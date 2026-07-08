@@ -3,7 +3,8 @@ name: 제품 대표 이미지 자동 수집
 on:
   # 매월 1일 콘텐츠 업데이트 완료 후 자동 실행 (KST 00:30 = UTC 15:30)
   schedule:
-    - cron: '30 15 1 * *'
+    # 매월 1일 09:30 KST = 00:30 UTC (콘텐츠 업데이트 30분 후)
+    - cron: '30 0 1 * *'
   # 수동 실행 (언제든 GitHub Actions 탭에서 실행 가능)
   workflow_dispatch:
 

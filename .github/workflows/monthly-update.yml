@@ -2,8 +2,8 @@ name: 월별 콘텐츠 자동 업데이트
 
 on:
   schedule:
-    # 매월 1일 00:10 KST = 전일 15:10 UTC (아카이브 후 실행)
-    - cron: '10 15 1 * *'
+    # 매월 1일 09:00 KST = 00:00 UTC
+    - cron: '0 0 1 * *'
   workflow_dispatch:   # 수동 실행 가능
 
 jobs:

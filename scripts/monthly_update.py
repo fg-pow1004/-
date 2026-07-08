@@ -66,18 +66,41 @@ BADGE_CSS = {
 }
 
 # ── Claude AI 리서치 ──────────────────────────────────────────────
+SYSTEM_PROMPT = (
+    "당신은 글로벌 사무가구 신제품 리서처입니다. "
+    "반드시 웹 검색으로 실제 확인된 신제품만 보고하세요. "
+    "확인되지 않은 제품은 포함하지 마세요. "
+    "JSON 배열 형식으로만 답하세요."
+)
+
+def extract_json(text: str) -> list:
+    """텍스트에서 JSON 배열 추출. 코드 블록 / 앞뒤 텍스트 무시."""
+    text = re.sub(r'```(?:json)?\s*', '', text)
+    m = re.search(r'\[\s*\{[\s\S]*?\}\s*\]', text)
+    if m:
+        try:
+            return json.loads(m.group())
+        except json.JSONDecodeError:
+            pass
+    # 더 넓게 시도
+    m2 = re.search(r'\[[\s\S]*?\]', text)
+    if m2:
+        try:
+            return json.loads(m2.group())
+        except json.JSONDecodeError:
+            pass
+    return []
+
 def research_products(region_key: str, region: dict) -> list:
     brands_str = ", ".join(region["brands"])
-    prompt = textwrap.dedent(f"""
+    user_msg = textwrap.dedent(f"""
         오늘 날짜: {today.isoformat()}
         조사 대상: {region["name"]} 사무가구 브랜드
         브랜드 목록: {brands_str}
 
         위 브랜드들이 {LABEL_KR} 전후(최근 2개월 이내)에 발표한 신제품이나
         주목할 만한 업데이트를 웹에서 검색해서 찾아줘.
-
-        각 브랜드당 1개 제품을 선정해 아래 JSON 배열로만 답해줘
-        (설명 없이 JSON만, 코드 블록 없이):
+        각 브랜드당 최대 1개 제품을 선정해 아래 JSON 배열로만 답해줘:
         [
           {{
             "brand": "브랜드명",
@@ -93,22 +116,43 @@ def research_products(region_key: str, region: dict) -> list:
     """).strip()
 
     print(f"  [{region_key.upper()}] 웹 리서치 중…")
+    messages = [{"role": "user", "content": user_msg}]
+
     try:
-        resp = client.messages.create(
-            model="claude-opus-4-8",
-            max_tokens=3000,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
-            messages=[{"role": "user", "content": prompt}],
-        )
-        for block in resp.content:
-            if hasattr(block, "text"):
-                raw = block.text.strip()
-                # JSON 배열 추출
-                m = re.search(r'\[[\s\S]*?\]', raw)
-                if m:
-                    data = json.loads(m.group())
-                    print(f"  [{region_key.upper()}] {len(data)}개 제품 수집")
-                    return data
+        for _turn in range(6):  # 최대 6턴 (tool use 루프)
+            resp = client.messages.create(
+                model="claude-opus-4-8",
+                max_tokens=4000,
+                system=SYSTEM_PROMPT,
+                tools=[{"type": "web_search_20250305", "name": "web_search"}],
+                messages=messages,
+            )
+
+            # 텍스트 블록에서 JSON 추출 시도
+            for block in resp.content:
+                if getattr(block, "type", None) == "text":
+                    data = extract_json(block.text)
+                    if data:
+                        print(f"  [{region_key.upper()}] {len(data)}개 제품 수집")
+                        return data
+
+            # tool_use 인 경우 결과를 messages 에 추가하고 계속
+            if resp.stop_reason == "tool_use":
+                tool_results = []
+                for block in resp.content:
+                    if getattr(block, "type", None) == "tool_use":
+                        # web_search 는 Anthropic 서버 실행 — 빈 결과로 계속
+                        tool_results.append({
+                            "type": "tool_result",
+                            "tool_use_id": block.id,
+                            "content": "검색 완료",
+                        })
+                messages.append({"role": "assistant", "content": resp.content})
+                messages.append({"role": "user", "content": tool_results})
+                continue
+
+            break  # end_turn 또는 기타
+
     except Exception as e:
         print(f"  [{region_key.upper()}] 오류: {e}")
     return []
@@ -160,30 +204,39 @@ def make_card(item: dict, region_key: str) -> str:
 
 # ── index.html 섹션 교체 ──────────────────────────────────────────
 def replace_section(html: str, sec_id: str, new_cards_html: str, region: dict) -> str:
-    """<!-- ═══ sec_id ═══ --> ... 다음 </div></div> 블록을 교체"""
-    # 지역 섹션 전체를 새로 생성
-    new_sec = f"""
-    <!-- ═══════════════════ {region["name"]} ═══════════════════ -->
-    <div id="{sec_id}" class="reg-sec">
-      <div class="reg-hd">
-        <div class="reg-hd-bar" style="background:{region['color']}"></div>
-        <span class="reg-hd-name">{region["name"]}</span>
-        <span class="reg-hd-count">신제품 · {LABEL_KR} 수집</span>
-        <div class="reg-hd-line"></div>
-      </div>
-      <div class="reg-grid">
-{new_cards_html}
-      </div>
-    </div>"""
+    """<!-- ═══ ... ═══ --> ~ <!-- /sec_id --> 블록 전체를 교체"""
+    n_cards = len([c for c in new_cards_html.split('class="bc"') if c]) - 1
+    count_label = f"신제품 {n_cards}개 · {n_cards}개 브랜드" if n_cards > 0 else f"신제품 · {LABEL_KR} 수집"
 
-    # 기존 섹션 교체: id="sec_id" 시작 ~ 다음 reg-sec 시작 전까지
-    pattern = rf'(<!-- ═+[^═]*{re.escape(region["name"][:4])}[^═]*═+ -->\s*<div id="{sec_id}"[\s\S]*?</div>\s*</div>\s*</div>)'
-    m = re.search(pattern, html)
+    new_sec = (
+        f'\n    <!-- ═══════════════════ {region["name"]} ═══════════════════ -->'
+        f'\n    <div id="{sec_id}" class="reg-sec">'
+        f'\n      <div class="reg-hd">'
+        f'\n        <div class="reg-hd-bar" style="background:{region["color"]}"></div>'
+        f'\n        <span class="reg-hd-name">{region["name"]}</span>'
+        f'\n        <span class="reg-hd-count">{count_label}</span>'
+        f'\n        <div class="reg-hd-line"></div>'
+        f'\n      </div>'
+        f'\n      <div class="reg-grid">'
+        f'\n{new_cards_html}'
+        f'\n      </div>'
+        f'\n    </div>'
+        f'\n    <!-- /{sec_id} -->'
+    )
+
+    # <!-- /sec_id --> 종료 마커 기반 교체 (가장 신뢰성 높음)
+    pattern = rf'<!-- ═+[^>]*═+ -->\s*<div id="{sec_id}"[\s\S]*?<!-- /{sec_id} -->'
+    if re.search(pattern, html):
+        return re.sub(pattern, new_sec.strip(), html, count=1)
+
+    # fallback: 종료 마커 없이 다음 <!-- 코멘트 직전까지 교체
+    pattern2 = rf'(<div id="{sec_id}" class="reg-sec">[\s\S]*?</div>\s*</div>)\s*\n(\s*<!--)'
+    m = re.search(pattern2, html)
     if m:
-        return html[:m.start()] + new_sec + html[m.end():]
-    # fallback: id 기반으로만 교체
-    pattern2 = rf'(<div id="{sec_id}"[\s\S]*?</div>\s*</div>\s*</div>)'
-    return re.sub(pattern2, new_sec, html, count=1)
+        return html[:m.start()] + new_sec + '\n' + m.group(2) + html[m.end():]
+
+    print(f"  [{sec_id}] ⚠ 섹션을 찾지 못해 업데이트 건너뜀")
+    return html
 
 # ── 헤더 날짜 업데이트 ────────────────────────────────────────────
 def update_header(html: str) -> str:
