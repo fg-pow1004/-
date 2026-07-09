@@ -1,4 +1,4 @@
-﻿<title>퍼시스 · 2026년 06월 신제품 리포트 (아카이브)</title>
+<title>퍼시스 · 2026년 06월 신제품 리포트 (아카이브)</title>
 <style>
 :root{
   --g:#FAFAF8; --w:#FFFFFF;
@@ -10,42 +10,99 @@
   --na:#3B82F6; --eu:#10B981; --jp:#EF4444; --kr:#C17F3E;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--g);color:var(--t);font-size:15px;line-height:1.5}
+html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--g);color:var(--t);font-size:16px;line-height:1.5}
 
 .app{display:flex;height:100vh;overflow:hidden}
 
 /* SIDEBAR */
 .sb{width:216px;flex-shrink:0;background:var(--w);border-right:1px solid var(--bd);display:flex;flex-direction:column;overflow-y:auto}
 .sb-logo{padding:16px 14px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--bd)}
-.sb-mark{width:28px;height:28px;background:var(--a);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.sb-name{font-size:15px;font-weight:700;letter-spacing:-.02em}
-.sb-sub{font-size:12px;color:var(--t3)}
+.sb-mark{width:28px;height:28px;background:var(--a);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.sb-name{font-size:16px;font-weight:700;letter-spacing:-.02em}
+.sb-sub{font-size:13px;color:var(--t3)}
 .sb-srch{padding:10px;border-bottom:1px solid var(--bd)}
 .sb-srch-in{display:flex;align-items:center;gap:7px;background:var(--g);border:1px solid var(--bd);border-radius:8px;padding:5px 9px}
-.sb-srch-ic{color:var(--t3);font-size:13px}
-.sb-srch input{border:none;background:none;outline:none;font-size:14px;color:var(--t);width:100%}
+.sb-srch-ic{color:var(--t3);font-size:14px}
+.sb-srch input{border:none;background:none;outline:none;font-size:15px;color:var(--t);width:100%}
 .sb-srch input::placeholder{color:var(--t3)}
-.sb-nav{flex:1;padding:6px 8px}
-.sb-grp{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);padding:10px 8px 4px}
-.sbl{display:flex;align-items:center;gap:9px;padding:7px 9px 7px 12px;border-radius:8px;cursor:pointer;color:var(--t2);font-size:14px;font-weight:500;border:none;border-left:2.5px solid transparent;background:none;width:100%;text-align:left;transition:background .12s,color .12s}
+.sb-nav{flex:1;padding:8px 8px}
+.sb-grp{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--t3);padding:4px 10px 4px;display:flex;align-items:center;gap:6px}
+.sb-grp::before{content:'';flex:none;width:14px;height:1px;background:var(--bd)}
+.sb-grp::after{content:'';flex:1;height:1px;background:var(--bd)}
+.sbl{display:flex;align-items:center;gap:9px;padding:7px 9px 7px 12px;border-radius:8px;cursor:pointer;color:var(--t2);font-size:15px;font-weight:500;border:none;border-left:2.5px solid transparent;background:none;width:100%;text-align:left;transition:background .12s,color .12s}
 .sbl:hover{background:var(--g);color:var(--t)}
 .sbl.on{background:var(--ab);color:var(--a);border-left-color:var(--a);font-weight:600}
 .sbl-ic{width:15px;text-align:center;font-size:15px;flex-shrink:0}
-.sbl-cnt{margin-left:auto;background:var(--g);color:var(--t3);font-size:12px;font-weight:600;padding:1px 6px;border-radius:8px}
+.sbl-cnt{margin-left:auto;background:var(--g);color:var(--t3);font-size:12px;font-weight:600;padding:1px 6px;border-radius:6px}
 .sbl.on .sbl-cnt{background:var(--ab);color:var(--a)}
-.sb-div{height:1px;background:var(--bd);margin:5px 4px}
+.sbl-sub{padding-left:28px;font-size:14px;padding-top:5px;padding-bottom:5px}
+.sb-div{height:8px}
 .sb-user{padding:12px 14px;border-top:1px solid var(--bd);display:flex;align-items:center;gap:9px;margin-top:auto}
-.sb-av{width:46px;height:46px;border-radius:50%;background:var(--a);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}.sb-av img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.sb-uname{font-size:14px;font-weight:600;line-height:1.2}
+.sb-av{width:46px;height:46px;border-radius:50%;background:var(--a);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}.sb-av img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.sb-uname{font-size:15px;font-weight:600;line-height:1.2}
 .sb-ubadge{font-size:9px;font-weight:600;background:var(--ab);color:var(--a);padding:1px 6px;border-radius:4px;display:inline-block;margin-top:2px}
+/* BOARD MODAL */
+.bd-overlay{display:none;position:fixed;inset:0;background:rgba(28,25,23,.45);z-index:1000;align-items:center;justify-content:center}
+.bd-overlay.open{display:flex}
+.bd-modal{background:#fff;border-radius:16px;width:660px;max-width:95vw;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(28,25,23,.18)}
+.bd-head{padding:20px 24px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0}
+.bd-head h2{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.bd-close{border:none;background:none;cursor:pointer;font-size:20px;color:var(--t3);line-height:1;padding:4px}
+.bd-close:hover{color:var(--t)}
+.bd-body{flex:1;overflow-y:auto;padding:20px 24px}
+.bd-write{background:var(--g);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:20px}
+.bd-write-title{font-size:13px;font-weight:700;color:var(--t2);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.bd-row{display:flex;gap:10px;margin-bottom:10px}
+.bd-inp{border:1px solid var(--bd);border-radius:8px;padding:8px 11px;font-size:14px;font-family:inherit;color:var(--t);background:#fff;outline:none;width:100%;transition:border .12s}
+.bd-inp:focus{border-color:var(--a)}
+.bd-sel{border:1px solid var(--bd);border-radius:8px;padding:8px 11px;font-size:14px;font-family:inherit;color:var(--t);background:#fff;outline:none;cursor:pointer;flex-shrink:0}
+.bd-ta{resize:vertical;min-height:72px;line-height:1.5}
+.bd-sub{background:var(--a);color:#fff;border:none;border-radius:8px;padding:9px 20px;font-size:14px;font-weight:600;cursor:pointer;width:100%;margin-top:4px;font-family:inherit;transition:opacity .12s}
+.bd-sub:hover{opacity:.88}
+.bd-list-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.bd-list-label{font-size:13px;font-weight:700;color:var(--t2)}
+.bd-cnt{font-size:12px;color:var(--t3);font-weight:500}
+.bd-empty{text-align:center;color:var(--t3);font-size:14px;padding:32px 0}
+.bd-item{border:1px solid var(--bd);border-radius:10px;padding:13px 15px;margin-bottom:8px;cursor:pointer;transition:box-shadow .12s}
+.bd-item:hover{box-shadow:var(--sh)}
+.bd-item-top{display:flex;align-items:center;gap:8px}
+.bd-cat{font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;flex-shrink:0}
+.bd-cat.bug{background:#FEE2E2;color:#DC2626}
+.bd-cat.imp{background:#DBEAFE;color:#2563EB}
+.bd-cat.etc{background:#F3F4F6;color:#6B7280}
+.bd-item-title{font-size:14px;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bd-st{font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;flex-shrink:0;border:none;cursor:pointer;font-family:inherit}
+.bd-st.wait{background:#FEF3C7;color:#D97706}
+.bd-st.prog{background:#DBEAFE;color:#2563EB}
+.bd-st.done{background:#D1FAE5;color:#059669}
+.bd-item-meta{font-size:12px;color:var(--t3);margin-top:5px}
+.bd-item-body{font-size:13px;color:var(--t2);margin-top:10px;line-height:1.6;border-top:1px solid var(--bd);padding-top:10px;display:none;white-space:pre-wrap}
+.bd-item.open .bd-item-body{display:block}
+.bd-del{font-size:11px;color:var(--t3);background:none;border:none;cursor:pointer;margin-left:6px;padding:2px 4px;border-radius:4px}
+.bd-del:hover{background:#FEE2E2;color:#DC2626}
+.bd-admin-btn{font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--bd);background:var(--g);color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
+.bd-admin-btn:hover{border-color:var(--a);color:var(--a)}
+.bd-flt{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;border:1px solid var(--bd);background:#fff;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
+.bd-flt.on{background:var(--a);color:#fff;border-color:var(--a)}
+.bd-flt:hover:not(.on){background:var(--g)}
+#bd-main{flex:1;overflow:hidden;flex-direction:column}
+.bd-tabs{display:flex;border-bottom:1px solid var(--bd);flex-shrink:0}
+.bd-tab{flex:1;padding:12px;font-size:14px;font-weight:600;color:var(--t3);background:none;border:none;cursor:pointer;font-family:inherit;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .12s}
+.bd-tab.on{color:var(--a);border-bottom-color:var(--a)}
+.bd-tab:hover:not(.on){color:var(--t2)}
+.bd-user-label{font-size:12px;color:var(--t2);font-weight:500}
+.bd-logout-btn{font-size:11px;color:var(--t3);background:none;border:1px solid var(--bd);border-radius:5px;padding:2px 7px;cursor:pointer;font-family:inherit;margin-left:6px;transition:all .12s}
+.bd-logout-btn:hover{color:var(--t);border-color:var(--t2)}
+.bd-cnt-badge{font-size:11px;font-weight:600;background:var(--g);color:var(--t3);border-radius:10px;padding:1px 6px;margin-left:4px}
+.bd-author{font-size:11px;color:var(--t3);background:var(--g);border-radius:4px;padding:1px 6px;flex-shrink:0;white-space:nowrap}
 
 /* MAIN */
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
 .tb{background:var(--w);border-bottom:1px solid var(--bd);padding:11px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.tb-t{font-size:16px;font-weight:700;letter-spacing:-.01em}
-.tb-s{font-size:13px;color:var(--t3);margin-top:1px}
+.tb-t{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.tb-s{font-size:14px;color:var(--t3);margin-top:1px}
 .tb-acts{display:flex;gap:7px}
-.btn{display:inline-flex;align-items:center;gap:5px;padding:6px 13px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:opacity .12s}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:6px 13px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:opacity .12s}
 .btn:hover{opacity:.82}
 .bp{background:var(--a);color:#fff}
 .bg{background:var(--g);color:var(--t2);border:1px solid var(--bd)}
@@ -53,18 +110,19 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
 /* SCROLL */
 .cnt{flex:1;overflow-y:auto;padding:18px 22px 32px;display:flex;flex-direction:column;gap:16px}
+.reg-sec+.reg-sec{margin-top:10px}
 
 /* KPI ROW */
 .krow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .kpi{background:var(--w);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;box-shadow:var(--sh)}
-.kpi-lbl{font-size:14px;font-weight:600;margin-bottom:9px}
-.kpi-val{font-size:34px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:5px}
-.up{color:#10B981;font-size:19px;font-weight:600;margin-left:3px}
-.kpi-sub{font-size:13px;color:var(--t3)}
-.kpi-lnk{display:block;margin-top:13px;font-size:13px;color:var(--a);font-weight:600;background:none;border:none;cursor:pointer;padding:0;text-align:left}
+.kpi-lbl{font-size:15px;font-weight:600;margin-bottom:9px}
+.kpi-val{font-size:35px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:5px}
+.up{color:#10B981;font-size:20px;font-weight:600;margin-left:3px}
+.kpi-sub{font-size:14px;color:var(--t3)}
+.kpi-lnk{display:block;margin-top:13px;font-size:14px;color:var(--a);font-weight:600;background:none;border:none;cursor:pointer;padding:0;text-align:left}
 .kpi-lnk:hover{text-decoration:underline}
 .gauge-wrap{display:flex;justify-content:center;position:relative;margin:2px 0 2px}
-.gauge-lbl{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);font-size:24px;font-weight:700;letter-spacing:-.02em}
+.gauge-lbl{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);font-size:25px;font-weight:700;letter-spacing:-.02em}
 
 /* LAYOUT GRIDS */
 .gmain{display:grid;grid-template-columns:1fr 260px;gap:12px}
@@ -73,51 +131,58 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 /* CARD */
 .card{background:var(--w);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
 .ch{padding:13px 16px 9px;display:flex;align-items:center;justify-content:space-between}
-.ct{font-size:15px;font-weight:700}
-.cc{font-size:13px;color:var(--t3);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px}
-.ca{font-size:13px;color:var(--a);font-weight:600;background:none;border:none;cursor:pointer;padding:0}
+.ct{font-size:16px;font-weight:700}
+.cc{font-size:14px;color:var(--t3);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:3px}
+.ca{font-size:14px;color:var(--a);font-weight:600;background:none;border:none;cursor:pointer;padding:0}
 
 /* PRODUCT LIST */
 .pi{display:flex;align-items:center;gap:11px;padding:10px 16px;border-top:1px solid #F4F2EF;cursor:pointer;transition:background .1s}
 .pi:hover{background:#FAFAF8}
 .pi.on{background:var(--ab)}
-.pav{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.03em}
+.pav{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.03em}
 .pinfo{flex:1;min-width:0}
-.pn{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pb{font-size:13px;color:var(--t3)}
+.pn{font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pb{font-size:14px;color:var(--t3)}
 .pacts{display:flex;gap:3px;opacity:0;transition:opacity .12s;flex-shrink:0}
 .pi:hover .pacts,.pi.on .pacts{opacity:1}
-.ibtn{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:var(--g);border:1px solid var(--bd);cursor:pointer;font-size:12px;color:var(--t2);text-decoration:none;transition:background .1s,color .1s}
+.pi-img{width:80px;height:60px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--g);border:1px solid var(--bd);cursor:zoom-in}
+.pi-img img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+#lbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.82);align-items:center;justify-content:center;cursor:zoom-out;backdrop-filter:blur(4px);animation:lbIn .18s ease}
+#lbox.on{display:flex}
+#lbox img{max-width:90vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.6);object-fit:contain;animation:lbImg .2s ease}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+@keyframes lbImg{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.ibtn{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:var(--g);border:1px solid var(--bd);cursor:pointer;font-size:13px;color:var(--t2);text-decoration:none;transition:background .1s,color .1s}
 .ibtn:hover{background:var(--w);color:var(--a);border-color:var(--abr)}
-.bdg{font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.bdg{font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
 .bdg-a{background:#FEF3C7;color:#D97706}
 .bdg-n{background:#F0FDF4;color:#16A34A}
 .bdg-w{background:#FEF2F2;color:#DC2626}
 .bdg-b{background:#EFF6FF;color:#2563EB}
 .p-all{padding:10px 16px;border-top:1px solid #F4F2EF}
-.p-all a{font-size:13px;color:var(--a);font-weight:600;text-decoration:none}
+.p-all a{font-size:14px;color:var(--a);font-weight:600;text-decoration:none}
 
 /* REGION STATS */
 .rs{padding:9px 16px;border-top:1px solid #F4F2EF}
 .rst{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
-.rsn{font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+.rsn{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}
 .rsd{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.rsc{font-size:13px;font-weight:600}
+.rsc{font-size:14px;font-weight:600}
 .rsb{height:6px;background:#F0EDE9;border-radius:3px;overflow:hidden}
 .rsf{height:100%;border-radius:3px}
 
 /* MINI CARDS */
 .mini{background:var(--w);border:1px solid var(--bd);border-radius:var(--r);padding:13px 16px;box-shadow:var(--sh)}
-.ml{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
-.mv{font-size:21px;font-weight:700;letter-spacing:-.02em;color:var(--a);line-height:1.2}
-.ms{font-size:13px;color:var(--t3);margin-top:2px}
+.ml{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.mv{font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--a);line-height:1.2}
+.ms{font-size:14px;color:var(--t3);margin-top:2px}
 
 /* ── REGION SECTIONS ── */
-.reg-sec{display:flex;flex-direction:column;gap:10px}
+.reg-sec{display:flex;flex-direction:column;gap:12px;background:var(--w);border:1px solid var(--bd);border-radius:var(--r);padding:18px 18px 20px;box-shadow:var(--sh)}
 .reg-hd{display:flex;align-items:center;gap:10px;padding:0 2px}
-.reg-hd-bar{width:3px;height:18px;border-radius:2px;flex-shrink:0}
-.reg-hd-name{font-size:16px;font-weight:700;letter-spacing:-.01em}
-.reg-hd-count{font-size:13px;color:var(--t3);font-weight:500}
+.reg-hd-bar{width:4px;height:20px;border-radius:2px;flex-shrink:0}
+.reg-hd-name{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.reg-hd-count{font-size:14px;color:var(--t3);font-weight:500}
 .reg-hd-line{flex:1;height:1px;background:var(--bd)}
 
 .reg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -126,62 +191,74 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 .bc{background:var(--w);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);display:flex;flex-direction:column;transition:box-shadow .15s,border-color .15s}
 .bc:hover{box-shadow:0 4px 14px rgba(28,25,23,.09);border-color:#D8D3CC}
 .bc-top{display:flex;align-items:flex-start;gap:10px;padding:14px 14px 10px}
-.bc-av{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.02em;overflow:hidden;padding:0}
+.bc-av{width:52px;height:52px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.02em;overflow:hidden;padding:0}
+.bc-av img{image-rendering:auto}
 .bc-head{flex:1;min-width:0}
-.bc-brand{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bc-country{font-size:12px;color:var(--t3)}
+.bc-brand{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-country{font-size:13px;color:var(--t3)}
 .bc-badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
 .bc-body{padding:0 14px 10px;flex:1}
-.bc-prod{font-size:14px;font-weight:600;color:var(--t);margin-bottom:5px;line-height:1.3}
-.bc-desc{font-size:13px;color:var(--t2);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.bc-prod{font-size:15px;font-weight:600;color:var(--t);margin-bottom:5px;line-height:1.3}
+.bc-desc{font-size:14px;color:var(--t2);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .bc-foot{padding:9px 14px;border-top:1px solid #F4F2EF;display:flex;align-items:center;justify-content:space-between}
-.bc-tag{font-size:12px;font-weight:600;color:var(--t3)}
-.bc-lnk{font-size:12px;font-weight:600;color:var(--a);text-decoration:none;display:flex;align-items:center;gap:3px}
+.bc-tag{font-size:13px;font-weight:600;color:var(--t3)}
+.bc-lnk{font-size:13px;font-weight:600;color:var(--a);text-decoration:none;display:flex;align-items:center;gap:3px}
 .bc-lnk:hover{text-decoration:underline}
 
 /* TRENDS */
 .ti{display:flex;gap:11px;padding:10px 16px;border-top:1px solid #F4F2EF}
-.tnum{width:19px;height:19px;border-radius:5px;background:var(--ab);color:var(--a);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.tt{font-size:14px;font-weight:600;margin-bottom:2px}
-.td{font-size:13px;color:var(--t3);line-height:1.5}
+.tnum{width:19px;height:19px;border-radius:5px;background:var(--ab);color:var(--a);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.tt{font-size:15px;font-weight:600;margin-bottom:2px}
+.td{font-size:14px;color:var(--t3);line-height:1.5}
 
 /* NEW TAGS */
 .ntags{padding:7px 16px 14px;display:flex;flex-wrap:wrap;gap:6px}
-.ntag{display:inline-flex;align-items:center;gap:4px;background:var(--g);border:1px solid var(--bd);border-radius:14px;padding:4px 9px;font-size:13px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .12s}
+.ntag{display:inline-flex;align-items:center;gap:4px;background:var(--g);border:1px solid var(--bd);border-radius:14px;padding:4px 9px;font-size:14px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .12s}
 .ntag:hover{background:var(--ab);border-color:var(--abr);color:var(--a)}
-.np{color:var(--a);font-size:14px;line-height:1}
+.np{color:var(--a);font-size:15px;line-height:1}
 
 /* SHARE BAR */
 .sbar{background:var(--w);border-top:1px solid var(--bd);padding:8px 22px;display:flex;justify-content:flex-end;gap:7px;flex-shrink:0}
 
 /* INSIGHTS */
 .ins-item{display:flex;align-items:flex-start;gap:12px;padding:11px 16px;border-top:1px solid #F4F2EF}
-.ins-pri{font-size:11px;font-weight:700;padding:3px 7px;border-radius:4px;white-space:nowrap;margin-top:1px;flex-shrink:0;letter-spacing:.04em}
+.ins-pri{font-size:12px;font-weight:700;padding:3px 7px;border-radius:4px;white-space:nowrap;margin-top:1px;flex-shrink:0;letter-spacing:.04em}
 .ins-r{background:#FEF2F2;color:#DC2626}
 .ins-a{background:#FEF3C7;color:#D97706}
 .ins-b{background:#EFF6FF;color:#2563EB}
-.ins-title{font-size:14px;font-weight:600;margin-bottom:3px;line-height:1.3}
-.ins-desc{font-size:13px;color:var(--t2);line-height:1.6}
+.ins-title{font-size:15px;font-weight:600;margin-bottom:3px;line-height:1.3}
+.ins-desc{font-size:14px;color:var(--t2);line-height:1.6}
 .pi[onclick]{cursor:pointer}
 .pi[onclick]:hover .pn{color:var(--a)}
 .bc.hl{border-color:var(--a);box-shadow:0 0 0 2px var(--ab),var(--sh);transition:border-color .15s,box-shadow .15s}
-@media print{.sb,.tb,.sbar{display:none}.main{overflow:visible}.cnt{overflow:visible;padding:12px}.gmain,.gbot,.reg-grid{grid-template-columns:1fr}.krow{grid-template-columns:repeat(3,1fr)}}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sb,.tb,.sbar,.bd-overlay{display:none!important}
+  html,body{height:auto!important;overflow:visible!important}
+  .app{height:auto!important;overflow:visible!important;display:block!important}
+  .main{height:auto!important;overflow:visible!important;display:block!important}
+  .cnt{height:auto!important;overflow:visible!important;padding:12px;display:flex!important;flex-direction:column}
+  .gmain,.gbot,.reg-grid{grid-template-columns:1fr}
+  .krow{grid-template-columns:repeat(3,1fr)}
+  .card{break-inside:avoid;page-break-inside:avoid}
+  #view-brands{display:none!important}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none !important}}
 
 /* BRAND DIRECTORY VIEW */
 .bdc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .bdc{background:var(--w);border:1px solid var(--bd);border-radius:var(--r);padding:16px 12px 14px;display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:inherit;box-shadow:var(--sh);transition:box-shadow .15s,border-color .15s;text-align:center}
 .bdc:hover{box-shadow:0 4px 14px rgba(28,25,23,.09);border-color:#D8D3CC}
-.bdc-av2{width:40px;height:40px;border-radius:10px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.bdc-name{font-size:13px;font-weight:700;line-height:1.3;color:var(--t)}
-.bdc-ctr{font-size:11px;color:var(--t3)}
-.bdc-cat{font-size:11px;color:var(--t2);line-height:1.4;margin-top:1px}
-.bdc-url{font-size:11px;font-weight:700;color:var(--a);margin-top:4px}
+.bdc-av2{width:68px;height:68px;border-radius:12px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.bdc-av2 img{image-rendering:auto}
+.bdc-name{font-size:14px;font-weight:700;line-height:1.3;color:var(--t)}
+.bdc-ctr{font-size:12px;color:var(--t3)}
+.bdc-cat{font-size:12px;color:var(--t2);line-height:1.4;margin-top:1px}
+.bdc-url{font-size:12px;font-weight:700;color:var(--a);margin-top:4px}
 .bdc:hover .bdc-url{text-decoration:underline}
 .bfilt{display:flex;gap:7px;flex-wrap:wrap}
-.bfbtn{padding:5px 14px;border-radius:20px;border:1px solid var(--bd);background:var(--w);color:var(--t2);font-size:12px;font-weight:600;cursor:pointer;transition:all .12s}
+.bfbtn{padding:5px 14px;border-radius:20px;border:1px solid var(--bd);background:var(--w);color:var(--t2);font-size:13px;font-weight:600;cursor:pointer;transition:all .12s}
 .bfbtn:hover,.bfbtn.on{background:var(--ab);color:var(--a);border-color:var(--abr)}
-
 /* Archive banner */
 .arch-bar{background:#FEF3C7;border-bottom:2px solid #FCD34D;padding:8px 22px;
   display:flex;align-items:center;justify-content:space-between;flex-shrink:0;font-size:13px}
@@ -196,7 +273,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   <div class="sb-logo">
     <div>
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKsAAAAlCAYAAAA9UhmxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP0SURBVHhe7Zs9duIwEMcnWyUhZ0BlsuQKa5UBzoBpgSusSRfgDEAZzBlIysi5QvJSIp9h923pLfiy9RF/yWAn83tPBbLeSMJ/a0Ya+ywIggAQpAL8ECsQpKygWJHKgGJFKgOKFakMKFakMmjFelG7KrQsXHffV7Pdlq432+3IeJISZ4t5nnQ9S2m229Bst2HhusA5j4xBRa8/gJvGrWQnTxmNJ3v7o/FEun7TuI2MISlJbXHOodcfSG3zlrA2wmjFinwOYx4w5kGvP4DeYKAVLOd8fwN0baoI8zy4adxqhVUEKFYDMLa5cczzxEvQGwzEqi9Br3/8eaFYDdLrR1dYzjkwJgu46jDPO4mXQLEahHMOC3d5+O37ketfhVMIFdKKdT6bwr+/f4yUrm2L5k/K89NKGuNnZT6bAiFENAPea/xK+vH+JtnLUu6Hjmj6pIjjy1p02kglVuRA17bB7nTEamDsNC7yO4BizQEhdbEKAEC54iL5QbHmwF0e4tMdKNTiONO9InhRuxKroGvbUK+rV5O0UGoBtSyA7UG+uGum1ILn1SpSl4Q4W8zzoNmSEw5p5ub7vnZHnKSvoZM91qTUAlKvSw/FaDyB8eSQJIDtg6MKVeLwXjdnyGEIIfDx/gYAAAvXVR5d5ZkXIXVtrLojlVhNMp9N94OLE1ga4mzpBGSK8LyK7CvcD2jEapKwWIua1+7h0m0cMQwwSNe2IwKiliWtgKbo9QeR7BGlGy91DEhCD5QWzjm4y6UyuQIoVnNQasF8NhWrM7nhpIRjZmpZsW7UFISQXC7/MzjnWg+BYjUE574yhr0fOjB0nEJWWPGYbOj8LkxEIl27U1hfnKuTKaliVkotsH6ZcTddu7O/gXFxZhribOnirTQbLO/V04rz4/1NKcydaxPHlhTf95Uvjaj645xvN4Dqmx5H3AYrTBF9wTbBIBFoOL+sSeVxsRCbGeGu1ZL6umu1xGaJiLP1wph0/fyyFrwwFrETx3q9Dq5/NiQ7D6Ox2NQIunGv12uxaW4eRmOpn+ufDbGZER4XC6mv88ua2CwIgiDAMCAjhJD90VuYJOlWJBso1hyowoas7hCJB8WKVIbSipWxbJ+fqIJ1Upc3PMfC1Gcfqk2hiKnPZnRHR2FUnw9lKapMmI5SiNXUCcN3gxAinQQUhSo+LwpdgqMUYu3axR2cAwDYBds/Fbq3vorgmP+hbvEqhViLzIgMHeeoq8KxIIRkOofOQvilo6Kh1Cr/uwH3Qween1ZaF5AGQsgmEfC00k68qhBCoGvbygN6k+xCjKHjHOWhSNKXNoOFIGWjNCsrgsSBYkUqA4oVqQwoVqQyoFiRyoBiRSrDf3mTgsrkd3bMAAAAAElFTkSuQmCC" style="height:20px;display:block;mix-blend-mode:multiply" alt="FURSYS">
-      <div class="sb-sub">신제품 인텔리전스</div>
+      <div class="sb-sub">가구연구소</div>
     </div>
   </div>
   <div class="sb-srch">
@@ -207,17 +284,22 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   </div>
   <nav class="sb-nav">
     <button class="sbl on" id="nav-dash" onclick="showView('dash')"><span class="sbl-ic">⊞</span>대시보드</button>
-    <button class="sbl" id="nav-brands" onclick="showView('brands')"><span class="sbl-ic">◎</span>브랜드<span class="sbl-cnt">40</span></button>
-    <button class="sbl"><span class="sbl-ic">↗</span>전체 리포트</button>
-    <div class="sb-grp">지역별</div>
-    <button class="sbl" onclick="sc('na-sec')"><span class="sbl-ic" style="color:var(--na)">●</span>북미<span class="sbl-cnt">10</span></button>
-    <button class="sbl" onclick="sc('eu-sec')"><span class="sbl-ic" style="color:var(--eu)">●</span>유럽<span class="sbl-cnt">7</span></button>
-    <button class="sbl" onclick="sc('jp-sec')"><span class="sbl-ic" style="color:var(--jp)">●</span>일본<span class="sbl-cnt">6</span></button>
-    <button class="sbl" onclick="sc('kr-sec')"><span class="sbl-ic" style="color:var(--kr)">●</span>국내<span class="sbl-cnt">4</span></button>
+    <button class="sbl" id="nav-brands" onclick="showView('brands')"><span class="sbl-ic">◎</span>브랜드 홈페이지<span class="sbl-cnt">57</span></button>
     <div class="sb-div"></div>
+    <button class="sbl" id="nav-report" onclick="showView('dash')"><span class="sbl-ic">◈</span>신제품 리포트</button>
+    <button class="sbl sbl-sub" onclick="sc('na-sec')"><span class="sbl-ic" style="color:var(--na)">●</span>북미<span class="sbl-cnt">8</span></button>
+    <button class="sbl sbl-sub" onclick="sc('eu-sec')"><span class="sbl-ic" style="color:var(--eu)">●</span>유럽<span class="sbl-cnt">6</span></button>
+    <button class="sbl sbl-sub" onclick="sc('jp-sec')"><span class="sbl-ic" style="color:var(--jp)">●</span>일본<span class="sbl-cnt">5</span></button>
+    <button class="sbl sbl-sub" onclick="sc('kr-sec')"><span class="sbl-ic" style="color:var(--kr)">●</span>국내<span class="sbl-cnt">4</span></button>
+    <div class="sb-div"></div>
+    <div class="sb-grp">분석</div>
     <button class="sbl" onclick="sc('trends-sec')"><span class="sbl-ic">↻</span>트렌드 분석</button>
     <button class="sbl" onclick="sc('insights-sec')"><span class="sbl-ic">📌</span>퍼시스 시사점<span class="sbl-cnt">5</span></button>
+    <div class="sb-div"></div>
+    <div class="sb-grp">도구</div>
     <button class="sbl" onclick="window.print()"><span class="sbl-ic">↓</span>내보내기</button>
+    <div class="sb-div"></div>
+    <button class="sbl" onclick="showBoard()"><span class="sbl-ic">📋</span>오류개선 및 요청사항</button>
   </nav>
   <div class="sb-user">
     <div class="sb-av"><img src="data:image/jpeg;base64,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" alt="이성근"></div>
@@ -233,26 +315,26 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     <div style="display:flex;align-items:center;gap:12px">
       <div>
         <div class="tb-t">글로벌 신제품 리포트</div>
-        <div class="tb-s">2026년 6월 수집 · 4개 지역 40개 브랜드 모니터링</div>
+        <div class="tb-s">2026년 6월 수집 · 4개 지역 57개 브랜드 모니터링</div>
       </div>
-      <span style="font-size:12px;font-weight:700;background:#FEF3C7;color:#D97706;padding:3px 11px;border-radius:20px;white-space:nowrap;flex-shrink:0">2026년 6월</span>
+      <span style="font-size:13px;font-weight:700;background:#FEF3C7;color:#D97706;padding:3px 11px;border-radius:20px;white-space:nowrap;flex-shrink:0">2026년 6월</span>
     </div>
     <div style="display:flex;align-items:center;gap:8px">
-      <a href="../archive.html" style="display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;font-size:13px;font-weight:600;background:var(--g);color:var(--t2);border:1px solid var(--bd);text-decoration:none;transition:opacity .12s">📁 월별 아카이브</a>
+      <a href="../archive.html" style="display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;font-size:14px;font-weight:600;background:var(--g);color:var(--t2);border:1px solid var(--bd);text-decoration:none;transition:opacity .12s">📁 월별 아카이브</a>
       <button class="btn bg" id="cb" onclick="cl()">🔗 링크 복사</button>
       <button class="btn bp" onclick="window.print()">⬇ PDF 저장</button>
     </div>
   </div>
 
   
-  <div class="arch-bar"><b>📦 2026년 06월 아카이브 — 읽기 전용</b><a href="../index.html">최신 리포트 보기 →</a></div>
+  <div class="arch-bar"><b>&#128230; 2026년 06월 아카이브 &#8212; 읽기 전용</b><a href="../archive.html">&#8592; 월별 아카이브</a></div>
   <div class="cnt" id="view-dash">
 
     <!-- KPI ROW -->
     <div class="krow">
       <div class="kpi">
         <div class="kpi-lbl">신제품 수</div>
-        <div class="kpi-val">30<span style="font-size:19px">+</span><span class="up">↗</span></div>
+        <div class="kpi-val">30<span style="font-size:20px">+</span><span class="up">↗</span></div>
         <div class="kpi-sub">4개 지역 · 20개 브랜드 신규 출시</div>
         <button class="kpi-lnk" onclick="sc('na-sec')">지역별 상세 보기 →</button>
       </div>
@@ -268,7 +350,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
           <canvas id="gc" width="130" height="74"></canvas>
           <div class="gauge-lbl">85%</div>
         </div>
-        <div class="kpi-sub" style="text-align:center">40개 브랜드 중 17개 업데이트 완료</div>
+        <div class="kpi-sub" style="text-align:center">57개 브랜드 중 17개 업데이트 완료</div>
         <button class="kpi-lnk" style="text-align:center;display:block">전체 현황 보기 →</button>
       </div>
     </div>
@@ -310,7 +392,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
           <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.prnewswire.com/news-releases/knoll-debuts-konzert-a-private-office-system-where-precision-meets-possibility-302775524.html" target="_blank">↗</a></div>
         </div>
         <div class="pi" onclick="pClick(event,'bc-hs')">
-          <div class="pav" style="background:var(--kr);font-size:11px">한샘</div>
+          <div class="pav" style="background:var(--kr);font-size:12px">한샘</div>
           <div class="pinfo"><div class="pn">이머전 오피스 시리즈</div><div class="pb">한샘 · 국내 · 2026.04</div></div>
           <span class="bdg bdg-w">첫 진출</span>
           <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.newsis.com/view/NISX20260402_0003575553" target="_blank">↗</a></div>
@@ -369,7 +451,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
         </div>
         <div class="mini">
           <div class="ml">주목 이슈</div>
-          <div class="mv" style="font-size:15px;line-height:1.3">한샘 오피스 첫 진출</div>
+          <div class="mv" style="font-size:16px;line-height:1.3">한샘 오피스 첫 진출</div>
           <div class="ms">이머전 시리즈 · B2C→B2B 확장 주의</div>
         </div>
       </div>
@@ -380,7 +462,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       <div class="reg-hd">
         <div class="reg-hd-bar" style="background:var(--na)"></div>
         <span class="reg-hd-name">북미 North America</span>
-        <span class="reg-hd-count">신제품 10개 · 6개 브랜드</span>
+        <span class="reg-hd-count">신제품 9개 · 9개 브랜드</span>
         <div class="reg-hd-line"></div>
       </div>
       <div class="reg-grid">
@@ -466,48 +548,106 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-av" style="background:#DC2626">HS</div>
             <div class="bc-head">
               <div class="bc-brand">Humanscale</div>
-              <div class="bc-country">미국 · 2026.04</div>
-              <div class="bc-badges"><span class="bdg bdg-n">4세대</span></div>
+              <div class="bc-country">미국 · 2026.03</div>
+              <div class="bc-badges"><span class="bdg bdg-a">iF Design Award 2026</span></div>
             </div>
           </div>
           <div class="bc-body">
             <div class="bc-prod">eFloat Quattro 전동 승강 데스크</div>
-            <div class="bc-desc">4세대 전동 승강 시스템. AI 기반 사용자 자세 기억·자동 복원 기능 탑재. 탄소 네거티브 인증 소재 사용. 5년 높이 보정 보증. 기업 대량 구매 시 IoT 통합 관리 지원.</div>
+            <div class="bc-desc">4개 다리 구조의 전동 승강 데스크. Smart Channel(케이블·모니터암 통합 슬롯) 및 2단계 높이 프리셋 탑재. PVC-프리·저VOC·99% 재활용 가능 친환경 소재 적용. 2026 iF Design Award 수상.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">AI·전동승강·친환경</span>
-            <a class="bc-lnk" href="https://www.humanscale.com/products/product.cfm?group=efloat" target="_blank">자세히 보기 ↗</a>
+            <span class="bc-tag">전동승강·친환경·iF수상</span>
+            <a class="bc-lnk" href="https://officeinsight.com/officenewswire/humanscale-earns-two-2026-if-design-awards-for-diffrient-lounge-and-efloat-quattro" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
         <div class="bc">
           <div class="bc-top">
-            <div class="bc-av" style="background:#92400E">HN</div>
+            <div class="bc-av" style="background:#fff;border:1px solid #E8E4DF;padding:3px"><img src="../logos/hon.png" style="width:100%;height:100%;object-fit:contain;display:block"></div>
             <div class="bc-head">
               <div class="bc-brand">HON</div>
-              <div class="bc-country">미국 · 2026.03</div>
+              <div class="bc-country">미국 · 2026.04</div>
               <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">Hello Office Lounge Series</div>
-            <div class="bc-desc">하이브리드 워크 전환에 맞춘 다목적 라운지 시리즈. 소파·체어·파티션·사이드 테이블 모듈 조합 가능. 중가 시장 타겟으로 대기업 대량 납품 경쟁력 강화. 납기 8주 이내.</div>
+            <div class="bc-prod">Brim™ Polyshell Chair</div>
+            <div class="bc-desc">조각적 곡선의 원피스 폴리쉘 버킷 체어. 11가지 컬러·4종 베이스 선택 가능. 카페·협업 공간에 최적화된 경량 설계. 시카고 Fulton Market 플래그십 쇼룸 오픈과 함께 데뷔.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">하이브리드·중가시장</span>
-            <a class="bc-lnk" href="https://www.hon.com/chairs/lounge-chairs" target="_blank">자세히 보기 ↗</a>
+            <span class="bc-tag">폴리쉘·협업공간</span>
+            <a class="bc-lnk" href="https://www.globenewswire.com/news-release/2026/04/30/3285607/0/en/hon-introduces-brim-a-sculpted-polyshell-chair-designed-for-comfort-and-versatility.html" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc" id="bc-ki">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#006341">KI</div>
+            <div class="bc-head">
+              <div class="bc-brand">KI</div>
+              <div class="bc-country">미국 · 2026.06</div>
+              <div class="bc-badges"><span class="bdg bdg-a">Best of NeoCon 2026</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Kiaura Collection</div>
+            <div class="bc-desc">NeoCon 2026 Best of Competition 수상. Cognetic Technology™ 기반으로 사용자 체형·자세에 자동 적응하는 인체공학 메커니즘 탑재. 7개 부문 Best of NeoCon 수상으로 올해 가장 주목받는 북미 신제품.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">인체공학·NeoCon수상</span>
+            <a class="bc-lnk" href="https://www.ki.com/about/pressroom/press-releases/2026/ki-earns-seven-best-of-neocon-awards-including-best-of-competition-for-the-kiaura-collection-built-with-cognetic-technology/" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#fff;border:1px solid #E8E4DF;padding:3px"><img src="../logos/nienkamper.png" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+            <div class="bc-head">
+              <div class="bc-brand">Nienkämper</div>
+              <div class="bc-country">캐나다 · 2026.06</div>
+              <div class="bc-badges"><span class="bdg bdg-a">NeoCon 2026 2관왕</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Pleat Collection</div>
+            <div class="bc-desc">주름진 패브릭의 유동성에서 영감받은 회의테이블·워크스테이션 컬렉션. REPUBLIC OF II BY IV 디자인. 건축적 정밀함과 조각적 조형미 결합. NeoCon 2026 Best of NeoCon Silver + Interior Design HiP Award 2관왕 수상.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">디자인수상·NeoCon2026</span>
+            <a class="bc-lnk" href="https://www.nienkamper.com/about-us/press-releases" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#fff;border:1px solid #E8E4DF;padding:3px"><img src="../logos/narbutas.png" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+            <div class="bc-head">
+              <div class="bc-brand">Narbutas</div>
+              <div class="bc-country">리투아니아 · 2026</div>
+              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">FLIPTOP Conference Tables</div>
+            <div class="bc-desc">회의·교육·협업 공간을 위한 유연한 테이블 시스템. 직관적인 플립탑 메커니즘으로 한 동작에 접기·펼치기 가능. 통합 캐스터로 쉽게 이동하고 적재해 공간 절약. 직사각·사다리꼴·초승달형 등 다양한 형태 조합으로 U·O·V자 배치 구성 가능.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">회의테이블·공간유연성</span>
+            <a class="bc-lnk" href="https://www.narbutas.com/products/desks-tables/conference-meeting/fliptop/" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
       </div>
     </div>
+    <!-- /na-sec -->
 
     <!-- ═══════════════════ 유럽 ═══════════════════ -->
     <div id="eu-sec" class="reg-sec">
       <div class="reg-hd">
         <div class="reg-hd-bar" style="background:var(--eu)"></div>
         <span class="reg-hd-name">유럽 Europe</span>
-        <span class="reg-hd-count">신제품 7개 · 6개 브랜드</span>
+        <span class="reg-hd-count">신제품 6개 · 6개 브랜드</span>
         <div class="reg-hd-line"></div>
       </div>
       <div class="reg-grid">
@@ -535,7 +675,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
           <div class="bc-top">
             <div class="bc-av" style="background:#065F46">FL</div>
             <div class="bc-head">
-              <div class="bc-brand">Flokk (HÅG)</div>
+              <div class="bc-brand">Flokk</div>
               <div class="bc-country">노르웨이 · 2026.03</div>
               <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
             </div>
@@ -555,17 +695,17 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-av" style="background:#1E40AF">KN</div>
             <div class="bc-head">
               <div class="bc-brand">Kinnarps</div>
-              <div class="bc-country">스웨덴 · 2026.04</div>
+              <div class="bc-country">스웨덴 · 2026</div>
               <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">Spout Table</div>
-            <div class="bc-desc">FSC 인증 스웨덴 소나무 상판 + 전동 승강 프레임 결합. 수동 조작 없이 앱으로 높이 프리셋 저장. 친환경 마감재로 EU 에코라벨 취득. 공유 워크스테이션 최적화.</div>
+            <div class="bc-prod">Espera Mesh Task Chair</div>
+            <div class="bc-desc">Synchrone™ 메커니즘으로 사용자 체중에 따른 틸트 저항 자동 조절—공유 좌석 공간에 최적. 3D 니팅 메시 등받이로 통기성과 패브릭 촉감 동시 구현. 등받이·팔걸이·헤드레스트 교체 가능해 장기 사용성 강화.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">전동승강·친환경목재</span>
-            <a class="bc-lnk" href="https://www.kinnarps.com/products/tables/desk-and-bench/" target="_blank">자세히 보기 ↗</a>
+            <span class="bc-tag">메시·자동인체공학</span>
+            <a class="bc-lnk" href="https://www.kinnarps.com/products/seating/task-chairs/espera/" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
@@ -575,15 +715,15 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-head">
               <div class="bc-brand">Wilkhahn</div>
               <div class="bc-country">독일 · 2026.05</div>
-              <div class="bc-badges"><span class="bdg bdg-b">Orgatec 출품</span></div>
+              <div class="bc-badges"><span class="bdg bdg-a">지속가능성 어워드 2026</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">CYNARA Conference Chair</div>
-            <div class="bc-desc">회의용 의자의 시각적 무거움을 해소한 슬림 디자인. 연결 없이도 링크 가능한 모듈형 구조. 자동 수납 팔걸이. 독일 블루엔젤 인증. 대형 회의실·강의실 납품 타겟.</div>
+            <div class="bc-prod">WiChair</div>
+            <div class="bc-desc">Alina Schnizler 디자인. 탄성 강철 브래킷 + FSC 인증 합판으로 전후좌우 자연스러운 움직임 지원. 34개 부품만으로 구성·플라스틱 배제, 전 부품 재활용 가능. 2026 독일 지속가능성 어워드 수상.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">회의·모듈·친환경인증</span>
+            <span class="bc-tag">인체공학·순환설계</span>
             <a class="bc-lnk" href="https://www.dezeen.com/2026/05/26/wichair-alina-schnizler-wilkhahn-dezeen-showroom/" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
@@ -593,17 +733,17 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-av" style="background:#0891B2">HY</div>
             <div class="bc-head">
               <div class="bc-brand">Hay</div>
-              <div class="bc-country">덴마크 · 2026.01</div>
+              <div class="bc-country">덴마크 · 2026 Spring</div>
               <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">World Upholstered Chair</div>
-            <div class="bc-desc">Hay의 베스트셀러 World Chair에 업홀스터 버전 추가. 35가지 패브릭 옵션. 오피스·라운지 겸용. 스칸디나비아 모던 디자인 철학 유지하며 컨트랙트 시장 확대. 중저가 포지셔닝.</div>
+            <div class="bc-prod">Deville Collection</div>
+            <div class="bc-desc">Julien Renault 디자인. 1920년대 토네트 비스트로 의자에서 영감, 60% 이상 재활용 알루미늄 소재 사용. 최대 5개 스태킹 가능한 실내외 겸용 체어·암체어. 나사 조립 방식으로 분해·수리 용이.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">업홀스터·컨트랙트</span>
-            <a class="bc-lnk" href="https://hay.com/en-us/products/chairs/office-chairs" target="_blank">자세히 보기 ↗</a>
+            <span class="bc-tag">재활용알루미늄·스태킹</span>
+            <a class="bc-lnk" href="https://www.hay.com/news/news-2026/deville-collection" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
@@ -617,24 +757,25 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">Insit Task Chair</div>
-            <div class="bc-desc">능동형 허리 지지 자동화 메커니즘 탑재. 사용자가 등받이 기울기를 조작할 필요 없이 앉은 자세에 따라 지지력 자동 조절. 독일 산업디자인상(iF) 수상. BIFMA 인증.</div>
+            <div class="bc-prod">se:cove Lounge Chair</div>
+            <div class="bc-desc">Konstantin Thomas 디자인. 오픈 오피스의 집중·휴식·대화를 위한 조각적 라운지 체어. PUR 폼 없이 100% 재활용 PET 충전재 사용, 분리 가능 커버로 완전 분해 설계. 목재·알루미늄 베이스 선택 가능.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">능동지지·자동조절</span>
-            <a class="bc-lnk" href="https://www.sedus.com/en/products/chairs/" target="_blank">자세히 보기 ↗</a>
+            <span class="bc-tag">라운지·순환설계</span>
+            <a class="bc-lnk" href="https://www.sedus.com/en/whatsup/secove-the-art-of-finding-retreat" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
       </div>
     </div>
+    <!-- /eu-sec -->
 
     <!-- ═══════════════════ 일본 ═══════════════════ -->
     <div id="jp-sec" class="reg-sec">
       <div class="reg-hd">
         <div class="reg-hd-bar" style="background:var(--jp)"></div>
         <span class="reg-hd-name">일본 Japan</span>
-        <span class="reg-hd-count">신제품 6개 · 6개 브랜드</span>
+        <span class="reg-hd-count">신제품 5개 · 5개 브랜드</span>
         <div class="reg-hd-line"></div>
       </div>
       <div class="reg-grid">
@@ -673,7 +814,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
           </div>
           <div class="bc-foot">
             <span class="bc-tag">협업·재활용·수상</span>
-            <a class="bc-lnk" href="https://www.coffeefranchisehub.com/archives/50709" target="_blank">자세히 보기 ↗</a>
+            <a class="bc-lnk" href="https://www.dezeen.com/2026/06/08/muku-task-chair-foster-partners-okamura-dezeen-showroom/" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
@@ -693,25 +834,6 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
           <div class="bc-foot">
             <span class="bc-tag">멀티포지션·기업납품</span>
             <a class="bc-lnk" href="https://www.itoki.jp/en/company/news/2025/2511_shiga/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:#92400E">PL</div>
-            <div class="bc-head">
-              <div class="bc-brand">Plus Corporation</div>
-              <div class="bc-country">일본 · 2025.10</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Madomino 파티션+퍼치</div>
-            <div class="bc-desc">파티션과 퍼치(perch) 시팅을 결합한 복합 모듈. 독립형·연결형 모두 가능. 파티션 상단에 간이 선반·화분·디스플레이 거치 옵션 추가. 집중과 협업 공간을 빠르게 전환 가능.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">복합모듈·공간전환</span>
-            <a class="bc-lnk" href="https://www.plus.co.jp/en/products/furniture/" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
@@ -755,6 +877,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
       </div>
     </div>
+    <!-- /jp-sec -->
 
     <!-- ═══════════════════ 국내 ═══════════════════ -->
     <div id="kr-sec" class="reg-sec">
@@ -790,17 +913,17 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-av" style="background:#0F766E">시디즈</div>
             <div class="bc-head">
               <div class="bc-brand">시디즈</div>
-              <div class="bc-country">한국 · 2026.03</div>
-              <div class="bc-badges"><span class="bdg bdg-n">리뉴얼</span></div>
+              <div class="bc-country">한국 · 2026.04</div>
+              <div class="bc-badges"><span class="bdg bdg-b">리뉴얼</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">GX 게이밍·홈오피스 체어 리뉴얼</div>
-            <div class="bc-desc">시디즈의 인체공학 기술을 게이밍·홈오피스 겸용으로 재편. 장시간 착석 쾌적성 강조, 요추 지지 자동 조절. MZ세대 컬러 감성. 쿠팡·네이버 채널 확대로 D2C 매출 증대 전략.</div>
+            <div class="bc-prod">GX 게이밍·워크퍼포먼스 체어 리뉴얼</div>
+            <div class="bc-desc">듀얼-텐션 서포트 이중 구조 메쉬 등판 적용 및 헤드레스트 높이 조절 기능 추가. 기존 GX 부품 호환 업그레이드 가능. 게이밍·홈오피스 겸용으로 MZ세대 D2C 채널 공략.</div>
           </div>
           <div class="bc-foot">
             <span class="bc-tag">게이밍·홈오피스·D2C</span>
-            <a class="bc-lnk" href="https://www.sidiz.com" target="_blank">자세히 보기 ↗</a>
+            <a class="bc-lnk" href="https://zdnet.co.kr/view/?no=20260427133243" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
@@ -809,16 +932,16 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-av" style="background:#1D4ED8">현대리바트</div>
             <div class="bc-head">
               <div class="bc-brand">현대리바트</div>
-              <div class="bc-country">한국 · 2026.02</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
+              <div class="bc-country">한국 · 2026.03</div>
+              <div class="bc-badges"><span class="bdg bdg-a">굿디자인 국무총리상</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">이모션(E-Motion) 높이조절 책상</div>
-            <div class="bc-desc">전동 승강 + 전용 앱 연동. 착석·기립 시간 기록 및 알림. 24가지 목재·색상 조합. 현대백화점 채널 활용 프리미엄 가정용 시장 공략. 기업 납품 라인 병행 운영.</div>
+            <div class="bc-prod">이모션 포레(Emotion Fore) 모션데스크</div>
+            <div class="bc-desc">높이 690~1120mm 전동 승강 + 6° 틸트 다릿발 설계로 높이를 올릴수록 책상이 사용자 쪽으로 기울어 인체공학적 거리 자동 유지. 2025 굿 디자인 어워드 국무총리상(금상) 수상.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">전동승강·앱연동</span>
+            <span class="bc-tag">전동승강·인체공학·수상</span>
             <a class="bc-lnk" href="https://www.hyundailivart.co.kr/p/P200196893" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
@@ -829,21 +952,22 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="bc-head">
               <div class="bc-brand">코아스</div>
               <div class="bc-country">한국 · 2026.01</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
+              <div class="bc-badges"><span class="bdg bdg-n">CES 2026 첫 공개</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">위무브(WiMove) 이동형 워크스테이션</div>
-            <div class="bc-desc">바퀴 달린 독립형 워크스테이션. 전동 승강 + 모니터 암 + 수납 일체형. 공간 재배치 유연성 극대화. 공유 오피스·애자일 조직 타겟. 소형 사무소 납품 강화 계획.</div>
+            <div class="bc-prod">캄스탠드 (Calm Stand)</div>
+            <div class="bc-desc">사무가구 기업 최초 CES 2026 참가작. 내장 카메라로 거북목·피로·스트레스 AI 감지 후 모니터 높이 자동 조절·아로마 분사·테라피 사운드 재생. 엠마헬스와 공동 개발한 AIoT 웰니스 데스크 오브제.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">이동형·공유오피스</span>
-            <a class="bc-lnk" href="https://www.ikoas.com/product/chair" target="_blank">자세히 보기 ↗</a>
+            <span class="bc-tag">AIoT·웰니스</span>
+            <a class="bc-lnk" href="https://www.enetnews.co.kr/news/articleView.html?idxno=45908" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
       </div>
     </div>
+    <!-- /kr-sec -->
 
     <!-- BOTTOM GRID -->
     <div id="trends-sec" class="gbot">
@@ -873,11 +997,11 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
       <div id="insights-sec" class="card">
         <div class="ch" style="background:#FDF9F5;border-bottom:1px solid #EDE8E3"><span class="ct">퍼시스 시사점</span><span class="ca">5개 전략 과제 · 2026.06</span></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">한샘 B2B 오피스 진출 — 직접 경쟁 위협 분석 시급</div><div class="td">한샘이 이머전 시리즈로 중소기업·스타트업 오피스 시장에 첫 진출. 퍼시스의 전통 강세 시장을 직접 위협. B2C 인지도·유통망을 앞세운 가격 경쟁 대응을 위한 B2B 차별화 전략(납기·A/S·공간 컨설팅) 수립 시급.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">소재 친환경 혁신 없이는 글로벌 경쟁력 약화</div><div class="td">Vitra(V Foam 재활용 폼), Flokk(97% 재활용 알루미늄), Okamura(폐어망 메쉬) — 글로벌 브랜드가 재활용 소재를 핵심 스펙으로 내세움. 국내 공공·대기업 입찰에서도 친환경 인증 요건 확산 중. 퍼시스 소재 혁신 로드맵 수립 필요.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">자동 감응형 인체공학 — 차기 의자 개발 방향 검토</div><div class="td">Mynt(Vitra), ingCloud(Kokuyo), SHIGA(Itoki), Insit(Sedus) 4개 제품이 동시에 무조작 자동 체중 감지 지지로 수렴. 패시브 인체공학이 글로벌 표준으로 자리잡는 추세. 퍼시스 차기 의자 로드맵에 반드시 반영 필요.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">게이밍·홈오피스 채널 — 시디즈와 포지셔닝 차별화</div><div class="td">Haworth Halo, 시디즈 GX 등 B2B 브랜드의 소비자 채널 진입 가속화. 퍼시스 홈오피스 진입 시 시디즈와 동일 포지션은 출혈 경쟁 우려. 프리미엄 홈오피스 또는 기업-재택 패키지 계약 등 B2B 연계형 접근 선제 기획 권고.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">단제품에서 공간 솔루션 패키지화 전략으로 전환</div><div class="td">Konzert(Knoll), Madomino(Plus Corp), Spout(Kinnarps) 등 단일 가구 판매에서 공간 솔루션 번들 제안이 글로벌 표준화. 통합 패키지 제안 시 단가 협상력 상승, 재구매율 향상. 제품 라인을 공간 모드(집중·협업·라운지)별 솔루션으로 재편 검토.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">한샘 B2B 오피스 진출 — 직접 경쟁 위협 분석 시급</div><div class="td">한샘이 이머전 시리즈로 중소기업·스타트업 오피스 시장에 첫 진출. 퍼시스의 전통 강세 시장을 직접 위협. B2C 인지도·유통망을 앞세운 가격 경쟁 대응을 위한 B2B 차별화 전략(납기·A/S·공간 컨설팅) 수립 시급.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">소재 친환경 혁신 없이는 글로벌 경쟁력 약화</div><div class="td">Vitra(V Foam 재활용 폼), Flokk(97% 재활용 알루미늄), Okamura(폐어망 메쉬) — 글로벌 브랜드가 재활용 소재를 핵심 스펙으로 내세움. 국내 공공·대기업 입찰에서도 친환경 인증 요건 확산 중. 퍼시스 소재 혁신 로드맵 수립 필요.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">자동 감응형 인체공학 — 차기 의자 개발 방향 검토</div><div class="td">Mynt(Vitra), ingCloud(Kokuyo), SHIGA(Itoki), Insit(Sedus) 4개 제품이 동시에 무조작 자동 체중 감지 지지로 수렴. 패시브 인체공학이 글로벌 표준으로 자리잡는 추세. 퍼시스 차기 의자 로드맵에 반드시 반영 필요.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">게이밍·홈오피스 채널 — 시디즈와 포지셔닝 차별화</div><div class="td">Haworth Halo, 시디즈 GX 등 B2B 브랜드의 소비자 채널 진입 가속화. 퍼시스 홈오피스 진입 시 시디즈와 동일 포지션은 출혈 경쟁 우려. 프리미엄 홈오피스 또는 기업-재택 패키지 계약 등 B2B 연계형 접근 선제 기획 권고.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">단제품에서 공간 솔루션 패키지화 전략으로 전환</div><div class="td">Konzert(Knoll), Madomino(Plus Corp), Spout(Kinnarps) 등 단일 가구 판매에서 공간 솔루션 번들 제안이 글로벌 표준화. 통합 패키지 제안 시 단가 협상력 상승, 재구매율 향상. 제품 라인을 공간 모드(집중·협업·라운지)별 솔루션으로 재편 검토.</div></div></div>
       </div>
     </div>
 
@@ -889,8 +1013,8 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     <!-- filter bar -->
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
       <div>
-        <div style="font-size:16px;font-weight:700;letter-spacing:-.01em">브랜드 디렉토리</div>
-        <div style="font-size:13px;color:var(--t3);margin-top:2px">4개 지역 · 40개 글로벌 브랜드</div>
+        <div style="font-size:17px;font-weight:700;letter-spacing:-.01em">브랜드 디렉토리</div>
+        <div style="font-size:14px;color:var(--t3);margin-top:2px">4개 지역 57개 글로벌 브랜드</div>
       </div>
       <div class="bfilt" id="bfilt">
         <button class="bfbtn on" onclick="bFilter('all',this)">전체</button>
@@ -903,13 +1027,13 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
     <!-- 북미 -->
     <div class="reg-sec" id="bsec-na">
-      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--na)"></div><span class="reg-hd-name">북미 North America</span><span class="reg-hd-count">10개 브랜드</span><div class="reg-hd-line"></div></div>
+      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--na)"></div><span class="reg-hd-name">북미 North America</span><span class="reg-hd-count">16개 브랜드</span><div class="reg-hd-line"></div></div>
       <div class="bdc-grid" id="bgrid-na"></div>
     </div>
 
     <!-- 유럽 -->
     <div class="reg-sec" id="bsec-eu">
-      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--eu)"></div><span class="reg-hd-name">유럽 Europe</span><span class="reg-hd-count">10개 브랜드</span><div class="reg-hd-line"></div></div>
+      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--eu)"></div><span class="reg-hd-name">유럽 Europe</span><span class="reg-hd-count">21개 브랜드</span><div class="reg-hd-line"></div></div>
       <div class="bdc-grid" id="bgrid-eu"></div>
     </div>
 
@@ -933,6 +1057,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 </div><!-- end main -->
 </div><!-- end app -->
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 (function(){
   var c=document.getElementById('gc');
@@ -987,6 +1112,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     var dash=document.getElementById('view-dash');
     var brands=document.getElementById('view-brands');
     var navD=document.getElementById('nav-dash');
+    var navR=document.getElementById('nav-report');
     var navB=document.getElementById('nav-brands');
     var tbT=document.querySelector('.tb-t');
     var tbS=document.querySelector('.tb-s');
@@ -994,17 +1120,19 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       dash.style.display='none';
       brands.style.display='';
       navD.classList.remove('on');
+      navR.classList.remove('on');
       navB.classList.add('on');
       tbT.textContent='브랜드 디렉토리';
-      tbS.textContent='4개 지역 40개 글로벌 브랜드 모니터링';
+      tbS.textContent='4개 지역 57개 글로벌 브랜드 모니터링';
       if(!brandsRendered){renderBrands();brandsRendered=true;}
     } else {
       brands.style.display='none';
       dash.style.display='';
       navD.classList.add('on');
+      navR.classList.add('on');
       navB.classList.remove('on');
       tbT.textContent='글로벌 신제품 리포트';
-      tbS.textContent='2026년 6월 수집 · 4개 지역 40개 브랜드 모니터링';
+      tbS.textContent='2026년 6월 수집 · 4개 지역 57개 브랜드 모니터링';
     }
   };
 
@@ -1018,6 +1146,79 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   };
 
   // Brand logo marks
+  // 로고 이미지 파일 매핑 (logos/ 폴더에 파일 추가 시 여기에 등록)
+  var LOGOS={
+    'Steelcase':              '../logos/steelcase.png',
+    'Herman Miller':          '../logos/hermanmiller.png',
+    'Haworth':                '../logos/haworth.png',
+    'Knoll':                  '../logos/knoll.png',
+    'Teknion':                '../logos/teknion.png',
+    'Humanscale':             '../logos/humanscale.png',
+    'Kimball':                '../logos/kimball.png',
+    'Global Furniture Group': '../logos/global.png',
+    'Allsteel':               '../logos/allsteel.png',
+    'HON':                    '../logos/hon.png',
+    'Davis Furniture':        '../logos/davis.png',
+    'Nienkämper':             '../logos/nienkamper.png',
+    'Narbutas':               '../logos/narbutas.png',
+    'Watson':                 '../logos/watson.png',
+    'OFS':                    '../logos/ofs.png',
+    'KI':                     '../logos/ki.png',
+    'Vitra':                  '../logos/vitra.png',
+    'Kinnarps':               '../logos/kinnarps.png',
+    'Wilkhahn':               '../logos/wilkhahn.png',
+    'Bene':                   '../logos/bene.png',
+    'Sedus':                  '../logos/sedus.png',
+    'Senator Group':          '../logos/senator.png',
+    'Hay':                    '../logos/hay.png?v=2',
+    'Orangebox':              '../logos/orangebox.png',
+    'Flokk':                  '../logos/flokk.png',
+    'Arper':                  '../logos/arper.png',
+    'Nowy Styl':              '../logos/nowystyl.png',
+    'Framery':                '../logos/framery.png',
+    'Interstuhl':             '../logos/interstuhl.png?v=2',
+    'Renz':                   '../logos/renz.png',
+    'Walter Knoll':           '../logos/walterknoll.png',
+    'Abstracta':              '../logos/abstracta.png',
+    'Lapalma':                '../logos/lapalma.png',
+    'Muuto':                  '../logos/muuto.png',
+    'Kettal':                 '../logos/kettal.png',
+    'Gumpo':                  '../logos/gumpo.png',
+    'Pedrali':                '../logos/pedrali.png',
+    'Okamura':                '../logos/okamura.png',
+    'Kokuyo':                 '../logos/kokuyo.png',
+    'Itoki':                  '../logos/itoki.png',
+    'Uchida Yoko':            '../logos/uchida.png',
+    'Plus Corporation':       '../logos/plus.png',
+    'Aichi':                  '../logos/aichi.png',
+    'Karimoku':               '../logos/karimoku.png',
+    'Tendo Mokko':            '../logos/tendo.png',
+    'Maruni':                 '../logos/maruni.png',
+    'Askul':                  '../logos/askul.png',
+    '퍼시스':                 '../logos/fursys.png',
+    '현대리바트':             '../logos/livart.png?v=2',
+    '코아스':                 '../logos/koas.png',
+    '한샘':                   '../logos/hanssem.png',
+    '시디즈':                 '../logos/sidiz.png',
+    '데스커':                 '../logos/desker.png',
+    '파트라':                 '../logos/patra.png',
+    '베스툴':                 '../logos/bestuhl.png',
+    '에넥스':                 '../logos/enex.png',
+    '아모스아인스':           '../logos/amosains.png',
+  };
+
+  // 주목 신제품 대표 이미지 (products/ 폴더에 파일 추가 시 여기에 등록)
+  var PRODUCTS={
+    'bc-ko': '../products/prod-ko.jpg',
+    'bc-hm': '../products/prod-hm.jpg',
+    'bc-ok': '../products/prod-ok.webp',
+    'bc-vi': '../products/prod-vi.jpg',
+    'bc-kn': '../products/prod-kn.jpg',
+    'bc-hs': '../products/prod-hs.jpg',
+    'bc-it': '../products/prod-it.jpg',
+    'bc-sc': '../products/prod-sc.jpg',
+    'bc-fl': '../products/prod-fl.jpg',
+  };
   (function(){
     var L={
       'Herman Miller': {bg:'#D35F23',lines:['herman','miller']},
@@ -1045,28 +1246,65 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     };
     function mk(lg){
       var c=lg.color||'#fff';
-      var p='<rect width="34" height="34" fill="'+lg.bg+'"/>';
+      var p='<rect width="44" height="44" fill="'+lg.bg+'"/>';
       if(lg.dots){
-        p+='<circle cx="25" cy="7" r="2.8" fill="white" opacity="0.7"/>';
-        p+='<circle cx="29" cy="14" r="2" fill="white" opacity="0.45"/>';
+        p+='<circle cx="32" cy="9" r="3.6" fill="white" opacity="0.7"/>';
+        p+='<circle cx="37" cy="18" r="2.6" fill="white" opacity="0.45"/>';
       }
       if(lg.lines){
-        p+='<text x="17" y="12.5" text-anchor="middle" dominant-baseline="central" fill="'+c+'" font-size="7.5" font-weight="300" font-family="Arial,sans-serif" letter-spacing="0.4">'+lg.lines[0]+'</text>';
-        p+='<text x="17" y="21.5" text-anchor="middle" dominant-baseline="central" fill="'+c+'" font-size="7.5" font-weight="300" font-family="Arial,sans-serif" letter-spacing="0.4">'+lg.lines[1]+'</text>';
+        p+='<text x="22" y="16" text-anchor="middle" dominant-baseline="central" fill="'+c+'" font-size="9.5" font-weight="300" font-family="Arial,sans-serif" letter-spacing="0.4">'+lg.lines[0]+'</text>';
+        p+='<text x="22" y="28" text-anchor="middle" dominant-baseline="central" fill="'+c+'" font-size="9.5" font-weight="300" font-family="Arial,sans-serif" letter-spacing="0.4">'+lg.lines[1]+'</text>';
       } else {
-        p+='<text x="17" y="17" text-anchor="middle" dominant-baseline="central" fill="'+c+'" font-size="'+lg.fs+'" font-weight="'+lg.fw+'" font-family="Arial,sans-serif" letter-spacing="'+lg.ls+'">'+lg.mark+'</text>';
+        p+='<text x="22" y="22" text-anchor="middle" dominant-baseline="central" fill="'+c+'" font-size="'+lg.fs+'" font-weight="'+lg.fw+'" font-family="Arial,sans-serif" letter-spacing="'+lg.ls+'">'+lg.mark+'</text>';
       }
-      return '<svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">'+p+'</svg>';
+      return '<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">'+p+'</svg>';
     }
+    // 주목 신제품 리스트 아바타
+    document.querySelectorAll('.pav').forEach(function(el){
+      var pi=el.closest('.pi');
+      if(!pi)return;
+      var pb=pi.querySelector('.pb');
+      if(!pb)return;
+      var brand=pb.textContent.split('·')[0].trim();
+      if(!LOGOS[brand])return;
+      el.style.background='#fff';
+      el.style.border='1px solid #E8E4DF';
+      el.style.borderRadius='9px';
+      el.style.padding='3px';
+      el.innerHTML='<img src="'+LOGOS[brand]+'" style="width:100%;height:100%;object-fit:contain;display:block">';
+    });
+
     document.querySelectorAll('.bc-av').forEach(function(el){
       var top=el.closest('.bc-top');
       if(!top)return;
       var nm=top.querySelector('.bc-brand');
       if(!nm)return;
-      var lg=L[nm.textContent.trim()];
+      var name=nm.textContent.trim();
+      if(LOGOS[name]){
+        el.style.background='#fff';
+        el.style.border='1px solid #E8E4DF';
+        el.style.padding='2px';
+        el.innerHTML='<img src="'+LOGOS[name]+'" style="width:100%;height:100%;object-fit:contain;display:block">';
+        return;
+      }
+      var lg=L[name];
       if(!lg)return;
       el.style.background=lg.bg;
       el.innerHTML=mk(lg);
+    });
+
+    // 주목 신제품 대표 이미지 삽입
+    document.querySelectorAll('.pi[onclick]').forEach(function(el){
+      var m=el.getAttribute('onclick').match(/'(bc-[^']+)'/);
+      if(!m)return;
+      var pid=m[1];
+      if(!PRODUCTS[pid])return;
+      var d=document.createElement('div');
+      d.className='pi-img';
+      d.innerHTML='<img src="'+PRODUCTS[pid]+'" alt="" loading="lazy" onerror="this.parentNode.style.display=\'none\'">';
+      var pa=el.querySelector('.pacts');
+      if(pa)el.insertBefore(d,pa);
+      else el.appendChild(d);
     });
   })();
 
@@ -1079,11 +1317,17 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       {n:'Haworth',      c:'미국',    cat:'오피스 솔루션',          url:'https://www.haworth.com',                bg:'#007A4D',mark:'H',  fs:20,fw:'700'},
       {n:'Knoll',        c:'미국',    cat:'모더니즘·시스템가구',    url:'https://www.knoll.com',                  bg:'#111111',mark:'K',  fs:20,fw:'700'},
       {n:'Teknion',      c:'캐나다',  cat:'워크플레이스 시스템',    url:'https://www.teknion.com',                bg:'#003A5D',mark:'T',  fs:20,fw:'700'},
-      {n:'Allsteel',     c:'미국',    cat:'오피스 시팅',            url:'https://www.allsteel.com',               bg:'#2E4057',mark:'AS', fs:14,fw:'700'},
+      {n:'Allsteel',     c:'미국',    cat:'오피스 시팅',            url:'https://www.allsteeloffice.com',         bg:'#2E4057',mark:'AS', fs:14,fw:'700'},
       {n:'Humanscale',   c:'미국',    cat:'인체공학·승강데스크',    url:'https://www.humanscale.com',             bg:'#2D2D2D',mark:'HS', fs:14,fw:'600'},
       {n:'HON',          c:'미국',    cat:'중가형 오피스가구',       url:'https://www.hon.com',                    bg:'#CF4520',mark:'HON',fs:13,fw:'800'},
       {n:'Kimball',      c:'미국',    cat:'계약가구·헬스케어',      url:'https://www.kimball.com',                bg:'#4A1942',mark:'K',  fs:20,fw:'700'},
       {n:'Global Furniture Group',c:'캐나다',cat:'종합 오피스가구',url:'https://www.globalfurnituregroup.com',   bg:'#1A4731',mark:'G',  fs:20,fw:'700'},
+      {n:'Watson',               c:'미국',    cat:'협업·벤칭 시스템',      url:'https://www.watsonfurniture.com',        bg:'#005B8E',mark:'W',  fs:18,fw:'700'},
+      {n:'Davis Furniture',      c:'미국',    cat:'시팅·라운지',            url:'https://www.davisfurniture.com',         bg:'#8B1A1A',mark:'DF', fs:13,fw:'700'},
+      {n:'OFS',                  c:'미국',    cat:'오피스 시스템·시팅',    url:'https://www.ofs.com',                    bg:'#1C1C1C',mark:'OFS',fs:12,fw:'700'},
+      {n:'KI',                   c:'미국',    cat:'교육·의료·오피스가구',  url:'https://www.ki.com',                     bg:'#006341',mark:'KI', fs:16,fw:'800'},
+      {n:'Nienkämper',           c:'캐나다',  cat:'프리미엄 오피스가구',   url:'https://www.nienkamper.com',             bg:'#1A1A2E',mark:'NK', fs:13,fw:'700'},
+      {n:'Narbutas',             c:'리투아니아',cat:'시스템·어쿠스틱가구', url:'https://www.narbutas.com',               bg:'#2D6A4F',mark:'NB', fs:13,fw:'700'},
     ],
     eu:[
       {n:'Vitra',         c:'스위스',    cat:'디자인·워크체어',      url:'https://www.vitra.com',           bg:'#CC0000',mark:'V',  fs:20,fw:'300',dots:true},
@@ -1091,19 +1335,30 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       {n:'Wilkhahn',      c:'독일',      cat:'회의·인체공학',        url:'https://www.wilkhahn.com',        bg:'#1D3557',mark:'W',  fs:18,fw:'700'},
       {n:'Bene',          c:'오스트리아',cat:'오피스 시스템',         url:'https://www.bene.com',            bg:'#1C2541',mark:'B',  fs:20,fw:'700'},
       {n:'Sedus',         c:'독일',      cat:'인체공학 워크체어',    url:'https://www.sedus.com',           bg:'#1F3245',mark:'S',  fs:20,fw:'700'},
-      {n:'Senator Group', c:'영국',      cat:'계약가구·회의',        url:'https://www.senatorgroup.com',    bg:'#2D3561',mark:'SG', fs:14,fw:'700'},
+      {n:'Senator Group', c:'영국',      cat:'계약가구·회의',        url:'https://www.thesenatorgroup.com/',    bg:'#2D3561',mark:'SG', fs:14,fw:'700'},
       {n:'Hay',           c:'덴마크',    cat:'라이프스타일·계약',    url:'https://www.hay.com',             bg:'#FFD600',color:'#111',mark:'HAY',fs:13,fw:'900'},
       {n:'Orangebox',     c:'영국',      cat:'협업·라운지',          url:'https://www.orangebox.com',       bg:'#E35205',mark:'O',  fs:20,fw:'700'},
       {n:'Flokk',         c:'노르웨이',  cat:'지속가능·인체공학',    url:'https://www.flokk.com',           bg:'#004A3F',mark:'F',  fs:20,fw:'700'},
       {n:'Arper',         c:'이탈리아',  cat:'라운지·계약가구',      url:'https://www.arper.com',           bg:'#8B6914',mark:'A',  fs:20,fw:'700'},
+      {n:'Nowy Styl',     c:'폴란드',    cat:'종합 오피스가구',       url:'https://www.nowystyl.com',        bg:'#003366',mark:'NS', fs:14,fw:'700'},
+      {n:'Framery',       c:'핀란드',    cat:'어쿠스틱 부스·포드',   url:'https://www.frameryacoustics.com',bg:'#007F6E',mark:'F',  fs:20,fw:'700'},
+      {n:'Interstuhl',    c:'독일',      cat:'인체공학 워크체어',    url:'https://www.interstuhl.com',      bg:'#003057',mark:'I',  fs:20,fw:'700'},
+      {n:'Renz',          c:'독일',      cat:'오피스 액세서리·리셉션',url:'https://www.renz.de',            bg:'#2C2C2C',mark:'R',  fs:20,fw:'700'},
+      {n:'Walter Knoll',  c:'독일',      cat:'프리미엄 라운지·경영층',url:'https://www.walterknoll.de',     bg:'#111111',mark:'WK', fs:14,fw:'700'},
+      {n:'Abstracta',     c:'스웨덴',    cat:'어쿠스틱·스크린',      url:'https://www.abstracta.se',        bg:'#4A4A4A',mark:'AB', fs:14,fw:'700'},
+      {n:'Lapalma',       c:'이탈리아',  cat:'이탈리안 디자인가구',  url:'https://www.lapalma.it',          bg:'#3D3028',mark:'L',  fs:20,fw:'700'},
+      {n:'Muuto',         c:'덴마크',    cat:'스칸디나비안 디자인',  url:'https://www.muuto.com',           bg:'#4A3728',mark:'M',  fs:20,fw:'700'},
+      {n:'Kettal',        c:'스페인',    cat:'야외·컨트랙트가구',    url:'https://www.kettal.com',          bg:'#8B4513',mark:'K',  fs:20,fw:'700'},
+      {n:'Gumpo',         c:'독일',      cat:'오피스 시스템',         url:'https://www.gumpo.de',            bg:'#1A4020',mark:'G',  fs:20,fw:'700'},
+      {n:'Pedrali',       c:'이탈리아',  cat:'이탈리안 컨트랙트가구',url:'https://www.pedrali.com',         bg:'#C41E3A',mark:'P',  fs:20,fw:'700'},
     ],
     jp:[
       {n:'Okamura',       c:'일본',cat:'워크체어·스마트오피스', url:'https://www.okamura.com',       bg:'#003F7F',mark:'O', fs:20,fw:'700'},
       {n:'Kokuyo',        c:'일본',cat:'IoT·스마트오피스',      url:'https://www.kokuyo.com',        bg:'#00316B',mark:'K', fs:20,fw:'700'},
-      {n:'Itoki',         c:'일본',cat:'워크체어·오피스시스템', url:'https://www.itoki.co.jp',       bg:'#006DB6',mark:'i', fs:22,fw:'700'},
+      {n:'Itoki',         c:'일본',cat:'워크체어·오피스시스템', url:'https://www.itoki.jp/',       bg:'#006DB6',mark:'i', fs:22,fw:'700'},
       {n:'Uchida Yoko',   c:'일본',cat:'오피스 시스템',         url:'https://www.uchida.co.jp',      bg:'#1B3A6B',mark:'U', fs:20,fw:'700'},
       {n:'Plus Corporation',c:'일본',cat:'오피스·문구가구',     url:'https://www.plus.co.jp',        bg:'#3D2A10',mark:'+', fs:22,fw:'700'},
-      {n:'Aichi',         c:'일본',cat:'워크체어 전문',         url:'https://www.aichi-net.co.jp',   bg:'#B22222',mark:'A', fs:20,fw:'700'},
+      {n:'Aichi',         c:'일본',cat:'워크체어 전문',         url:'https://axona-aichi.com/en/',   bg:'#B22222',mark:'A', fs:20,fw:'700'},
       {n:'Karimoku',      c:'일본',cat:'목공·프리미엄 가구',    url:'https://www.karimoku.com',      bg:'#5C3317',mark:'K', fs:20,fw:'700'},
       {n:'Tendo Mokko',   c:'일본',cat:'전통 목공예 가구',      url:'https://www.tendo-mokko.co.jp', bg:'#3D2B1F',mark:'T', fs:20,fw:'700'},
       {n:'Maruni',        c:'일본',cat:'목재 컨트랙트가구',     url:'https://www.maruni.com',        bg:'#1A1A1A',mark:'M', fs:20,fw:'700'},
@@ -1116,15 +1371,16 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       {n:'한샘',       c:'한국',cat:'홈퍼니싱·B2B 오피스', url:'https://www.hanssem.com',           bg:'#C8001E',mark:'한샘', fs:13,fw:'700'},
       {n:'시디즈',     c:'한국',cat:'인체공학 워크체어',    url:'https://www.sidiz.com',             bg:'#0D7377',mark:'시디즈',fs:10,fw:'700'},
       {n:'데스커',     c:'한국',cat:'1인 오피스·홈오피스',  url:'https://www.desker.co.kr',          bg:'#374151',mark:'D',   fs:20,fw:'700'},
-      {n:'파트라',     c:'한국',cat:'홈오피스 솔루션',      url:'https://www.patra.co.kr',           bg:'#92400E',mark:'P',   fs:20,fw:'700'},
+      {n:'파트라',     c:'한국',cat:'홈오피스 솔루션',      url:'https://patrakorea.com/',           bg:'#92400E',mark:'P',   fs:20,fw:'700'},
       {n:'베스툴',     c:'한국',cat:'인체공학 의자',        url:'https://www.bestuhl.co.kr',         bg:'#1E40AF',mark:'B',   fs:20,fw:'700'},
       {n:'에넥스',     c:'한국',cat:'주방·오피스가구',      url:'https://www.enex.co.kr',            bg:'#047857',mark:'E',   fs:20,fw:'700'},
-      {n:'동연디자인', c:'한국',cat:'공간 디자인가구',      url:'https://www.dongyeon.co.kr',        bg:'#6D28D9',mark:'D',   fs:20,fw:'700'},
+      {n:'아모스아인스',c:'한국',cat:'사무환경 토탈 솔루션', url:'https://www.amosains.com',             bg:'#0F3460',mark:'A',   fs:20,fw:'700'},
     ]
   };
   function mkBLogo(b){
     var s=40,c=b.color||'#fff';
-    if(b.fursys)return '<div class="bdc-av2" style="background:#fff;border:1px solid #E8E4DF;padding:5px"><img src="data:image/png;base64,'+FURSYS_B64+'" style="height:14px;mix-blend-mode:multiply" alt="FURSYS"></div>';
+    if(LOGOS[b.n])return '<div class="bdc-av2" style="background:#fff;border:1px solid #E8E4DF;padding:2px"><img src="'+LOGOS[b.n]+'" style="width:100%;height:100%;object-fit:contain;display:block"></div>';
+    if(b.fursys)return '<div class="bdc-av2" style="background:#fff;border:1px solid #E8E4DF;padding:3px"><img src="data:image/png;base64,'+FURSYS_B64+'" style="height:16px;mix-blend-mode:multiply" alt="FURSYS"></div>';
     var p='<rect width="'+s+'" height="'+s+'" fill="'+b.bg+'"/>';
     if(b.dots){p+='<circle cx="29" cy="8" r="3.2" fill="white" opacity="0.7"/><circle cx="34" cy="15" r="2.4" fill="white" opacity="0.45"/>';}
     if(b.lines){
@@ -1151,4 +1407,344 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     });
   }
 })();
+
+// 라이트박스
+(function(){
+  var lb=document.createElement('div');
+  lb.id='lbox';
+  var img=document.createElement('img');
+  lb.appendChild(img);
+  document.body.appendChild(lb);
+
+  function open(src){
+    img.src=src;
+    lb.classList.add('on');
+  }
+  function close(){
+    lb.classList.remove('on');
+    img.src='';
+  }
+
+  // .pi-img 각각에 직접 리스너 — stopPropagation으로 부모 onclick 차단
+  document.querySelectorAll('.pi-img').forEach(function(el){
+    el.addEventListener('click',function(e){
+      e.stopPropagation();
+      var i=el.querySelector('img');
+      if(i)open(i.src);
+    });
+  });
+  // 이후 동적으로 추가되는 .pi-img 대응 (MutationObserver)
+  new MutationObserver(function(muts){
+    muts.forEach(function(mut){
+      mut.addedNodes.forEach(function(node){
+        if(node.nodeType!==1)return;
+        var els=node.classList&&node.classList.contains('pi-img')?[node]:node.querySelectorAll('.pi-img');
+        els.forEach(function(el){
+          el.addEventListener('click',function(e){
+            e.stopPropagation();
+            var i=el.querySelector('img');
+            if(i)open(i.src);
+          });
+        });
+      });
+    });
+  }).observe(document.body,{childList:true,subtree:true});
+
+  document.addEventListener('click',function(e){
+    if(lb.classList.contains('on'))close();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')close();
+  });
+})();
+
+// ── 게시판 (Supabase + 로그인) ──────────────────────────
+(function(){
+  var CFG = {
+    url:     'https://khcfqgaiucggrlhtlivn.supabase.co',
+    key:     'sb_publishable_c8IQPyeyZIZB3VrcBWCoIw_Iqs4pwUJ',
+    adminPw: 'fursys2026'
+  };
+
+  var sbClient = null;
+  var isAdmin = false;
+  var currentUser = null;
+
+  function getSB(){
+    if(!sbClient){
+      try{ sbClient = window.supabase.createClient(CFG.url, CFG.key); }
+      catch(e){ alert('Supabase를 불러오지 못했습니다.'); return null; }
+    }
+    return sbClient;
+  }
+
+  function initUser(){
+    try{ currentUser = JSON.parse(localStorage.getItem('fursys_user')||'null'); }catch(e){ currentUser=null; }
+  }
+
+  function showLoginView(){
+    document.getElementById('bd-login').style.display = '';
+    document.getElementById('bd-main').style.display = 'none';
+    document.getElementById('bd-adm').style.display = 'none';
+    document.getElementById('bd-user-info').style.display = 'none';
+    document.getElementById('bd-adm-btn').style.display = 'none';
+  }
+
+  function showMainView(){
+    isAdmin = false;
+    document.getElementById('bd-login').style.display = 'none';
+    document.getElementById('bd-main').style.display = 'flex';
+    document.getElementById('bd-adm').style.display = 'none';
+    document.getElementById('bd-user-info').style.display = '';
+    document.getElementById('bd-adm-btn').style.display = '';
+    document.getElementById('bd-adm-btn').textContent = '🔐 관리자';
+    var label = currentUser.name + (currentUser.dept ? ' · '+currentUser.dept : '');
+    document.getElementById('bd-user-label').textContent = label;
+    showTab('write');
+  }
+
+  window.showBoard = function(){
+    initUser();
+    document.getElementById('bd-overlay').classList.add('open');
+    if(!currentUser){ showLoginView(); }
+    else { showMainView(); loadMyPosts(); }
+  };
+
+  window.closeBoard = function(){
+    document.getElementById('bd-overlay').classList.remove('open');
+  };
+
+  window.bdLogin = function(){
+    var name = document.getElementById('bd-login-name').value.trim();
+    var dept = document.getElementById('bd-login-dept').value.trim();
+    if(!name){ alert('이름을 입력해 주세요.'); return; }
+    currentUser = {name:name, dept:dept};
+    localStorage.setItem('fursys_user', JSON.stringify(currentUser));
+    showMainView();
+    loadMyPosts();
+  };
+
+  window.bdLogout = function(){
+    currentUser = null;
+    localStorage.removeItem('fursys_user');
+    isAdmin = false;
+    showLoginView();
+    document.getElementById('bd-login-name').value = '';
+    document.getElementById('bd-login-dept').value = '';
+  };
+
+  window.showTab = function(tab){
+    document.querySelectorAll('.bd-tab').forEach(function(t){ t.classList.remove('on'); });
+    document.querySelector('.bd-tab[data-tab="'+tab+'"]').classList.add('on');
+    document.getElementById('bd-write-sec').style.display = tab==='write' ? '' : 'none';
+    document.getElementById('bd-mine-sec').style.display = tab==='mine' ? '' : 'none';
+    if(tab==='mine') loadMyPosts();
+  };
+
+  window.toggleAdmin = function(){
+    if(isAdmin){
+      isAdmin = false;
+      document.getElementById('bd-main').style.display = 'flex';
+      document.getElementById('bd-adm').style.display = 'none';
+      document.getElementById('bd-adm-btn').textContent = '🔐 관리자';
+      return;
+    }
+    var pw = prompt('관리자 비밀번호:');
+    if(pw !== CFG.adminPw){ if(pw !== null) alert('비밀번호가 틀렸습니다.'); return; }
+    isAdmin = true;
+    document.getElementById('bd-main').style.display = 'none';
+    document.getElementById('bd-adm').style.display = '';
+    document.getElementById('bd-adm-btn').textContent = '📝 일반화면';
+    document.getElementById('bd-filter').value = 'all';
+    document.querySelectorAll('.bd-flt').forEach(function(b){ b.classList.remove('on'); });
+    document.querySelector('.bd-flt[data-v="all"]').classList.add('on');
+    loadAdminPosts();
+  };
+
+  window.submitPost = async function(){
+    var cat = document.getElementById('bd-cat').value;
+    var title = document.getElementById('bd-title').value.trim();
+    var content = document.getElementById('bd-content').value.trim();
+    if(!title){ alert('제목을 입력해 주세요.'); return; }
+    var sb = getSB(); if(!sb) return;
+    var btn = document.querySelector('.bd-sub');
+    btn.disabled = true; btn.textContent = '접수 중...';
+    try{
+      var res = await sb.from('board_posts').insert({
+        category:cat, title:title, content:content, status:'wait',
+        author:currentUser.name, dept:currentUser.dept||''
+      });
+      if(res.error) throw res.error;
+      document.getElementById('bd-title').value = '';
+      document.getElementById('bd-content').value = '';
+      var ok = document.getElementById('bd-ok');
+      ok.style.display = '';
+      setTimeout(function(){ ok.style.display='none'; showTab('mine'); }, 1500);
+    } catch(e){ alert('오류: '+e.message); }
+    btn.disabled = false; btn.textContent = '접수하기';
+  };
+
+  async function loadMyPosts(){
+    var list = document.getElementById('bd-mine-list');
+    var badge = document.getElementById('bd-mine-cnt');
+    list.innerHTML = '<div class="bd-empty">불러오는 중...</div>';
+    var sb = getSB(); if(!sb) return;
+    try{
+      var res = await sb.from('board_posts').select('*')
+        .eq('author', currentUser.name).order('created_at',{ascending:false});
+      if(res.error) throw res.error;
+      var data = res.data;
+      badge.textContent = data.length || '';
+      if(!data.length){ list.innerHTML = '<div class="bd-empty">접수한 항목이 없습니다.</div>'; return; }
+      list.innerHTML = data.map(function(p){
+        var dt = new Date(p.created_at);
+        var ds = dt.getFullYear()+'.'+(dt.getMonth()+1).toString().padStart(2,'0')+'.'+dt.getDate().toString().padStart(2,'0')+' '+dt.getHours().toString().padStart(2,'0')+':'+dt.getMinutes().toString().padStart(2,'0');
+        return '<div class="bd-item" onclick="this.classList.toggle(\'open\')">'+
+          '<div class="bd-item-top">'+
+          '<span class="bd-cat '+catClass(p.category)+'">'+catLabel(p.category)+'</span>'+
+          '<span class="bd-item-title">'+escHtml(p.title)+'</span>'+
+          '<span class="bd-st '+stClass(p.status)+'" style="cursor:default">'+stLabel(p.status)+'</span>'+
+          '</div>'+
+          '<div class="bd-item-meta">'+ds+'</div>'+
+          (p.content?'<div class="bd-item-body">'+escHtml(p.content)+'</div>':'')+
+          '</div>';
+      }).join('');
+    } catch(e){ list.innerHTML = '<div class="bd-empty">오류: '+escHtml(e.message)+'</div>'; }
+  }
+
+  window.changeStatus = async function(e, id, cur){
+    e.stopPropagation();
+    var sb = getSB(); if(!sb) return;
+    var order = ['wait','prog','done'];
+    var next = order[(order.indexOf(cur)+1) % 3];
+    await sb.from('board_posts').update({status:next}).eq('id', id);
+    loadAdminPosts();
+  };
+
+  window.deletePost = async function(e, id){
+    e.stopPropagation();
+    if(!confirm('삭제하시겠습니까?')) return;
+    var sb = getSB(); if(!sb) return;
+    await sb.from('board_posts').delete().eq('id', id);
+    loadAdminPosts();
+  };
+
+  window.filterPosts = function(val, el){
+    document.querySelectorAll('.bd-flt').forEach(function(b){ b.classList.remove('on'); });
+    el.classList.add('on');
+    document.getElementById('bd-filter').value = val;
+    loadAdminPosts();
+  };
+
+  window.togglePost = function(id){
+    var el = document.getElementById('bdi-'+id);
+    if(el) el.classList.toggle('open');
+  };
+
+  async function loadAdminPosts(){
+    var list = document.getElementById('bd-adm-list');
+    var cnt = document.getElementById('bd-adm-cnt');
+    list.innerHTML = '<div class="bd-empty">불러오는 중...</div>';
+    var sb = getSB(); if(!sb) return;
+    try{
+      var filter = document.getElementById('bd-filter').value;
+      var q = sb.from('board_posts').select('*').order('created_at',{ascending:false});
+      if(filter !== 'all') q = q.eq('status', filter);
+      var res = await q;
+      if(res.error) throw res.error;
+      var data = res.data;
+      cnt.textContent = data.length+'건';
+      if(!data.length){ list.innerHTML = '<div class="bd-empty">접수된 항목이 없습니다.</div>'; return; }
+      list.innerHTML = data.map(function(p){
+        var dt = new Date(p.created_at);
+        var ds = dt.getFullYear()+'.'+(dt.getMonth()+1).toString().padStart(2,'0')+'.'+dt.getDate().toString().padStart(2,'0')+' '+dt.getHours().toString().padStart(2,'0')+':'+dt.getMinutes().toString().padStart(2,'0');
+        var auth = escHtml(p.author+(p.dept?' · '+p.dept:''));
+        return '<div class="bd-item" id="bdi-'+p.id+'" onclick="togglePost('+p.id+')">'+
+          '<div class="bd-item-top">'+
+          '<span class="bd-cat '+catClass(p.category)+'">'+catLabel(p.category)+'</span>'+
+          '<span class="bd-item-title">'+escHtml(p.title)+'</span>'+
+          '<span class="bd-author">'+auth+'</span>'+
+          '<button class="bd-st '+stClass(p.status)+'" onclick="changeStatus(event,'+p.id+',\''+p.status+'\')">'+stLabel(p.status)+'</button>'+
+          '<button class="bd-del" onclick="deletePost(event,'+p.id+')">✕</button>'+
+          '</div>'+
+          '<div class="bd-item-meta">'+ds+'</div>'+
+          (p.content?'<div class="bd-item-body">'+escHtml(p.content)+'</div>':'')+
+          '</div>';
+      }).join('');
+    } catch(e){ list.innerHTML = '<div class="bd-empty">오류: '+escHtml(e.message)+'</div>'; }
+  }
+
+  function stClass(s){ return s==='wait'?'wait':s==='prog'?'prog':'done'; }
+  function stLabel(s){ return s==='wait'?'대기중':s==='prog'?'처리중':'완료'; }
+  function catClass(c){ return c==='bug'?'bug':c==='imp'?'imp':'etc'; }
+  function catLabel(c){ return c==='bug'?'🐛 오류':c==='imp'?'💡 개선요청':'📝 기타'; }
+  function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeBoard(); });
+})();
 </script>
+
+<!-- 게시판 모달 -->
+<div class="bd-overlay" id="bd-overlay" onclick="if(event.target===this)closeBoard()">
+  <div class="bd-modal">
+    <div class="bd-head">
+      <div>
+        <h2>📋 오류개선 및 요청사항</h2>
+        <div id="bd-user-info" style="display:none;margin-top:5px">
+          <span id="bd-user-label" class="bd-user-label"></span>
+          <button onclick="bdLogout()" class="bd-logout-btn">로그아웃</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-start">
+        <button class="bd-admin-btn" id="bd-adm-btn" onclick="toggleAdmin()" style="display:none">🔐 관리자</button>
+        <button class="bd-close" onclick="closeBoard()">✕</button>
+      </div>
+    </div>
+    <!-- 로그인 뷰 -->
+    <div id="bd-login" class="bd-body">
+      <div class="bd-write">
+        <div class="bd-write-title">👤 이름을 입력해 주세요</div>
+        <input class="bd-inp" id="bd-login-name" type="text" placeholder="이름" style="margin-bottom:10px" onkeydown="if(event.key==='Enter')bdLogin()">
+        <input class="bd-inp" id="bd-login-dept" type="text" placeholder="부서 / 팀 (선택)" onkeydown="if(event.key==='Enter')bdLogin()">
+        <button class="bd-sub" style="margin-top:10px" onclick="bdLogin()">확인</button>
+      </div>
+    </div>
+    <!-- 일반 사용자 뷰 -->
+    <div id="bd-main" style="display:none;flex:1;overflow:hidden;flex-direction:column">
+      <div class="bd-tabs">
+        <button class="bd-tab on" data-tab="write" onclick="showTab('write')">✏️ 접수하기</button>
+        <button class="bd-tab" data-tab="mine" onclick="showTab('mine')">📋 내 요청 <span id="bd-mine-cnt" class="bd-cnt-badge"></span></button>
+      </div>
+      <div id="bd-write-sec" class="bd-body">
+        <div class="bd-row">
+          <select class="bd-sel" id="bd-cat">
+            <option value="bug">🐛 오류</option>
+            <option value="imp">💡 개선요청</option>
+            <option value="etc">📝 기타</option>
+          </select>
+          <input class="bd-inp" id="bd-title" type="text" placeholder="제목을 입력하세요">
+        </div>
+        <textarea class="bd-inp bd-ta" id="bd-content" placeholder="내용을 입력하세요 (선택)"></textarea>
+        <button class="bd-sub" onclick="submitPost()">접수하기</button>
+        <div id="bd-ok" style="display:none;margin-top:10px;text-align:center;color:#059669;font-size:14px;font-weight:600">✅ 접수되었습니다!</div>
+      </div>
+      <div id="bd-mine-sec" class="bd-body" style="display:none">
+        <div id="bd-mine-list"></div>
+      </div>
+    </div>
+    <!-- 관리자 뷰 -->
+    <div id="bd-adm" class="bd-body" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div style="display:flex;gap:6px">
+          <button class="bd-flt on" data-v="all" onclick="filterPosts('all',this)">전체</button>
+          <button class="bd-flt" data-v="wait" onclick="filterPosts('wait',this)">대기중</button>
+          <button class="bd-flt" data-v="prog" onclick="filterPosts('prog',this)">처리중</button>
+          <button class="bd-flt" data-v="done" onclick="filterPosts('done',this)">완료</button>
+        </div>
+        <span class="bd-cnt" id="bd-adm-cnt">0건</span>
+      </div>
+      <input type="hidden" id="bd-filter" value="all">
+      <div id="bd-adm-list"></div>
+    </div>
+  </div>
+</div>

@@ -74,6 +74,12 @@ else:
 
     # ── 상대 경로 수정 ────────────────────────────────────
     html = html.replace('href="archive.html"', 'href="../archive.html"')
+    # logos/ → ../logos/  (하드코딩 src 및 LOGOS JS 맵)
+    html = html.replace('src="logos/', 'src="../logos/')
+    html = html.replace("'logos/", "'../logos/")
+    # products/ → ../products/  (PRODUCTS JS 맵 및 src 속성)
+    html = html.replace('src="products/', 'src="../products/')
+    html = html.replace("'products/", "'../products/")
 
     # ── 파일 저장 ─────────────────────────────────────────
     with open(dest, "w", encoding="utf-8") as f:
