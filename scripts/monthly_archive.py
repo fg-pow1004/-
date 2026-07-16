@@ -123,8 +123,53 @@ if card_pattern.search(arch):
 else:
     print(f"[WARN] archive.html 에서 {yearmonth} 카드를 찾지 못했습니다")
 
+# ── 탭 버튼 done 상태로 업데이트 ────────────────────────
+# <button class="arc-tab" data-m="YYYY-MM" ...> → class에 done 추가
+tab_btn_pattern = re.compile(
+    rf'(<button class="arc-tab)(" data-m="{re.escape(yearmonth)}")',
+    re.MULTILINE
+)
+if tab_btn_pattern.search(arch):
+    arch = tab_btn_pattern.sub(
+        rf'\1 done\2',
+        arch, count=1
+    )
+    print(f"[OK] archive.html 탭 버튼 done 처리: {label_kr}")
+
+# ── 탭 패널 내용 업데이트 ────────────────────────────────
+# 빈 placeholder → 리포트 링크 카드로 교체
+month_en = date(year, month, 1).strftime("%B")
+NEW_PANEL_CONTENT = (
+    f'\n      <div class="arc-head">'
+    f'\n        <div class="arc-year-badge">{label_kr} · 완료</div>'
+    f'\n        <h1 class="arc-title">{label_kr} 신제품 리포트</h1>'
+    f'\n        <p class="arc-desc">글로벌 가구 브랜드 신제품 출시 현황 · {label_kr}</p>'
+    f'\n      </div>'
+    f'\n      <a class="mc mc-done" href="reports/{yearmonth}.html" style="text-decoration:none;max-width:300px;width:100%">'
+    f'\n        <div class="mc-month">{month_ko}</div>'
+    f'\n        <div class="mc-label">{month_en} {year}</div>'
+    f'\n        <div class="mc-meta">'
+    f'\n          <span>🌍 4개 지역</span>'
+    f'\n          <span>📦 신제품 수집</span>'
+    f'\n          <span>🏢 글로벌 브랜드</span>'
+    f'\n        </div>'
+    f'\n        <div class="mc-status mc-status-done">리포트 보기 →</div>'
+    f'\n      </a>'
+)
+panel_pattern = re.compile(
+    rf'(<div class="arc-panel" id="tab-{re.escape(yearmonth)}">\s*)'
+    rf'<div class="arc-empty">[\s\S]*?</div>\s*'
+    rf'(</div>)',
+    re.MULTILINE
+)
+if panel_pattern.search(arch):
+    arch = panel_pattern.sub(
+        rf'\g<1>{NEW_PANEL_CONTENT}\n    \g<2>',
+        arch, count=1
+    )
+    print(f"[OK] archive.html 탭 패널 업데이트: {label_kr}")
+
 # ── 사이드바 월 링크 추가 ────────────────────────────────
-# 기존 가장 최근 완료 링크 찾아서 앞에 삽입
 NEW_SIDEBAR_LINK = (
     f'\n    <a class="sbl sbl-sub" href="reports/{yearmonth}.html" '
     f'style="text-decoration:none;color:var(--a);font-weight:600;">'

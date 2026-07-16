@@ -262,11 +262,30 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 </style>
 <style>
 /* ARCHIVE HUB */
-.arc-wrap{flex:1;overflow-y:auto;padding:32px 32px 48px;display:flex;flex-direction:column;align-items:center}
-.arc-head{text-align:center;margin-bottom:36px}
+.arc-wrap{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+/* 월별 탭 바 */
+.arc-tabbar{position:sticky;top:0;background:var(--w);border-bottom:2px solid var(--bd);z-index:10;display:flex;overflow-x:auto;flex-shrink:0;padding:0 24px;scrollbar-width:none}
+.arc-tabbar::-webkit-scrollbar{display:none}
+.arc-tab{padding:14px 20px;font-size:15px;font-weight:600;color:var(--t3);background:none;border:none;border-bottom:2.5px solid transparent;margin-bottom:-2px;cursor:pointer;transition:color .12s,border-color .12s;white-space:nowrap;font-family:inherit;display:flex;align-items:center;gap:6px}
+.arc-tab:hover:not(.on){color:var(--t2)}
+.arc-tab.on{color:var(--a);border-bottom-color:var(--a)}
+.arc-tab.done{color:var(--t)}
+.arc-tab-dot{width:7px;height:7px;border-radius:50%;background:var(--a);flex-shrink:0;opacity:0}
+.arc-tab.done .arc-tab-dot{opacity:1}
+/* 탭 패널 */
+.arc-panel{display:none;padding:32px 32px 48px;flex-direction:column;align-items:center;gap:24px}
+.arc-panel.on{display:flex}
+/* 미완료 달 빈 화면 */
+.arc-empty{text-align:center;padding:80px 24px;max-width:440px;display:flex;flex-direction:column;align-items:center}
+.arc-empty-icon{font-size:52px;margin-bottom:18px;opacity:.6}
+.arc-empty-title{font-size:19px;font-weight:700;color:var(--t);margin-bottom:8px}
+.arc-empty-desc{font-size:14px;color:var(--t3);line-height:1.7}
+/* 공통 헤더 */
+.arc-head{text-align:center;margin-bottom:8px}
 .arc-year-badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--ab);color:var(--a);padding:4px 14px;border-radius:20px;margin-bottom:14px}
-.arc-title{font-size:28px;font-weight:800;letter-spacing:-.03em;color:var(--t);margin-bottom:8px}
+.arc-title{font-size:26px;font-weight:800;letter-spacing:-.03em;color:var(--t);margin-bottom:6px}
 .arc-desc{font-size:15px;color:var(--t3)}
+/* 월 카드 그리드 */
 .arc-months{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;max-width:900px}
 .mc{background:var(--w);border:1px solid var(--bd);border-radius:var(--r);padding:20px 18px 18px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--sh)}
 .mc-pending{opacity:.55}
@@ -280,7 +299,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 .mc-meta span{font-size:13px;color:var(--t2);font-weight:500}
 .mc-status{font-size:13px;font-weight:700;color:var(--t3);margin-top:auto;padding-top:10px}
 .mc-status-done{color:var(--a)}
-@media(max-width:700px){.arc-months{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.arc-months{grid-template-columns:repeat(2,1fr)}.arc-tab{padding:12px 14px;font-size:14px}}
 </style>
 
 <div class="app">
@@ -331,106 +350,185 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     </div>
   </div>
   <div class="arc-wrap">
-    <div class="arc-head">
-  <div class="arc-year-badge">2026</div>
-  <h1 class="arc-title">신제품 리포트 아카이브</h1>
-  <p class="arc-desc">글로벌 가구 브랜드 신제품 출시 현황 · 월별 아카이브</p>
-</div>
 
-<div class="arc-months" id="arc-months">
-
-  <!-- 1월 -->
-  <div class="mc mc-pending" data-m="2026-01">
-    <div class="mc-month">1월</div>
-    <div class="mc-label">January 2026</div>
-    <div class="mc-status">준비중</div>
-  </div>
-
-  <!-- 2월 -->
-  <div class="mc mc-pending" data-m="2026-02">
-    <div class="mc-month">2월</div>
-    <div class="mc-label">February 2026</div>
-    <div class="mc-status">준비중</div>
-  </div>
-
-  <!-- 3월 -->
-  <div class="mc mc-pending" data-m="2026-03">
-    <div class="mc-month">3월</div>
-    <div class="mc-label">March 2026</div>
-    <div class="mc-status">준비중</div>
-  </div>
-
-  <!-- 4월 -->
-  <div class="mc mc-pending" data-m="2026-04">
-    <div class="mc-month">4월</div>
-    <div class="mc-label">April 2026</div>
-    <div class="mc-status">준비중</div>
-  </div>
-
-  <!-- 5월 -->
-  <div class="mc mc-pending" data-m="2026-05">
-    <div class="mc-month">5월</div>
-    <div class="mc-label">May 2026</div>
-    <div class="mc-status">준비중</div>
-  </div>
-
-  <!-- 6월 — 완료 -->
-  <a class="mc mc-done" data-m="2026-06" href="reports/2026-06.html" style="text-decoration:none;">
-    <div class="mc-month">6월</div>
-    <div class="mc-label">June 2026</div>
-    <div class="mc-meta">
-      <span>🌍 4개 지역</span>
-      <span>📦 30+ 신제품</span>
-      <span>🏢 20개 브랜드</span>
+    <!-- ── 월별 탭 바 ── -->
+    <div class="arc-tabbar" id="arc-tabbar">
+      <button class="arc-tab done on" data-m="2026-06" onclick="arcTab(this,'tab-2026-06')"><span class="arc-tab-dot"></span>2026년 6월</button>
+      <button class="arc-tab" data-m="2026-07" onclick="arcTab(this,'tab-2026-07')">2026년 7월</button>
+      <button class="arc-tab" data-m="2026-08" onclick="arcTab(this,'tab-2026-08')">2026년 8월</button>
+      <button class="arc-tab" data-m="2026-09" onclick="arcTab(this,'tab-2026-09')">2026년 9월</button>
+      <button class="arc-tab" data-m="2026-10" onclick="arcTab(this,'tab-2026-10')">2026년 10월</button>
+      <button class="arc-tab" data-m="2026-11" onclick="arcTab(this,'tab-2026-11')">2026년 11월</button>
+      <button class="arc-tab" data-m="2026-12" onclick="arcTab(this,'tab-2026-12')">2026년 12월</button>
     </div>
-    <div class="mc-status mc-status-done">리포트 보기 →</div>
-  </a>
 
-  <!-- 7월 -->
-  <div class="mc mc-future" data-m="2026-07">
-    <div class="mc-month">7월</div>
-    <div class="mc-label">July 2026</div>
-    <div class="mc-status">예정</div>
-  </div>
+    <!-- ── 6월 패널 (현재 내용) ── -->
+    <div class="arc-panel on" id="tab-2026-06">
+      <div class="arc-head">
+        <div class="arc-year-badge">2026년 6월 · 완료</div>
+        <h1 class="arc-title">신제품 리포트 아카이브</h1>
+        <p class="arc-desc">글로벌 가구 브랜드 신제품 출시 현황 · 월별 아카이브</p>
+      </div>
 
-  <!-- 8월 -->
-  <div class="mc mc-future" data-m="2026-08">
-    <div class="mc-month">8월</div>
-    <div class="mc-label">August 2026</div>
-    <div class="mc-status">예정</div>
-  </div>
+      <div class="arc-months" id="arc-months">
 
-  <!-- 9월 -->
-  <div class="mc mc-future" data-m="2026-09">
-    <div class="mc-month">9월</div>
-    <div class="mc-label">September 2026</div>
-    <div class="mc-status">예정</div>
-  </div>
+        <!-- 1월 -->
+        <div class="mc mc-pending" data-m="2026-01">
+          <div class="mc-month">1월</div>
+          <div class="mc-label">January 2026</div>
+          <div class="mc-status">준비중</div>
+        </div>
 
-  <!-- 10월 -->
-  <div class="mc mc-future" data-m="2026-10">
-    <div class="mc-month">10월</div>
-    <div class="mc-label">October 2026</div>
-    <div class="mc-status">예정</div>
-  </div>
+        <!-- 2월 -->
+        <div class="mc mc-pending" data-m="2026-02">
+          <div class="mc-month">2월</div>
+          <div class="mc-label">February 2026</div>
+          <div class="mc-status">준비중</div>
+        </div>
 
-  <!-- 11월 -->
-  <div class="mc mc-future" data-m="2026-11">
-    <div class="mc-month">11월</div>
-    <div class="mc-label">November 2026</div>
-    <div class="mc-status">예정</div>
-  </div>
+        <!-- 3월 -->
+        <div class="mc mc-pending" data-m="2026-03">
+          <div class="mc-month">3월</div>
+          <div class="mc-label">March 2026</div>
+          <div class="mc-status">준비중</div>
+        </div>
 
-  <!-- 12월 -->
-  <div class="mc mc-future" data-m="2026-12">
-    <div class="mc-month">12월</div>
-    <div class="mc-label">December 2026</div>
-    <div class="mc-status">예정</div>
-  </div>
+        <!-- 4월 -->
+        <div class="mc mc-pending" data-m="2026-04">
+          <div class="mc-month">4월</div>
+          <div class="mc-label">April 2026</div>
+          <div class="mc-status">준비중</div>
+        </div>
 
-</div>
-  </div>
-</div>
+        <!-- 5월 -->
+        <div class="mc mc-pending" data-m="2026-05">
+          <div class="mc-month">5월</div>
+          <div class="mc-label">May 2026</div>
+          <div class="mc-status">준비중</div>
+        </div>
+
+        <!-- 6월 — 완료 -->
+        <a class="mc mc-done" data-m="2026-06" href="reports/2026-06.html" style="text-decoration:none;">
+          <div class="mc-month">6월</div>
+          <div class="mc-label">June 2026</div>
+          <div class="mc-meta">
+            <span>🌍 4개 지역</span>
+            <span>📦 30+ 신제품</span>
+            <span>🏢 20개 브랜드</span>
+          </div>
+          <div class="mc-status mc-status-done">리포트 보기 →</div>
+        </a>
+
+        <!-- 7월 -->
+        <div class="mc mc-future" data-m="2026-07">
+          <div class="mc-month">7월</div>
+          <div class="mc-label">July 2026</div>
+          <div class="mc-status">예정</div>
+        </div>
+
+        <!-- 8월 -->
+        <div class="mc mc-future" data-m="2026-08">
+          <div class="mc-month">8월</div>
+          <div class="mc-label">August 2026</div>
+          <div class="mc-status">예정</div>
+        </div>
+
+        <!-- 9월 -->
+        <div class="mc mc-future" data-m="2026-09">
+          <div class="mc-month">9월</div>
+          <div class="mc-label">September 2026</div>
+          <div class="mc-status">예정</div>
+        </div>
+
+        <!-- 10월 -->
+        <div class="mc mc-future" data-m="2026-10">
+          <div class="mc-month">10월</div>
+          <div class="mc-label">October 2026</div>
+          <div class="mc-status">예정</div>
+        </div>
+
+        <!-- 11월 -->
+        <div class="mc mc-future" data-m="2026-11">
+          <div class="mc-month">11월</div>
+          <div class="mc-label">November 2026</div>
+          <div class="mc-status">예정</div>
+        </div>
+
+        <!-- 12월 -->
+        <div class="mc mc-future" data-m="2026-12">
+          <div class="mc-month">12월</div>
+          <div class="mc-label">December 2026</div>
+          <div class="mc-status">예정</div>
+        </div>
+
+      </div><!-- /arc-months -->
+    </div><!-- /tab-2026-06 -->
+
+    <!-- ── 7월 패널 ── -->
+    <div class="arc-panel" id="tab-2026-07">
+      <div class="arc-empty">
+        <div class="arc-empty-icon">📅</div>
+        <div class="arc-empty-title">2026년 7월 리포트</div>
+        <div class="arc-empty-desc">매월 1일 자동으로 업데이트됩니다.<br>8월 1일에 리포트가 공개될 예정입니다.</div>
+      </div>
+    </div>
+
+    <!-- ── 8월 패널 ── -->
+    <div class="arc-panel" id="tab-2026-08">
+      <div class="arc-empty">
+        <div class="arc-empty-icon">📅</div>
+        <div class="arc-empty-title">2026년 8월 리포트</div>
+        <div class="arc-empty-desc">매월 1일 자동으로 업데이트됩니다.</div>
+      </div>
+    </div>
+
+    <!-- ── 9월 패널 ── -->
+    <div class="arc-panel" id="tab-2026-09">
+      <div class="arc-empty">
+        <div class="arc-empty-icon">📅</div>
+        <div class="arc-empty-title">2026년 9월 리포트</div>
+        <div class="arc-empty-desc">매월 1일 자동으로 업데이트됩니다.</div>
+      </div>
+    </div>
+
+    <!-- ── 10월 패널 ── -->
+    <div class="arc-panel" id="tab-2026-10">
+      <div class="arc-empty">
+        <div class="arc-empty-icon">📅</div>
+        <div class="arc-empty-title">2026년 10월 리포트</div>
+        <div class="arc-empty-desc">매월 1일 자동으로 업데이트됩니다.</div>
+      </div>
+    </div>
+
+    <!-- ── 11월 패널 ── -->
+    <div class="arc-panel" id="tab-2026-11">
+      <div class="arc-empty">
+        <div class="arc-empty-icon">📅</div>
+        <div class="arc-empty-title">2026년 11월 리포트</div>
+        <div class="arc-empty-desc">매월 1일 자동으로 업데이트됩니다.</div>
+      </div>
+    </div>
+
+    <!-- ── 12월 패널 ── -->
+    <div class="arc-panel" id="tab-2026-12">
+      <div class="arc-empty">
+        <div class="arc-empty-icon">📅</div>
+        <div class="arc-empty-title">2026년 12월 리포트</div>
+        <div class="arc-empty-desc">매월 1일 자동으로 업데이트됩니다.</div>
+      </div>
+    </div>
+
+  </div><!-- /arc-wrap -->
+</div><!-- /main -->
+
+<script>
+function arcTab(btn, panelId) {
+  document.querySelectorAll('.arc-tab').forEach(function(t){t.classList.remove('on')});
+  document.querySelectorAll('.arc-panel').forEach(function(p){p.classList.remove('on')});
+  btn.classList.add('on');
+  document.getElementById(panelId).classList.add('on');
+}
+</script>
 
 </div>
 
