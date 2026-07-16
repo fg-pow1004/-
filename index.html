@@ -1480,7 +1480,8 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     document.getElementById('bd-main').style.display = 'none';
     document.getElementById('bd-adm').style.display = 'none';
     document.getElementById('bd-user-info').style.display = 'none';
-    document.getElementById('bd-adm-btn').style.display = 'none';
+    document.getElementById('bd-adm-btn').style.display = '';
+    document.getElementById('bd-adm-btn').textContent = '🔐 관리자';
   }
 
   function showMainView(){
@@ -1537,9 +1538,9 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   window.toggleAdmin = function(){
     if(isAdmin){
       isAdmin = false;
-      document.getElementById('bd-main').style.display = 'flex';
       document.getElementById('bd-adm').style.display = 'none';
       document.getElementById('bd-adm-btn').textContent = '🔐 관리자';
+      if(currentUser){ showMainView(); } else { showLoginView(); }
       return;
     }
     var pw = prompt('관리자 비밀번호:');
