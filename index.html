@@ -1022,16 +1022,16 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     <!-- KPI ROW -->
     <div class="krow">
       <div class="kpi">
-        <div class="kpi-lbl">신제품 수</div>
-        <div class="kpi-val">27<span style="font-size:20px">+</span><span class="up">↗</span></div>
-        <div class="kpi-sub">4개 지역 · 15개 브랜드 신규 출시</div>
-        <button class="kpi-lnk" onclick="document.getElementById('jul-na-sec').scrollIntoView({behavior:'smooth'})">지역별 상세 보기 →</button>
+        <div class="kpi-lbl">7월 확인 신제품</div>
+        <div class="kpi-val">4<span style="font-size:20px">개</span></div>
+        <div class="kpi-sub">일본 3개 · 북미 1개 · 전시 공백기</div>
+        <button class="kpi-lnk" onclick="document.getElementById('jul-jp-sec').scrollIntoView({behavior:'smooth'})">지역별 상세 보기 →</button>
       </div>
       <div class="kpi">
-        <div class="kpi-lbl">수상 제품</div>
-        <div class="kpi-val">10</div>
-        <div class="kpi-sub">Best of NeoCon 2026 · iF Design Award 2026</div>
-        <button class="kpi-lnk" onclick="document.getElementById('jul-na-sec').scrollIntoView({behavior:'smooth'})">수상 제품 보기 →</button>
+        <div class="kpi-lbl">다음 주요 행사</div>
+        <div class="kpi-val" style="font-size:18px;letter-spacing:-.02em">Orgatec</div>
+        <div class="kpi-sub">2026년 10월 27~30일 · 쾰른</div>
+        <button class="kpi-lnk" onclick="document.getElementById('jul-eu-sec').scrollIntoView({behavior:'smooth'})">유럽 동향 →</button>
       </div>
       <div class="kpi">
         <div class="kpi-lbl">리포트 완성도</div>
@@ -1039,8 +1039,17 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
           <canvas id="gc2" width="130" height="74"></canvas>
           <div class="gauge-lbl">90%</div>
         </div>
-        <div class="kpi-sub" style="text-align:center">57개 브랜드 중 16개 업데이트 완료</div>
+        <div class="kpi-sub" style="text-align:center">57개 브랜드 7월 모니터링 완료</div>
         <button class="kpi-lnk" style="text-align:center;display:block">전체 현황 보기 →</button>
+      </div>
+    </div>
+
+    <!-- 7월 공백기 안내 -->
+    <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:14px 18px;margin:0 22px 12px;display:flex;align-items:flex-start;gap:12px">
+      <span style="font-size:20px;flex-shrink:0;margin-top:1px">📋</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px">7월은 글로벌 전시 공백기입니다</div>
+        <div style="font-size:13px;color:var(--t2);line-height:1.6">NeoCon(6월 7~10일, 시카고)과 Orgatec(10월 27~30일, 쾰른) 사이의 조용한 달로, 북미·유럽 주요 브랜드의 신제품 발표는 거의 없습니다. 일본 브랜드(이토키, 카리모쿠, 카리모쿠60)는 전시회와 무관하게 독자적인 출시 일정을 유지하여 7월에 존재감을 나타냈습니다.</div>
       </div>
     </div>
 
@@ -1048,63 +1057,34 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     <div class="gmain">
       <div class="card">
         <div class="ch">
-          <span class="ct">주목 신제품 Top 9</span>
+          <span class="ct">7월 확인 신제품</span>
           <button class="cc">최신순 ▾</button>
         </div>
         <div class="pi on">
-          <div class="pav" style="background:var(--na)">KI</div>
-          <div class="pinfo"><div class="pn">Kiaura Collection</div><div class="pb">KI · 북미 · 2026.06</div></div>
-          <span class="bdg bdg-a">Best of Competition</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.ki.com/about/pressroom/press-releases/2026/ki-introduces-the-kiaura-collection-built-with-cognetic-technology-and-defines-human-performance-seating-at-design-days/" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
-          <div class="pav" style="background:var(--na)">HW</div>
-          <div class="pinfo"><div class="pn">Gallerie Workstations</div><div class="pb">Haworth · 북미 · 2026.06</div></div>
-          <span class="bdg bdg-a">NeoCon Gold</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.haworth.com/na/en/about/about-haworth/media-room/neocon-2026-and-haworth.html" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
-          <div class="pav" style="background:var(--na)">HS</div>
-          <div class="pinfo"><div class="pn">Diffrient Lounge Chair</div><div class="pb">Humanscale · 북미 · 2026.03</div></div>
-          <span class="bdg bdg-b">iF Award 2026</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.humanscale.com/products/diffrient-lounge.cfm" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
-          <div class="pav" style="background:var(--eu)">VI</div>
-          <div class="pinfo"><div class="pn">Bascule Lounge Chair</div><div class="pb">Vitra · 유럽 · 2026.06</div></div>
-          <span class="bdg bdg-n">신규</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.vitra.com/en-us/page/3daysofdesign" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
-          <div class="pav" style="background:var(--eu)">FL</div>
-          <div class="pinfo"><div class="pn">HÅG Minu</div><div class="pb">Flokk · 유럽 · 2026.06</div></div>
-          <span class="bdg bdg-n">신규</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://focus.flokk.com/hag-minu-by-andreas-engesvik" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
-          <div class="pav" style="background:var(--na)">SC</div>
-          <div class="pinfo"><div class="pn">Aisla Workstation System</div><div class="pb">Steelcase · 북미 · 2026.06</div></div>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.steelcase.com/products/workstations/aisla/" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
-          <div class="pav" style="background:var(--jp)">OK</div>
-          <div class="pinfo"><div class="pn">MUKU Task Chair</div><div class="pb">Okamura · 일본 · 2026.06</div></div>
-          <span class="bdg bdg-n">NeoCon 지속가능성</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.dezeen.com/2026/06/08/muku-task-chair-foster-partners-okamura-dezeen-showroom/" target="_blank">↗</a></div>
-        </div>
-        <div class="pi">
           <div class="pav" style="background:var(--jp)">IT</div>
-          <div class="pinfo"><div class="pn">HAKUSAN Stacking Chair</div><div class="pb">Itoki NII · 일본 · 2026.07</div></div>
-          <span class="bdg bdg-n">신규</span>
+          <div class="pinfo"><div class="pn">NII HAKUSAN Stacking Chair</div><div class="pb">Itoki NII · 일본 · 2026.07</div></div>
+          <span class="bdg bdg-n">7월 출시</span>
           <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.itoki.jp/en/company/news/2026/0414_niisalone/" target="_blank">↗</a></div>
         </div>
         <div class="pi">
-          <div class="pav" style="background:var(--kr);font-size:12px">시디즈</div>
-          <div class="pinfo"><div class="pn">T50 2세대</div><div class="pb">시디즈 · 국내 · 2026.06</div></div>
-          <span class="bdg bdg-w">풀체인지</span>
-          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://v.daum.net/v/BZeIgUJ6oi" target="_blank">↗</a></div>
+          <div class="pav" style="background:var(--jp)">KM</div>
+          <div class="pinfo"><div class="pn">ESTEEM Dining Chair</div><div class="pb">Karimoku · 일본 · 2026.07</div></div>
+          <span class="bdg bdg-n">7월 출시</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://karimoku-contract.com/en/" target="_blank">↗</a></div>
         </div>
-        <div class="p-all"><a href="#" onclick="document.getElementById('jul-na-sec').scrollIntoView({behavior:'smooth'});return false;">지역별 전체 신제품 보기 →</a></div>
+        <div class="pi">
+          <div class="pav" style="background:var(--jp);font-size:11px">K60</div>
+          <div class="pinfo"><div class="pn">K Chair Summer 2026 Limited</div><div class="pb">Karimoku60 · 일본 · 2026.07.03</div></div>
+          <span class="bdg bdg-w">여름 한정판</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.karimoku60.com/" target="_blank">↗</a></div>
+        </div>
+        <div class="pi">
+          <div class="pav" style="background:var(--na)">HS</div>
+          <div class="pinfo"><div class="pn">M/Class Monitor Arms</div><div class="pb">Humanscale · 북미 · 2026.07.08 국제 발표</div></div>
+          <span class="bdg bdg-n">글로벌 확대</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.humanscale.com/products/monitor-arms/" target="_blank">↗</a></div>
+        </div>
+        <div class="p-all"><a href="#" onclick="document.getElementById('jul-jp-sec').scrollIntoView({behavior:'smooth'});return false;">지역별 전체 신제품 보기 →</a></div>
       </div>
 
       <!-- Right column -->
@@ -1112,313 +1092,40 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
         <div class="card">
           <div class="ch">
             <span class="ct">지역별 신제품 현황</span>
-            <button class="cc">이번 달 ▾</button>
+            <button class="cc">7월 ▾</button>
           </div>
           <div class="rs">
-            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--na)"></span>북미</span><span class="rsc">12개</span></div>
-            <div class="rsb"><div class="rsf" style="width:100%;background:var(--na)"></div></div>
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--na)"></span>북미</span><span class="rsc">1개</span></div>
+            <div class="rsb"><div class="rsf" style="width:33%;background:var(--na)"></div></div>
           </div>
           <div class="rs">
-            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--eu)"></span>유럽</span><span class="rsc">8개</span></div>
-            <div class="rsb"><div class="rsf" style="width:67%;background:var(--eu)"></div></div>
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--eu)"></span>유럽</span><span class="rsc">0개</span></div>
+            <div class="rsb"><div class="rsf" style="width:0%;background:var(--eu)"></div></div>
           </div>
           <div class="rs">
-            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--jp)"></span>일본</span><span class="rsc">5개</span></div>
-            <div class="rsb"><div class="rsf" style="width:42%;background:var(--jp)"></div></div>
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--jp)"></span>일본</span><span class="rsc">3개</span></div>
+            <div class="rsb"><div class="rsf" style="width:100%;background:var(--jp)"></div></div>
           </div>
           <div class="rs">
-            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--kr)"></span>국내</span><span class="rsc">2개</span></div>
-            <div class="rsb"><div class="rsf" style="width:17%;background:var(--kr)"></div></div>
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--kr)"></span>국내</span><span class="rsc">0개</span></div>
+            <div class="rsb"><div class="rsf" style="width:0%;background:var(--kr)"></div></div>
           </div>
         </div>
         <div class="mini">
-          <div class="ml">이달의 최고상</div>
-          <div class="mv">KI Kiaura</div>
-          <div class="ms">Best of NeoCon 2026 Best of Competition</div>
+          <div class="ml">이달의 주목</div>
+          <div class="mv">일본 브랜드</div>
+          <div class="ms">전시 무관 독자 출시 일정 유지 · 3개 확인</div>
         </div>
         <div class="mini">
-          <div class="ml">최다 출시 지역</div>
-          <div class="mv">북미</div>
-          <div class="ms">12개 신제품 · NeoCon 2026 집중 출시</div>
+          <div class="ml">다음 빅 이벤트</div>
+          <div class="mv">Orgatec 2026</div>
+          <div class="ms">10월 27~30일 · 쾰른 · 유럽 신제품 러시 예고</div>
         </div>
         <div class="mini">
           <div class="ml">주목 이슈</div>
-          <div class="mv" style="font-size:16px;line-height:1.3">인지 성능 시팅 부상</div>
-          <div class="ms">KI Cognetic Technology · 4시간 임상 검증</div>
+          <div class="mv" style="font-size:16px;line-height:1.3">카리모쿠 이중 전략</div>
+          <div class="ms">계약 라인(ESTEEM) + 한정판 에디션(K Chair) 동시 공략</div>
         </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════ 북미 7월 ═══════════════════ -->
-    <div id="jul-na-sec" class="reg-sec">
-      <div class="reg-hd">
-        <div class="reg-hd-bar" style="background:var(--na)"></div>
-        <span class="reg-hd-name">북미 North America</span>
-        <span class="reg-hd-count">신제품 12개 · 8개 브랜드</span>
-        <div class="reg-hd-line"></div>
-      </div>
-      <div class="reg-grid">
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">KI</div>
-            <div class="bc-head">
-              <div class="bc-brand">KI</div>
-              <div class="bc-country">미국 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-a">Best of Competition</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Kiaura Collection (Cognetic Technology)</div>
-            <div class="bc-desc">특허 기술 Cognetic Technology 탑재 시팅 컬렉션. 중력 반응형 다축 메커니즘이 신체 미세 움직임에 실시간 반응, 유동적 착석 경험 제공. 4시간 착석 연구에서 불안 감소·집중력 향상·요통 감소 임상 검증. NeoCon Best of Competition(최고상) 포함 7관왕.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">인지성능·인체공학혁신</span>
-            <a class="bc-lnk" href="https://www.ki.com/about/pressroom/press-releases/2026/ki-introduces-the-kiaura-collection-built-with-cognetic-technology-and-defines-human-performance-seating-at-design-days/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">HW</div>
-            <div class="bc-head">
-              <div class="bc-brand">Haworth</div>
-              <div class="bc-country">미국 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-a">NeoCon Gold</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Gallerie Workstations + Sosu Collection</div>
-            <div class="bc-desc">Haworth 20년 만의 대규모 신제품 출시. Gallerie는 리빙룸형 협업존과 전통 데스크를 하나의 시스템으로 통합한 워크스테이션. Patricia Urquiola 협업 Sosu 소파·테이블 컬렉션은 Interior Design HiP Award 수상. Best of NeoCon Gold + Business Impact 더블 수상.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">하이브리드레이아웃·스타디자이너협업</span>
-            <a class="bc-lnk" href="https://www.haworth.com/na/en/about/about-haworth/media-room/neocon-2026-and-haworth.html" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">HS</div>
-            <div class="bc-head">
-              <div class="bc-brand">Humanscale</div>
-              <div class="bc-country">미국 · 2026.03</div>
-              <div class="bc-badges"><span class="bdg bdg-b">iF Design Award</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Diffrient Lounge Chair</div>
-            <div class="bc-desc">Niels Diffrient의 20년 전 컨셉을 현대화한 혁신적 라운지 체어. 전동 등받이·헤드레스트 조절, 싱크로 리클라인, 내장 USB-C 140W 충전 포트, 접이식 워크서페이스 탑재. 업무·휴식을 동시 지원하는 하이브리드 시팅. iF Design Award 2026 수상.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">하이브리드시팅·기술통합</span>
-            <a class="bc-lnk" href="https://www.humanscale.com/products/diffrient-lounge.cfm" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:#1D4ED8">SC</div>
-            <div class="bc-head">
-              <div class="bc-brand">Steelcase</div>
-              <div class="bc-country">미국 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-b">NeoCon 출품</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Aisla Workstation System</div>
-            <div class="bc-desc">오픈 플랜 오피스를 위한 고급형 워크스테이션 시스템. 1.5인치 갤러리 패널에 전원·데이터 통합. 패브릭 래핑 패널·숨겨진 브래킷·플러시 마운트 유리로 커스텀 수준의 마감 구현. West Elm 협업 시팅 4컬렉션(Fulton/Sterling/Kent/Slope)도 동반 출시.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">통합전원·레지덴셜감성협업</span>
-            <a class="bc-lnk" href="https://www.steelcase.com/products/workstations/aisla/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">HM</div>
-            <div class="bc-head">
-              <div class="bc-brand">Herman Miller</div>
-              <div class="bc-country">미국 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Headway Huddle &amp; Café Tables</div>
-            <div class="bc-desc">Headway 컬렉션 확장작. 통합 전원 공급·심리스 기술 연결성을 갖춘 협업 공간용 테이블. 하이브리드 워크 환경 지원 목적의 테크-인테그레이티드 디자인. Aeron 2026 업데이트도 병행 발표 — 신규 컬러 2종·리디자인 베이스 추가.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">하이브리드워크·기술통합</span>
-            <a class="bc-lnk" href="https://www.prnewswire.com/news-releases/millerknoll-powers-the-future-of-design-at-fulton-market-design-days-2026-302789354.html" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">KN</div>
-            <div class="bc-head">
-              <div class="bc-brand">Knoll</div>
-              <div class="bc-country">미국 · 2026.04</div>
-              <div class="bc-badges"><span class="bdg bdg-n">클래식 리이슈</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Morrison Hannah Chair (재발행)</div>
-            <div class="bc-desc">1973년 Morrison &amp; Hannah 설계 클래식을 현대화한 리이슈. 개선된 폼 밀도와 4도 전방 틸트 기능 추가로 능동적 착석 지원. 요추 지지 향상. 주물 알루미늄·목재 내부 프레임. 같은 시기 발표한 Konzert 프라이빗 오피스 시스템과 연계 제안.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">헤리티지디자인·인체공학</span>
-            <a class="bc-lnk" href="https://www.dezeen.com/2026/04/29/morrison-hannah-chair-knoll-dezeen-showroom/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">HN</div>
-            <div class="bc-head">
-              <div class="bc-brand">HON</div>
-              <div class="bc-country">미국 · 2026.04</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Brim Chair</div>
-            <div class="bc-desc">디자이너 Nils Koehn과 협업한 폴리쉘 버킷 체어. 넓은 원피스 쉘과 윤곽형 커브로 자연스러운 자세 지원. 11가지 쉘 컬러, 목재·캐스터 등 4가지 베이스 옵션 제공. 카페·회의·현대 사무실 다목적 레지덴셜 감성 디자인. Design Days 기간 시카고 첫 플래그십 스토어 동반 오픈.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">폴리쉘·컬러다양성·레지덴셜</span>
-            <a class="bc-lnk" href="https://www.globenewswire.com/news-release/2026/04/30/3285607/0/en/hon-introduces-brim-a-sculpted-polyshell-chair-designed-for-comfort-and-versatility.html" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--na)">NK</div>
-            <div class="bc-head">
-              <div class="bc-brand">Nienkämper</div>
-              <div class="bc-country">캐나다 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-b">NeoCon Silver</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Pleat Collection</div>
-            <div class="bc-desc">REPUBLIC OF II BY IV 스튜디오가 디자인한 컬렉션. 단일 폴디드 제스처에서 영감받은 조각적 형태와 건축적 정밀함이 특징. 프라이빗 오피스·협업 공간·회의실을 통합된 디자인 언어로 연결. NeoCon Silver Award(워크스테이션 부문) + Interior Design HiP Award(컨퍼런스 부문) 동반 수상.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">조각적형태·건축적정밀함</span>
-            <a class="bc-lnk" href="https://neocon.com/exhibitors/nienk%C3%A4mper" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ═══════════════════ 유럽 7월 ═══════════════════ -->
-    <div id="jul-eu-sec" class="reg-sec">
-      <div class="reg-hd">
-        <div class="reg-hd-bar" style="background:var(--eu)"></div>
-        <span class="reg-hd-name">유럽 Europe</span>
-        <span class="reg-hd-count">신제품 8개 · 5개 브랜드</span>
-        <div class="reg-hd-line"></div>
-      </div>
-      <div class="reg-grid">
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--eu)">VI</div>
-            <div class="bc-head">
-              <div class="bc-brand">Vitra</div>
-              <div class="bc-country">스위스 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Bascule Lounge Chair</div>
-            <div class="bc-desc">Studio Œ(Lisa Ertel &amp; Anne-Sophie Oberkrome) 설계. 루즈한 재킷처럼 감싸는 탈착 교체형 패브릭 커버와 자동 무게 감지 시트 메커니즘 결합. Vitra·BASF 공동 개발 신소재 V-Foam 사용으로 재활용 공정 지원. 3daysofdesign Copenhagen 세계 최초 공개. 9월 판매 시작 예정.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">탈착식커버·V-Foam·순환경제</span>
-            <a class="bc-lnk" href="https://www.wallpaper.com/design-interiors/vitra-bascule-lounge-chair-oe-studio-reveal" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--eu)">FL</div>
-            <div class="bc-head">
-              <div class="bc-brand">Flokk / HÅG</div>
-              <div class="bc-country">노르웨이 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">HÅG Minu</div>
-            <div class="bc-desc">Andreas Engesvik &amp; Jannicke Grung 설계. 주거 공간 따뜻함과 사무 기능성을 결합한 소형 태스크 체어. HÅG inBalance® 메커니즘 기반 3차원 동적 움직임. 외부 플라스틱 노출 없는 완전 패브릭 업홀스터리. 재활용 소재 60%, EU Ecolabel + GREENGUARD Gold 인증, 10년 보증.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">홈오피스겸용·60%재활용·EU Ecolabel</span>
-            <a class="bc-lnk" href="https://focus.flokk.com/hag-minu-by-andreas-engesvik" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--eu)">WK</div>
-            <div class="bc-head">
-              <div class="bc-brand">Wilkhahn</div>
-              <div class="bc-country">독일 · 2026.04</div>
-              <div class="bc-badges"><span class="bdg bdg-a">독일 지속가능성 어워드</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">WiChair</div>
-            <div class="bc-desc">Alina Schnizler 설계. 굽은 탄성 강철과 FSC 인증 합판으로 구성된 단 34개 부품의 태스크 체어. 별도 레버·노브 없이 소재 탄성으로 3차원 동적 움직임 구현. 스크루 조립으로 완전 분해·단일소재 재활용 가능. 독일 지속가능성 어워드 2026 수상.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">34부품·탄성강철·완전분해가능</span>
-            <a class="bc-lnk" href="https://www.dezeen.com/2026/05/26/wichair-alina-schnizler-wilkhahn-dezeen-showroom/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--eu)">HA</div>
-            <div class="bc-head">
-              <div class="bc-brand">HAY</div>
-              <div class="bc-country">덴마크 · 2026.02</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">Deville Chair (Spring 2026 Collection)</div>
-            <div class="bc-desc">Julien Renault 설계. 비스트로 스타일 재해석 경량 의자. 재활용 알루미늄 60% 이상 사용, 스택 가능. Spring 2026 컬렉션 주력작으로 Layout Side Chair(재활용 플라스틱 96%), Facet Cabinet 등도 동시 출시. 호스피탤리티·워크플레이스·공공공간 타겟.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">60%재활용알루미늄·호스피탤리티</span>
-            <a class="bc-lnk" href="https://www.interiordaily.com/article/9807778/hay-launches-spring-2026-furniture-collection-for-professional-and-public-spaces/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--eu)">SD</div>
-            <div class="bc-head">
-              <div class="bc-brand">Sedus</div>
-              <div class="bc-country">독일 · 2026.02</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">se:cove Lounge Chair</div>
-            <div class="bc-desc">Konstantin Thomas 설계. 조각적 형태와 어쿠스틱 효과를 결합한 라운지 체어. 오픈 플랜 오피스 내 프라이버시와 음향적 안정감 제공. 너도밤나무 프레임 + 100% 재활용 PET 충전재 + 탈착식 텍스타일 커버. Clerkenwell Design Week 2026 전시 및 호평.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">어쿠스틱·재활용PET·탈착식커버</span>
-            <a class="bc-lnk" href="https://www.sedus.com/en/whatsup/secove-the-art-of-finding-retreat" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -1427,68 +1134,127 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       <div class="reg-hd">
         <div class="reg-hd-bar" style="background:var(--jp)"></div>
         <span class="reg-hd-name">일본 Japan</span>
-        <span class="reg-hd-count">신제품 5개 · 3개 브랜드</span>
+        <span class="reg-hd-count">신제품 3개 · 3개 브랜드 · 7월 출시 확인</span>
         <div class="reg-hd-line"></div>
       </div>
       <div class="reg-grid">
 
         <div class="bc">
           <div class="bc-top">
-            <div class="bc-av" style="background:var(--jp)">KO</div>
-            <div class="bc-head">
-              <div class="bc-brand">Kokuyo</div>
-              <div class="bc-country">일본 · 2025.12 출시 / 2026.06 수상</div>
-              <div class="bc-badges"><span class="bdg bdg-a">Red Dot Best of Best</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">ingCloud</div>
-            <div class="bc-desc">트리플 글라이딩 메커니즘(좌판 하부·등받이·팔걸이 3개 영역)과 3D 해먹 메쉬를 결합한 플로팅 착좌감 체어. Kokuyo 독자 개발 "3D Ultra Auto-Fit Mechanism"으로 신체와 의자가 하나처럼 움직임. Red Dot Design Award 2026 Innovative Design 항목 96/100점 Best of the Best 수상.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">3D글라이딩·플로팅착좌·Red Dot BotB</span>
-            <a class="bc-lnk" href="https://www.kokuyo.com/en/insights/20260610/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--jp)">OK</div>
-            <div class="bc-head">
-              <div class="bc-brand">Okamura</div>
-              <div class="bc-country">일본 · 2026.06</div>
-              <div class="bc-badges"><span class="bdg bdg-a">NeoCon 지속가능성상</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">MUKU Task Chair</div>
-            <div class="bc-desc">Foster + Partners Industrial Design과 Okamura 협업 설계. 등받이에 폐어망 재생 'Re:net' 니트 메쉬, 베이스에 재활용 알루미늄 사용. 계층형 쿠션 요추 지지 + 개인 조절 시스템. NeoCon 2026 Best of NeoCon Sustainability Award 수상. 오피스·상업·홈 다목적 설계.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">Foster+Partners·폐어망메쉬·지속가능성</span>
-            <a class="bc-lnk" href="https://www.dezeen.com/2026/06/08/muku-task-chair-foster-partners-okamura-dezeen-showroom/" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
-        <div class="bc">
-          <div class="bc-top">
             <div class="bc-av" style="background:var(--jp)">IT</div>
             <div class="bc-head">
               <div class="bc-brand">Itoki NII</div>
-              <div class="bc-country">일본 · 2026.06~07</div>
-              <div class="bc-badges"><span class="bdg bdg-n">신규 브랜드</span></div>
+              <div class="bc-country">일본 · 2026.07 출시</div>
+              <div class="bc-badges"><span class="bdg bdg-n">7월 출시 확인</span></div>
             </div>
           </div>
           <div class="bc-body">
-            <div class="bc-prod">NII Collection — BIWA · ALLROUND · HAKUSAN</div>
-            <div class="bc-desc">이토키 글로벌 브랜드 NII의 2026 론칭 컬렉션. BIWA(유기적 곡선 워크 체어, 6월), ALLROUND(좌석·사이드 테이블 겸용 캐스터 스툴, 6월), HAKUSAN(Industrial Facility 설계 스태킹 체어, 7월). 밀라노 살로네 발표 후 6~7월 순차 출시.</div>
+            <div class="bc-prod">NII HAKUSAN Stacking Chair</div>
+            <div class="bc-desc">이토키 글로벌 브랜드 NII의 3번째 컬렉션. Industrial Facility(Sam Hecht &amp; Kim Colin)가 설계한 스태킹 체어로 발매일 2026년 7월 확인. 유기적 곡선 BIWA(6월)·스툴 겸용 ALLROUND(6월)에 이은 HAKUSAN은 심플하고 기능적인 스태킹 디자인으로 NII 론칭 컬렉션을 완성. 밀라노 살로네(4월) 공개 후 6~7월 순차 출시 전략.</div>
           </div>
           <div class="bc-foot">
-            <span class="bc-tag">글로벌브랜드론칭·3D유기형태·스태킹</span>
+            <span class="bc-tag">스태킹·Industrial Facility·글로벌론칭</span>
             <a class="bc-lnk" href="https://www.itoki.jp/en/company/news/2026/0414_niisalone/" target="_blank">자세히 보기 ↗</a>
           </div>
         </div>
 
+        <div class="bc">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--jp)">KM</div>
+            <div class="bc-head">
+              <div class="bc-brand">Karimoku Contract</div>
+              <div class="bc-country">일본 · 2026.07 쇼룸 공개</div>
+              <div class="bc-badges"><span class="bdg bdg-n">계약 라인 신작</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">ESTEEM Dining Chair</div>
+            <div class="bc-desc">카리모쿠 계약 가구 라인에서 발표한 목재 다이닝 체어. 2026년 7월 쇼룸 첫 공개. 호텔·레스토랑·상업 공간을 타겟으로 하는 전통 목공 기술 기반 제품. 카리모쿠의 고품질 국산 목재 기술과 현대적 디자인을 결합한 B2B 전략 라인으로, 글로벌 호스피탤리티 시장 공략 의도.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">목재다이닝·B2B계약·호스피탤리티</span>
+            <a class="bc-lnk" href="https://karimoku-contract.com/en/" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--jp);font-size:11px">K60</div>
+            <div class="bc-head">
+              <div class="bc-brand">Karimoku60</div>
+              <div class="bc-country">일본 · 2026.07.03 한정 발매</div>
+              <div class="bc-badges"><span class="bdg bdg-w">여름 한정판</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">K Chair Summer 2026 Limited Edition</div>
+            <div class="bc-desc">카리모쿠60 아카이브 대표작 K Chair의 2026년 여름 한정 컬러 에디션. 2026년 7월 3일 정확한 발매일 확인. 시즌별 한정판 컬러 전략으로 아카이브 가치를 높이는 카리모쿠60의 지속적 브랜딩. 코어 팬층과 신규 구매자를 동시 겨냥한 마케팅 접근. 발매 즉시 완판 패턴 반복 예상.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">한정판·아카이브·여름시즌컬러</span>
+            <a class="bc-lnk" href="https://www.karimoku60.com/" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 북미 7월 ═══════════════════ -->
+    <div id="jul-na-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--na)"></div>
+        <span class="reg-hd-name">북미 North America</span>
+        <span class="reg-hd-count">신제품 1개 · 1개 브랜드 · 7월 국제 발표</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--na)">HS</div>
+            <div class="bc-head">
+              <div class="bc-brand">Humanscale</div>
+              <div class="bc-country">미국 · 2026.07.08 UK/EU/APAC 발표</div>
+              <div class="bc-badges"><span class="bdg bdg-n">글로벌 확대</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">M/Class Monitor Arms</div>
+            <div class="bc-desc">1월 북미 선출시에 이어 7월 8일 UK·EU·APAC 공식 발표로 글로벌 시장 공급 시작. 폼팩터 대폭 슬림화(기존 대비 47% 감소), CFM(케이블-프리 마운팅) 시스템으로 완전 케이블 은폐, 공기압 실린더로 무단 높이 조절. 싱글~트리플 모니터 지원, 최대 무게 9.1kg. 단순 악세서리를 넘어 프리미엄 오피스 필수품으로 포지셔닝.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">CFM케이블은폐·47%슬림화·글로벌확대</span>
+            <a class="bc-lnk" href="https://www.humanscale.com/products/monitor-arms/" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 유럽 7월 - 예고 ═══════════════════ -->
+    <div id="jul-eu-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--eu)"></div>
+        <span class="reg-hd-name">유럽 Europe</span>
+        <span class="reg-hd-count">7월 신제품 없음 · Orgatec 2026 준비 중</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:18px 20px;margin:0 22px 12px">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">유럽 주요 브랜드 하반기 동향</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--eu);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Vitra</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Bascule Lounge Chair — 6월 3daysofdesign Copenhagen 세계 최초 공개. <strong>9월 판매 시작</strong> 예정. 7월은 공식 판매 전 대기 중.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--eu);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Flokk/HÅG</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">HÅG Minu — 6월 3daysofdesign 공개, <strong>Q3 2026(7~9월) 글로벌 출시 예정</strong>. 국내 공급 시점 별도 확인 필요.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#B45309;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Orgatec</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6"><strong>2026년 10월 27~30일</strong> 쾰른 개최. Steelcase, Haworth, Vitra, Wilkhahn, HAY, Sedus 등 유럽 주요 브랜드 신제품 준비 중. <strong>10월 리포트에서 집중 모니터링</strong> 예정.</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1497,49 +1263,21 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       <div class="reg-hd">
         <div class="reg-hd-bar" style="background:var(--kr)"></div>
         <span class="reg-hd-name">국내 Korea</span>
-        <span class="reg-hd-count">신제품 2개 · 2개 브랜드</span>
+        <span class="reg-hd-count">7월 신제품 출시 없음 · 서비스 모델 전환 주목</span>
         <div class="reg-hd-line"></div>
       </div>
-      <div class="reg-grid">
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--kr);font-size:12px">시디즈</div>
-            <div class="bc-head">
-              <div class="bc-brand">시디즈</div>
-              <div class="bc-country">국내 · 2026.06.19</div>
-              <div class="bc-badges"><span class="bdg bdg-w">풀체인지</span></div>
-            </div>
+      <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:18px 20px;margin:0 22px 12px">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">국내 7월 주요 동향</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--kr);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">퍼시스</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">2026년 7월 29일 <strong>WaaS(Workplace as a Service)</strong> 구독형 사무가구 서비스 공식 발표. 신제품 출시는 아니나, 사무가구 소유→구독 패러다임 전환을 선도하는 비즈니스 모델 혁신으로 주목.</div>
           </div>
-          <div class="bc-body">
-            <div class="bc-prod">T50 2세대</div>
-            <div class="bc-desc">2007년 초대 T50 이후 20년·누적 300만 대 판매를 거쳐 완전 풀체인지. 요추 지지대 완전 재설계(불편감 감소), 헤드레스트 면적 확대 + 메시 소재 적용, 팔걸이 동작 범위 확대. EASY REPAIR 에코 시스템 강화 — T50(패브릭)/T50 AIR(메시) 좌판 교체 호환 가능.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">풀체인지·EASY REPAIR·요추재설계</span>
-            <a class="bc-lnk" href="https://v.daum.net/v/BZeIgUJ6oi" target="_blank">자세히 보기 ↗</a>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--kr);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">시장 동향</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">국내 주요 브랜드(시디즈, 코아스, 일룸 등) 7월 중 신제품 발표 없음. 상반기 신제품 판매 집중 기간으로 파악.</div>
           </div>
         </div>
-
-        <div class="bc">
-          <div class="bc-top">
-            <div class="bc-av" style="background:var(--kr);font-size:12px">코아스</div>
-            <div class="bc-head">
-              <div class="bc-brand">코아스</div>
-              <div class="bc-country">국내 · 2026.01 CES 공개</div>
-              <div class="bc-badges"><span class="bdg bdg-w">CES 2026</span></div>
-            </div>
-          </div>
-          <div class="bc-body">
-            <div class="bc-prod">캄스탠드 (Calm Stand)</div>
-            <div class="bc-desc">국내 종합 사무가구 기업 최초 CES 참가작. 내장 카메라가 표정 변화·생체 신호를 AI로 분석, 거북목·스트레스 감지 시 실시간 알림. 전면 디퓨저에서 아로마 향기 분사·테라피 사운드 제공. 사무가구 업계 AI 웰니스 솔루션 선도 사례.</div>
-          </div>
-          <div class="bc-foot">
-            <span class="bc-tag">AI웰니스·아로마·스마트오피스</span>
-            <a class="bc-lnk" href="https://v.daum.net/v/20260107180643612" target="_blank">자세히 보기 ↗</a>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -1549,33 +1287,33 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
         <div class="ch"><span class="ct">이달의 주요 트렌드</span><span class="ca">5개</span></div>
         <div class="ti">
           <div class="tnum">01</div>
-          <div><div class="tt">인지 성능 시팅의 부상</div><div class="td">KI Kiaura Cognetic Technology — 단순 인체공학을 넘어 집중력·불안 감소·인지 처리 향상을 임상 검증한 "Human Performance Seating" 카테고리 등장. NeoCon Best of Competition 수상으로 업계 표준 논의 시작</div></div>
+          <div><div class="tt">7월 = 글로벌 전시 공백기</div><div class="td">NeoCon(6/7~10, 시카고)이 막을 내리고 Orgatec(10/27~30, 쾰른)까지 약 5개월의 공백. 북미·유럽 주요 브랜드의 신제품 발표는 극히 드물며, 전시회 중심으로 돌아가는 글로벌 가구 업계의 계절성을 잘 보여주는 달</div></div>
         </div>
         <div class="ti">
           <div class="tnum">02</div>
-          <div><div class="tt">서스테이너블 소재 경쟁 심화</div><div class="td">폐어망(Okamura), V-Foam(Vitra), 재활용 알루미늄 60%(HAY), 34부품 완전분해(Wilkhahn) — 재활용 소재가 선택이 아닌 글로벌 경쟁 필수 스펙으로 고착화</div></div>
+          <div><div class="tt">일본 브랜드의 전시 무관 독자 출시 전략</div><div class="td">이토키 NII HAKUSAN(7월), 카리모쿠 ESTEEM(7월), 카리모쿠60 K Chair 한정판(7/3) — 일본 주요 브랜드는 서방 전시회 캘린더와 무관하게 독자적인 출시 일정을 유지. 글로벌 공백기에도 꾸준히 존재감을 유지하며 브랜드 지속성 강화</div></div>
         </div>
         <div class="ti">
           <div class="tnum">03</div>
-          <div><div class="tt">레지덴셜 오피스화 가속</div><div class="td">HON Brim, West Elm × Steelcase, HÅG Minu — 가정용 소재·형태·감성을 오피스로 이식하는 "홈라이크 오피스" 디자인 주류화. B2C 감성의 B2B 전환이 신제품 전략 핵심</div></div>
+          <div><div class="tt">아카이브 한정판 에디션 전략 확산</div><div class="td">카리모쿠60 K Chair Summer 2026 Limited — 시즌별 한정 컬러로 아카이브 가치와 신규 구매 욕구를 동시 자극. 가구 업계에서도 패션·라이프스타일 브랜드식 "한정판 드롭" 마케팅이 정착 중. 완판→레어리티 심리를 활용한 브랜드 가치 극대화 전략</div></div>
         </div>
         <div class="ti">
           <div class="tnum">04</div>
-          <div><div class="tt">3daysofdesign 유럽 신제품 물결</div><div class="td">Vitra Bascule·HÅG Minu 등 코펜하겐 3daysofdesign(6/10~12)이 유럽 오피스 가구 주요 발표 플랫폼으로 확립. Orgatec(10월) 대비 조기 공개 전략 확산</div></div>
+          <div><div class="tt">모니터 암의 주류화 — 악세서리에서 필수품으로</div><div class="td">Humanscale M/Class가 1월 북미 출시 후 7/8 UK·EU·APAC 정식 발표. 케이블 은폐·슬림화·공기압 조절 등 기능 혁신으로 단순 악세서리를 넘어 프리미엄 오피스 인테리어 필수 요소로 포지셔닝. 국내 공급가 및 B2B 제안 여부 모니터링 필요</div></div>
         </div>
         <div class="ti">
           <div class="tnum">05</div>
-          <div><div class="tt">스타 디자이너·건축사무소 협업 심화</div><div class="td">Patricia Urquiola(Haworth), Foster+Partners(Okamura), Industrial Facility(Itoki NII), Studio Œ(Vitra) — 스타 협업이 프리미엄 포지셔닝의 표준 전략으로 정착</div></div>
+          <div><div class="tt">Orgatec 2026 예고 — 유럽 신제품 대기 모드</div><div class="td">Vitra Bascule(9월 판매), HÅG Minu(Q3 출시) 등 유럽 브랜드들이 하반기 출시를 예고한 상태. 10월 Orgatec에서 Steelcase, Haworth, Vitra 등 대규모 신제품 공개 예상. 6월 NeoCon과 함께 연간 모니터링의 양대 핵심 행사로 사전 준비 필요</div></div>
         </div>
       </div>
 
       <div class="card">
         <div class="ch" style="background:#FDF9F5;border-bottom:1px solid #EDE8E3"><span class="ct">퍼시스 시사점</span><span class="ca">5개 전략 과제 · 2026.07</span></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">KI Kiaura 인지 성능 시팅 — 차기 체어 R&amp;D 방향 재검토 시급</div><div class="td">NeoCon 최고상 수상 KI Kiaura의 Cognetic Technology는 종래 인체공학 의자와 차별화된 "임상 검증 + 인지 향상" 카테고리를 창출. 퍼시스 차기 의자 개발 로드맵에 동적 메커니즘 + 과학적 효능 검증 방식 도입 검토 시급.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">시디즈 T50 2세대 출시 — 경쟁 포지셔닝 재점검</div><div class="td">시디즈 T50 2세대 6월 출시로 300만 대 누적 모델의 전면 업그레이드 단행. 퍼시스 동급 의자 라인의 기능·가격·마케팅 차별화 포인트 재점검 필요. EASY REPAIR 소재 교체 시스템은 국내 시장에서 장기 사용·서스테이너빌리티 소구로 주목.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">서스테이너블 소재 글로벌 표준화 — 퍼시스 대응 로드맵 수립</div><div class="td">Okamura 폐어망·HAY 60% 재활용 알루미늄·Wilkhahn 단일소재 분해 설계 등 글로벌 브랜드가 재활용 소재 비율·분해 가능성을 핵심 스펙으로 내세움. 국내 공공·대기업 입찰의 친환경 인증 요건 확산에 대비, 소재 혁신 로드맵 즉시 수립.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">홈라이크 오피스 디자인 — 퍼시스 제품 라인 감성 업그레이드 필요</div><div class="td">West Elm × Steelcase, HÅG Minu, HON Brim 등 레지덴셜 감성의 오피스 가구가 글로벌 주류화. 국내 스타트업·크리에이티브 오피스 수요에서도 동일 트렌드 감지. 퍼시스 중가 라인 디자인 업그레이드 및 컬러 옵션 확대 검토.</div></div></div>
-        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">AI 웰니스 사무가구 — 코아스 캄스탠드 사례 모니터링</div><div class="td">코아스 캄스탠드(CES 2026 공개) 시장 반응 지속 모니터링. AI 표정·생체 분석 + 아로마 테라피 결합 방식은 스마트오피스 솔루션 번들 제안의 새 레퍼런스. 퍼시스 B2B 솔루션 포트폴리오에 웰니스 IoT 연계 검토.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">Orgatec 2026 사전 준비 — 10월 유럽 신제품 러시 대비</div><div class="td">10월 27~30일 Orgatec에서 유럽 주요 브랜드 대규모 신제품 발표 예상. Steelcase, Haworth, Herman Miller, Vitra, Wilkhahn, Sedus, HAY 등 모니터링 리스트 사전 준비 및 리포트 템플릿 업데이트 권장. 국내 수입사 동향도 사전 파악 필요.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">카리모쿠 이중 포지셔닝 전략 학습 — B2B 계약 + B2C 한정판</div><div class="td">카리모쿠는 B2B 계약 라인(ESTEEM)과 B2C 아카이브 한정판(K Chair)을 동시에 운영하며 브랜드 가치와 매출을 동시 강화. 퍼시스의 B2B 전문 포지셔닝과 대비되는 전략으로, 소비자 브랜드 인지도 향상 방안으로 참조 가치 있음.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">HÅG Minu Q3 출시 — 국내 공급 시점 및 경쟁 포지셔닝 확인</div><div class="td">노르웨이 Flokk의 HÅG Minu가 Q3 2026(7~9월) 글로벌 출시 예정. 재활용 소재 60%·EU Ecolabel 인증의 친환경 의자로 국내 고급 오피스 시장 수요 예상. 국내 공식 딜러를 통한 공급 시점·가격대 사전 조사 및 자사 동급 제품과 비교 분석 권장.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">이토키 NII 글로벌 전략 — 일본 경쟁사 해외 진출 모니터링</div><div class="td">이토키가 독립 디자인 레이블 NII로 밀라노 살로네 공개 후 글로벌 순차 출시. 일본 내수 브랜드가 독립 레이블로 해외 시장을 공략하는 전략은 퍼시스의 장기 해외 진출 계획에 참조 가치. Industrial Facility 같은 글로벌 스튜디오 협업 접근법 주목.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">퍼시스 WaaS 서비스 — 신성장 모델 업계 반향 추적</div><div class="td">2026년 7월 29일 발표한 구독형 WaaS 서비스는 국내 최초 사무가구 구독 모델. 초기 기업 고객 반응·리스 vs 구독 선호도·타사 유사 서비스 출시 동향을 분기별 추적하여 서비스 로드맵 개선에 반영.</div></div></div>
       </div>
     </div>
 
