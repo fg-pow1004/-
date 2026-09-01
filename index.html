@@ -330,6 +330,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   <div class="mo-tabbar" id="mo-tabbar">
     <button class="mo-tab on" data-mo="jun" onclick="moTab(this,'view-dash')">2026년 6월</button>
     <button class="mo-tab" data-mo="jul" onclick="moTab(this,'view-jul')">2026년 7월</button>
+    <button class="mo-tab" data-mo="aug" onclick="moTab(this,'view-aug')">2026년 8월</button>
   </div>
 
   <div class="cnt" id="view-dash">
@@ -1317,6 +1318,364 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
   </div><!-- end view-jul -->
 
+  <!-- ══════════════════════════════════════════
+       8월 신제품 리포트
+  ══════════════════════════════════════════ -->
+  <div class="cnt" id="view-aug" style="display:none">
+
+    <!-- KPI ROW -->
+    <div class="krow">
+      <div class="kpi">
+        <div class="kpi-lbl">8월 확인 신제품</div>
+        <div class="kpi-val">5<span style="font-size:20px">개</span></div>
+        <div class="kpi-sub">국내 1 · 유럽 2 · 북미 2 · Orgatec 티저 다수</div>
+        <button class="kpi-lnk" onclick="document.getElementById('aug-kr-sec').scrollIntoView({behavior:'smooth'})">지역별 상세 보기 →</button>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">다음 주요 행사</div>
+        <div class="kpi-val" style="font-size:18px;letter-spacing:-.02em">Orgatec</div>
+        <div class="kpi-sub">2026년 10월 27~30일 · 쾰른 · 57일 후</div>
+        <button class="kpi-lnk" onclick="document.getElementById('aug-eu-sec').scrollIntoView({behavior:'smooth'})">유럽 동향 →</button>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">리포트 완성도</div>
+        <div class="gauge-wrap">
+          <canvas id="gc3" width="130" height="74"></canvas>
+          <div class="gauge-lbl">85%</div>
+        </div>
+        <div class="kpi-sub" style="text-align:center">Orgatec 이전 · 유럽 데이터 예고 단계</div>
+        <button class="kpi-lnk" style="text-align:center;display:block">전체 현황 보기 →</button>
+      </div>
+    </div>
+
+    <!-- 8월 컨텍스트 배너 -->
+    <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:14px 18px;margin:0 22px 12px;display:flex;align-items:flex-start;gap:12px">
+      <span style="font-size:20px;flex-shrink:0;margin-top:1px">🔭</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px">8월 = NeoCon 여파 + Orgatec 준비기</div>
+        <div style="font-size:13px;color:var(--t2);line-height:1.6">NeoCon(6월) 신제품이 딜러망을 통해 공급 확산되는 시기이자, Orgatec(10월 27~30일, 쾰른)을 앞두고 유럽 브랜드들이 출품작을 사전 티저로 공개하기 시작하는 달입니다. 국내에서는 시디즈 T50 2세대가 큰 주목을 받고 있습니다.</div>
+      </div>
+    </div>
+
+    <!-- MAIN GRID: featured list + right panel -->
+    <div class="gmain">
+      <div class="card">
+        <div class="ch">
+          <span class="ct">8월 주목 신제품</span>
+          <button class="cc">최신순 ▾</button>
+        </div>
+        <div class="pi on" onclick="pClick(event,'bc-aug-sd')">
+          <div class="pav" style="background:var(--kr)">SD</div>
+          <div class="pinfo"><div class="pn">T50 2세대</div><div class="pb">시디즈 · 국내 · 2026.07 출시</div></div>
+          <span class="bdg bdg-w">풀모델체인지</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.sidiz.com/product/t50" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-aug-hm')">
+          <div class="pav" style="background:var(--na)">HM</div>
+          <div class="pinfo"><div class="pn">Aeron Jasper / Nightfall</div><div class="pb">Herman Miller · 북미 · 2026.08</div></div>
+          <span class="bdg bdg-n">신규 컬러</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.hermanmiller.com/products/seating/office-chairs/aeron-chairs/" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-aug-hw')">
+          <div class="pav" style="background:#059669">HW</div>
+          <div class="pinfo"><div class="pn">Sorin · Accolade · Gallerie</div><div class="pb">Haworth · 북미 · 2026.06 NeoCon → 8월 공급</div></div>
+          <span class="bdg bdg-a">NeoCon 수상</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.haworth.com/na/en/about/about-haworth/media-room/neocon-2026-and-haworth.html" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-aug-hag')">
+          <div class="pav" style="background:#004A3F">HÅG</div>
+          <div class="pinfo"><div class="pn">HÅG Minu</div><div class="pb">Flokk · 유럽 · 2026 Q3 글로벌 확장</div></div>
+          <span class="bdg bdg-n">글로벌 확대</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://focus.flokk.com/hag-minu-by-andreas-engesvik" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-aug-vi')">
+          <div class="pav" style="background:#CC0000">VI</div>
+          <div class="pinfo"><div class="pn">Bascule Lounge Chair</div><div class="pb">Vitra · 유럽 · 2026.09.03 판매 시작</div></div>
+          <span class="bdg bdg-b">판매 임박</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.vitra.com/en-gb/office/product/details/bascule-lounge-chair" target="_blank">↗</a></div>
+        </div>
+        <div class="p-all"><a href="#" onclick="document.getElementById('aug-eu-sec').scrollIntoView({behavior:'smooth'});return false;">지역별 전체 신제품 보기 →</a></div>
+      </div>
+
+      <!-- Right column -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card">
+          <div class="ch">
+            <span class="ct">지역별 신제품 현황</span>
+            <button class="cc">8월 ▾</button>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--na)"></span>북미</span><span class="rsc">2개</span></div>
+            <div class="rsb"><div class="rsf" style="width:67%;background:var(--na)"></div></div>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--eu)"></span>유럽</span><span class="rsc">2개 + 티저 다수</span></div>
+            <div class="rsb"><div class="rsf" style="width:67%;background:var(--eu)"></div></div>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--jp)"></span>일본</span><span class="rsc">0개</span></div>
+            <div class="rsb"><div class="rsf" style="width:0%;background:var(--jp)"></div></div>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--kr)"></span>국내</span><span class="rsc">1개</span></div>
+            <div class="rsb"><div class="rsf" style="width:33%;background:var(--kr)"></div></div>
+          </div>
+        </div>
+        <div class="mini">
+          <div class="ml">이달의 주목</div>
+          <div class="mv">Orgatec 예고</div>
+          <div class="ms">Interstuhl·Narbutas·Sedus 티저 공개 시작</div>
+        </div>
+        <div class="mini">
+          <div class="ml">국내 최대 이슈</div>
+          <div class="mv">시디즈 T50</div>
+          <div class="ms">300만 대 베스트셀러 · 20년 만의 풀체인지</div>
+        </div>
+        <div class="mini">
+          <div class="ml">D-DAY</div>
+          <div class="mv">Orgatec 2026</div>
+          <div class="ms">10월 27일 개막 · 유럽 신제품 대공개</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 국내 8월 ═══════════════════ -->
+    <div id="aug-kr-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--kr)"></div>
+        <span class="reg-hd-name">국내 Korea</span>
+        <span class="reg-hd-count">신제품 1개 · 8월 캠페인 집중</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-aug-sd">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--kr)">시디즈</div>
+            <div class="bc-head">
+              <div class="bc-brand">시디즈</div>
+              <div class="bc-country">한국 · 2026.07 출시 · 8월 마케팅 집중</div>
+              <div class="bc-badges"><span class="bdg bdg-w">풀모델체인지</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">T50 2세대</div>
+            <div class="bc-desc">2007년 출시 이후 누적 300만 대 이상 판매된 국내 최다 판매 사무용 의자의 20년 만의 풀모델체인지. 럼버서포트 전면 재설계(지지력 강화·이물감 해소), 헤드레스트 폭 확대, 암레스트 가동 범위 확장, 패브릭·메쉬 좌판 사용자 직접 교체 가능. 7월 6일 공식 발표, 7월 25일 평택 공장에서 '시디즈 체어레이스' 이벤트로 대대적 론칭. 269,000원.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">풀체인지·럼버재설계·사용자교체</span>
+            <a class="bc-lnk" href="https://www.koreatimes.co.kr/business/companies/20260727/sidiz-puts-office-chair-on-racetrack-for-launch-of-new-t50-model" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--kr)">퍼시스</div>
+            <div class="bc-head">
+              <div class="bc-brand">퍼시스</div>
+              <div class="bc-country">한국 · 2026.07.29 출범 · 8월 정식 가동</div>
+              <div class="bc-badges"><span class="bdg bdg-b">서비스 혁신</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">WaaS(Workplace as a Service) 구독형 서비스</div>
+            <div class="bc-desc">국내 최초 사무가구 구독형 비즈니스 모델. 가구 납품·설치·정기 유지보수·회수·재사용을 월정액 패키지로 제공. 계약 기간 3·4·5년 선택, 월납·연납·선납 가능. LG전자·대학내일 파일럿 거쳐 7월 정식 출범, 8월 본격 영업 가동. 하드웨어 제품이 아닌 비즈니스 모델 혁신.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">구독형·WaaS·국내최초·소유→서비스</span>
+            <a class="bc-lnk" href="https://www.asiae.co.kr/en/article/smb-venture/2026072914001018887" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 북미 8월 ═══════════════════ -->
+    <div id="aug-na-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--na)"></div>
+        <span class="reg-hd-name">북미 North America</span>
+        <span class="reg-hd-count">신제품 2개 · NeoCon 딜러망 공급 확산</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-aug-hm">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--na)">HM</div>
+            <div class="bc-head">
+              <div class="bc-brand">Herman Miller</div>
+              <div class="bc-country">미국 · 2026.08</div>
+              <div class="bc-badges"><span class="bdg bdg-n">신규 컬러</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Aeron Chair — Jasper &amp; Nightfall 컬러</div>
+            <div class="bc-desc">30년 역사 에어론 체어에 두 가지 신규 컬러 추가. Jasper(무채 올리브 그린)와 Nightfall(다크 네이비)로 고급 오피스 인테리어 수요 공략. 동시에 Bay Work Pod(독립형 영상통화 부스)도 출시. 재활용 알루미늄 베이스·생분해 소재 적용으로 지속가능성 강화 지속.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">신규컬러·Jasper·Nightfall·BayPod</span>
+            <a class="bc-lnk" href="https://www.wallpaper.com/design-interiors/furniture/herman-miller-aeron-office-chair" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc" id="bc-aug-hw">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#007A4D">HW</div>
+            <div class="bc-head">
+              <div class="bc-brand">Haworth</div>
+              <div class="bc-country">미국 · 2026.06 NeoCon → 8월 딜러 공급</div>
+              <div class="bc-badges"><span class="bdg bdg-a">NeoCon Gold 수상</span><span class="bdg bdg-a">Best of Show</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Sorin · Accolade · Gallerie · DualCircuit</div>
+            <div class="bc-desc">NeoCon 2026 역대 최대 규모 출시. Sorin(NeoCon Best of Show 실버, Czumaj-Bront&amp;Litten 디자인), Accolade(Giancarlo Piretti 협업), Gallerie 워크스테이션(NeoCon Gold + Business Impact 수상), DualCircuit 전력 시스템 — 8월부터 딜러망 공급 확산 중.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">Sorin·Gallerie·수상·딜러공급확산</span>
+            <a class="bc-lnk" href="https://www.haworth.com/na/en/about/about-haworth/media-room/neocon-2026-and-haworth.html" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 유럽 8월 ═══════════════════ -->
+    <div id="aug-eu-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--eu)"></div>
+        <span class="reg-hd-name">유럽 Europe</span>
+        <span class="reg-hd-count">신제품 2개 확인 · Orgatec 티저 다수 공개</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-aug-hag">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#004A3F">HÅG</div>
+            <div class="bc-head">
+              <div class="bc-brand">Flokk</div>
+              <div class="bc-country">노르웨이 · 2026 Q3 글로벌 확장 중</div>
+              <div class="bc-badges"><span class="bdg bdg-n">글로벌 확대</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">HÅG Minu</div>
+            <div class="bc-desc">Andreas Engesvik &amp; Jannicke Grung 디자인. inBalance® 메커니즘 기반 컴팩트 태스크체어. 주거형 미감과 오피스 내구성을 결합한 '홈오피스 하이브리드' 포지셔닝. 재활용 소재 60%, EU Ecolabel 인증. 노르웨이 6월 출시 후 Q3 중 아시아 포함 추가 시장 순차 개방 진행 중.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">inBalance·친환경·홈오피스·글로벌확장</span>
+            <a class="bc-lnk" href="https://focus.flokk.com/hag-minu-by-andreas-engesvik" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc" id="bc-aug-vi">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#CC0000">VI</div>
+            <div class="bc-head">
+              <div class="bc-brand">Vitra</div>
+              <div class="bc-country">스위스 · 2026.09.03 공식 판매 시작</div>
+              <div class="bc-badges"><span class="bdg bdg-b">판매 임박</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Bascule Lounge Chair</div>
+            <div class="bc-desc">Studio Œ 디자인. 패브릭이 재킷처럼 느슨하게 구조물을 감싸는 독창적 외형. 체중 감지 자동 시소(bascule) 메커니즘으로 하이백·로우백 자동 전환. V-Foam(BASF 협력, 재활용 가능)과 리사이클 PET 패브릭 적용. 6월 Copenhagen 3daysofdesign 최초 공개 후 8월 사전 커뮤니케이션, 9월 3일 공식 판매.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">시소메커니즘·StudioŒ·V-Foam·재활용</span>
+            <a class="bc-lnk" href="https://www.wallpaper.com/design-interiors/vitra-bascule-lounge-chair-oe-studio-reveal" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Orgatec 티저 박스 -->
+      <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:10px;padding:18px 20px;margin:10px 22px 0">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">Orgatec 2026 — 10월 27~30일 쾰른 · 사전 티저 공개 중</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#374151;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Interstuhl</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Hall 6 출품 예정 — CHECK 이동형 라운지, HEJ 홈오피스 하이브리드 체어, QOMFORT 소파 시스템, SHUFFLE 라운지 등 <strong>5개 이상 신제품 티저 공개</strong> 중.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--eu);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Narbutas</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Hall 7.1 A010 출품 — 창립 35주년 기념 <strong>10개 신규 컬렉션</strong> 예정. Gensler·Baldanzi&amp;Novelli·Says Who 협업. 태스크 체어·어쿠스틱·스토리지 전 분야.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#1F3245;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Sedus</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Hall 6.1 출품 예정 — <strong>막(멤브레인) 소재 커버 오피스 의자</strong> 최초 공개, 모듈형 선반 시스템, Cisco 연동 디지털 기능. "Wellbuilding for Human Nature" 컨셉.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 일본 8월 ═══════════════════ -->
+    <div id="aug-jp-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--jp)"></div>
+        <span class="reg-hd-name">일본 Japan</span>
+        <span class="reg-hd-count">8월 신제품 출시 없음 · 하반기 준비 중</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:18px 20px;margin:0 22px 12px">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">일본 브랜드 8월 동향</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--jp);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Itoki NII</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">7월 HAKUSAN 출시 완료. 글로벌 NII 컬렉션 3종(BIWA, ALLROUND, HAKUSAN) 라인업 완성 후 해외 딜러망 확대 중. 8월 별도 신제품 출시 없음.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#B91C1C;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Okamura</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">MUKU Task Chair(NeoCon 2026 수상) 글로벌 판매 확산 중. 하반기 신규 라인 준비 미발표 상태.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#78350F;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Karimoku</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">7월 K Chair Summer 2026 Limited 완판 패턴 반복 예상. 하반기 가을·겨울 에디션 별도 발표 미확인.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8월 BOTTOM GRID -->
+    <div class="gbot">
+      <div class="card">
+        <div class="ch"><span class="ct">이달의 주요 트렌드</span><span class="ca">5개</span></div>
+        <div class="ti">
+          <div class="tnum">01</div>
+          <div><div class="tt">Orgatec 준비기 — 유럽 브랜드 티저 대전</div><div class="td">Interstuhl, Narbutas, Sedus 등 유럽 주요 브랜드가 Orgatec(10/27~30) 2개월 전인 8월부터 사전 티저 공개 시작. 10개+의 신제품 예고가 쏟아지며 업계 기대감 형성. 10월 리포트에서 집중 분석 예정</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">02</div>
+          <div><div class="tt">국내 사무 의자 시장의 재편 — 시디즈 T50 2세대</div><div class="td">300만 대 베스트셀러의 20년 만의 풀체인지는 단순 리뉴얼이 아닌 국내 사무 의자 시장의 기준점 재설정. 럼버서포트 자가 교체 기능은 애프터마켓·악세서리 생태계까지 영향. 퍼시스 의자 라인과의 포지셔닝 비교 검토 필요</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">03</div>
+          <div><div class="tt">홈오피스 하이브리드 소재 전략</div><div class="td">HÅG Minu(집+오피스 겸용), Vitra Bascule(재킷형 패브릭 커버), Herman Miller Bay Pod(부스형 집중 공간) — 공간과 소재 양면에서 '집 같은 오피스' 트렌드가 구체적 제품으로 구현되는 흐름이 뚜렷</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">04</div>
+          <div><div class="tt">NeoCon → 딜러망 공급 사이클</div><div class="td">6월 NeoCon에서 발표된 Haworth Sorin·Gallerie가 7~8월 딜러망으로 실제 공급 시작. 전시회 발표에서 실제 납품까지 1~3개월 지연이 표준화된 패턴임을 확인. 국내 수입사 입고 시점 별도 추적 필요</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">05</div>
+          <div><div class="tt">구독형 가구 서비스의 첫 번째 여름</div><div class="td">퍼시스 WaaS가 8월 본격 가동되며 '사무가구 구독' 개념이 처음으로 국내 시장에서 실증 단계 진입. 글로벌에서는 Kinnarps·Steelcase 등이 이미 서비스 모델 확장 중. 하드웨어 경쟁과 무관하게 비즈니스 모델 전환이 진짜 경쟁이 될 수 있음</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ch" style="background:#FDF9F5;border-bottom:1px solid #EDE8E3"><span class="ct">퍼시스 시사점</span><span class="ca">5개 전략 과제 · 2026.08</span></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">시디즈 T50 2세대 — 포지셔닝 재점검 시급</div><div class="td">국내 베스트셀러 의자가 20년 만의 풀체인지로 시장 기준점을 재정의하고 있음. 269,000원의 가격대와 사용자 직접 교체 구조는 퍼시스 동급 제품과 직접 비교 대상. 기능·가격·A/S 차별화 포인트 긴급 점검 권장.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">Orgatec 2026 사전 준비 — 10월 집중 모니터링 체계 구축</div><div class="td">8월부터 Interstuhl(5개+), Narbutas(10개), Sedus(막 커버 의자 등)의 티저가 공개 중. 10월 Orgatec에서 Vitra, Wilkhahn, HAY, Kinnarps 추가 발표 예상. 10월 리포트 전담 인력·채널 미리 준비 필요.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">HÅG Minu 국내 공급 시점 및 가격 모니터링</div><div class="td">재활용 소재 60%, EU Ecolabel 인증의 HÅG Minu가 Q3 중 아시아 시장 확대 중. 국내 수입 딜러(플로크 한국 공식 대리점) 입고 시점·가격대 확인 후 퍼시스 동급 제품과 비교 분석 필요.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">WaaS 서비스 경쟁 모니터링 — 시디즈·코아스 유사 서비스 출시 가능성</div><div class="td">퍼시스 WaaS가 첫 여름을 맞이하는 가운데, 시디즈·코아스 등 경쟁사가 유사 구독 모델을 검토하고 있을 가능성. 서비스 초기 고객 Lock-in을 강화하는 계약 조건·부가서비스 차별화가 중요한 시기.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">Vitra Bascule & HÅG Minu — 홈오피스 라운지 시장 진입 검토</div><div class="td">두 제품 모두 '집 같은 오피스' 감성의 프리미엄 포지셔닝. 국내 고급 오피스·임원실 시장에서의 수요 확인 후, 퍼시스 리빙라인 또는 프리미엄 라운지 제안 라인으로의 벤치마킹 가능성 검토.</div></div></div>
+      </div>
+    </div>
+
+  </div><!-- end view-aug -->
+
   <!-- BRANDS DIRECTORY VIEW -->
   <div class="cnt" id="view-brands" style="display:none">
     <!-- filter bar -->
@@ -1419,18 +1778,20 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   var curMo = 'jun';
   var MO_SUBTITLES = {
     jun: '2026년 6월 수집 · 4개 지역 57개 브랜드 모니터링',
-    jul: '2026년 7월 수집 · 4개 지역 57개 브랜드 모니터링'
+    jul: '2026년 7월 수집 · 4개 지역 57개 브랜드 모니터링',
+    aug: '2026년 8월 수집 · 4개 지역 57개 브랜드 모니터링'
   };
+  var MO_PANELS = {jun:'view-dash', jul:'view-jul', aug:'view-aug'};
   window.moTab = function(btn, panelId){
-    var isJul = (panelId === 'view-jul');
-    curMo = isJul ? 'jul' : 'jun';
+    curMo = btn.dataset.mo;
     document.querySelectorAll('.mo-tab').forEach(function(t){t.classList.remove('on');});
     btn.classList.add('on');
-    document.getElementById('view-dash').style.display = isJul ? 'none' : '';
-    document.getElementById('view-jul').style.display  = isJul ? '' : 'none';
+    Object.keys(MO_PANELS).forEach(function(mo){
+      document.getElementById(MO_PANELS[mo]).style.display = (mo===curMo) ? '' : 'none';
+    });
     document.querySelector('.tb-s').textContent = MO_SUBTITLES[curMo];
-    // 7월 게이지 초기화 (최초 1회)
-    if(isJul && !document.getElementById('gc2').dataset.drawn){
+    // 게이지 초기화 (최초 1회)
+    if(curMo==='jul' && !document.getElementById('gc2').dataset.drawn){
       var c2=document.getElementById('gc2');
       var x2=c2.getContext('2d'),cx=65,cy=66,r=48,lw=8;
       x2.beginPath();x2.arc(cx,cy,r,Math.PI,0,false);
@@ -1438,6 +1799,15 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       x2.beginPath();x2.arc(cx,cy,r,Math.PI,Math.PI+Math.PI*.9,false);
       x2.strokeStyle='#C17F3E';x2.lineWidth=lw;x2.lineCap='round';x2.stroke();
       c2.dataset.drawn='1';
+    }
+    if(curMo==='aug' && !document.getElementById('gc3').dataset.drawn){
+      var c3=document.getElementById('gc3');
+      var x3=c3.getContext('2d'),cx=65,cy=66,r=48,lw=8;
+      x3.beginPath();x3.arc(cx,cy,r,Math.PI,0,false);
+      x3.strokeStyle='#F4F2EF';x3.lineWidth=lw;x3.stroke();
+      x3.beginPath();x3.arc(cx,cy,r,Math.PI,Math.PI+Math.PI*.85,false);
+      x3.strokeStyle='#C17F3E';x3.lineWidth=lw;x3.lineCap='round';x3.stroke();
+      c3.dataset.drawn='1';
     }
   };
 
@@ -1453,9 +1823,11 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     var tbT=document.querySelector('.tb-t');
     var tbS=document.querySelector('.tb-s');
     var tabbar=document.getElementById('mo-tabbar');
+    var aug=document.getElementById('view-aug');
     if(v==='brands'){
       dash.style.display='none';
       jul.style.display='none';
+      aug.style.display='none';
       brands.style.display='';
       tabbar.style.display='none';
       navD.classList.remove('on');
@@ -1475,6 +1847,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       // 현재 선택된 월 패널만 표시
       dash.style.display = (curMo==='jun') ? '' : 'none';
       jul.style.display  = (curMo==='jul') ? '' : 'none';
+      aug.style.display  = (curMo==='aug') ? '' : 'none';
     }
   };
 
@@ -1565,6 +1938,11 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     'bc-jul-it':  'products/prod-jul-it.jpg',
     'bc-jul-k60': 'products/prod-jul-k60.png',
     'bc-jul-hs':  'products/prod-jul-hs.jpg',
+    'bc-aug-sd':  'products/prod-aug-sd.jpg',
+    'bc-aug-hm':  'products/prod-aug-hm.jpg',
+    'bc-aug-hw':  'products/prod-aug-hw.jpg',
+    'bc-aug-hag': 'products/prod-aug-hag.jpg',
+    'bc-aug-vi':  'products/prod-aug-vi.jpg',
   };
   (function(){
     var L={
