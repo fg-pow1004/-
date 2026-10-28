@@ -285,7 +285,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   </div>
   <nav class="sb-nav">
     <button class="sbl on" id="nav-dash" onclick="showView('dash')"><span class="sbl-ic">⊞</span>대시보드</button>
-    <button class="sbl" id="nav-brands" onclick="showView('brands')"><span class="sbl-ic">◎</span>브랜드 홈페이지<span class="sbl-cnt">57</span></button>
+    <button class="sbl" id="nav-brands" onclick="showView('brands')"><span class="sbl-ic">◎</span>브랜드 홈페이지<span class="sbl-cnt">60</span></button>
     <div class="sb-div"></div>
     <button class="sbl" id="nav-report" onclick="showView('dash')"><span class="sbl-ic">◈</span>신제품 리포트</button>
     <button class="sbl sbl-sub" onclick="sc('na-sec')"><span class="sbl-ic" style="color:var(--na)">●</span>북미<span class="sbl-cnt">8</span></button>
@@ -331,6 +331,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     <button class="mo-tab on" data-mo="jun" onclick="moTab(this,'view-dash')">2026년 6월</button>
     <button class="mo-tab" data-mo="jul" onclick="moTab(this,'view-jul')">2026년 7월</button>
     <button class="mo-tab" data-mo="aug" onclick="moTab(this,'view-aug')">2026년 8월</button>
+    <button class="mo-tab" data-mo="sep" onclick="moTab(this,'view-sep')">2026년 9월</button>
   </div>
 
   <div class="cnt" id="view-dash">
@@ -1327,8 +1328,8 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     <div class="krow">
       <div class="kpi">
         <div class="kpi-lbl">8월 확인 신제품</div>
-        <div class="kpi-val">5<span style="font-size:20px">개</span></div>
-        <div class="kpi-sub">국내 1 · 유럽 2 · 북미 2 · Orgatec 티저 다수</div>
+        <div class="kpi-val">6<span style="font-size:20px">개</span></div>
+        <div class="kpi-sub">국내 1 · 유럽 2 · 북미 2 · 일본 1 · Orgatec 티저 다수</div>
         <button class="kpi-lnk" onclick="document.getElementById('aug-kr-sec').scrollIntoView({behavior:'smooth'})">지역별 상세 보기 →</button>
       </div>
       <div class="kpi">
@@ -1413,8 +1414,8 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
             <div class="rsb"><div class="rsf" style="width:67%;background:var(--eu)"></div></div>
           </div>
           <div class="rs">
-            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--jp)"></span>일본</span><span class="rsc">0개</span></div>
-            <div class="rsb"><div class="rsf" style="width:0%;background:var(--jp)"></div></div>
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--jp)"></span>일본</span><span class="rsc">1개</span></div>
+            <div class="rsb"><div class="rsf" style="width:33%;background:var(--jp)"></div></div>
           </div>
           <div class="rs">
             <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--kr)"></span>국내</span><span class="rsc">1개</span></div>
@@ -1616,8 +1617,32 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       <div class="reg-hd">
         <div class="reg-hd-bar" style="background:var(--jp)"></div>
         <span class="reg-hd-name">일본 Japan</span>
-        <span class="reg-hd-count">8월 신제품 출시 없음 · 하반기 준비 중</span>
+        <span class="reg-hd-count">신제품 1개 · 하반기 준비 중</span>
         <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-aug-ko">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--jp)">KO</div>
+            <div class="bc-head">
+              <div class="bc-brand">Kokuyo</div>
+              <div class="bc-country">일본 · 2026.07.31 발매 · 8월 판매 본격화</div>
+              <div class="bc-badges"><span class="bdg bdg-w">풀모델체인지</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Viena2 미팅테이블</div>
+            <div class="bc-desc">코쿠요의 회의 테이블 '비에나'의 2세대 모델입니다. 다리를 낮게 설계해 다리 아래 공간을 넓혔고, 기능 부품이 드러나지 않게 해 공간에 자연스럽게 섞이도록 했습니다. 플랩형에는 조작 레버를, 상판 고정형에는 양쪽에서 열 수 있는 배선 박스를 달아 전원에 손이 쉽게 닿습니다. 일본 희망소매가는 세전 90,500엔부터입니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">회의테이블·저상다리·배선박스·2세대</span>
+            <a class="bc-lnk" href="https://dime.jp/company_news/detail/?pr=2663300" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+
+
       </div>
       <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:18px 20px;margin:0 22px 12px">
         <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">일본 브랜드 8월 동향</div>
@@ -1676,13 +1701,426 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
   </div><!-- end view-aug -->
 
+  <!-- ══════════════════════════════════════════
+       9월 신제품 리포트
+  ══════════════════════════════════════════ -->
+  <div class="cnt" id="view-sep" style="display:none">
+
+    <!-- KPI ROW -->
+    <div class="krow">
+      <div class="kpi">
+        <div class="kpi-lbl">9월 확인 신제품</div>
+        <div class="kpi-val">7<span style="font-size:20px">개</span></div>
+        <div class="kpi-sub">국내 2 · 유럽 3 · 북미 1 · 일본 1</div>
+        <button class="kpi-lnk" onclick="document.getElementById('sep-kr-sec').scrollIntoView({behavior:'smooth'})">지역별 상세 보기 →</button>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">다음 주요 행사</div>
+        <div class="kpi-val" style="font-size:18px;letter-spacing:-.02em">Orgatec</div>
+        <div class="kpi-sub">2026년 10월 27~30일 · 쾰른 · 9월 말 기준 27일 후</div>
+        <button class="kpi-lnk" onclick="document.getElementById('sep-eu-sec').scrollIntoView({behavior:'smooth'})">유럽 동향 →</button>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">리포트 완성도</div>
+        <div class="gauge-wrap">
+          <canvas id="gc4" width="130" height="74"></canvas>
+          <div class="gauge-lbl">85%</div>
+        </div>
+        <div class="kpi-sub" style="text-align:center">일본 공식 보도자료 확인 · Orgatec 발표 대기</div>
+        <button class="kpi-lnk" style="text-align:center;display:block">전체 현황 보기 →</button>
+      </div>
+    </div>
+
+    <!-- 9월 컨텍스트 배너 -->
+    <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:14px 18px;margin:0 22px 12px;display:flex;align-items:flex-start;gap:12px">
+      <span style="font-size:20px;flex-shrink:0;margin-top:1px">🍂</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px">9월 = London Design Festival + 가을 컬렉션 + Orgatec 직전</div>
+        <div style="font-size:13px;color:var(--t2);line-height:1.6">London Design Festival(9월 12~20일)에 맞춰 Vitra·HAY·Muuto 등 유럽 브랜드가 가을 컬렉션을 내놓았습니다. Orgatec을 한 달 앞두고 Thonet·COR·Kokuyo 등이 출품작을 미리 공개하기 시작했습니다. 국내에서는 시디즈 뮤브 컬러 확장과 코웨이의 사무·휴식 겸용 의자가 나왔습니다.</div>
+      </div>
+    </div>
+
+    <!-- MAIN GRID: featured list + right panel -->
+    <div class="gmain">
+      <div class="card">
+        <div class="ch">
+          <span class="ct">9월 주목 신제품</span>
+          <button class="cc">최신순 ▾</button>
+        </div>
+        <div class="pi on" onclick="pClick(event,'bc-sep-cw')">
+          <div class="pav" style="background:var(--kr)">CW</div>
+          <div class="pinfo"><div class="pn">비렉스 트리플체어2 슬림</div><div class="pb">코웨이 · 국내 · 2026.09.16</div></div>
+          <span class="bdg bdg-w">신제품</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://news.mtn.co.kr/news-detail/2026091613594090878" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-sep-mu')">
+          <div class="pav" style="background:#1A1A1A">MU</div>
+          <div class="pinfo"><div class="pn">Coltre Modular Sofa</div><div class="pb">Muuto · 유럽 · 2026.09 출시</div></div>
+          <span class="bdg bdg-w">신제품</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.designville.eu/blog/muuto-s-fresh-fall-new-arrivals-for-2026" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-sep-sd')">
+          <div class="pav" style="background:var(--kr)">SD</div>
+          <div class="pinfo"><div class="pn">뮤브 신규 컬러 6종</div><div class="pb">시디즈 · 국내 · 2026.09.04 판매</div></div>
+          <span class="bdg bdg-n">신규 컬러</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.newspim.com/news/view/20260907000083" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-sep-hay')">
+          <div class="pav" style="background:#E2412E">HAY</div>
+          <div class="pinfo"><div class="pn">Pack Chair</div><div class="pb">HAY · 유럽 · 2026 가을 컬렉션</div></div>
+          <span class="bdg bdg-b">판매 예정</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.hay.com/news/news-2026/pack-chair-by-jasper-morrison" target="_blank">↗</a></div>
+        </div>
+        <div class="pi" onclick="pClick(event,'bc-sep-vi')">
+          <div class="pav" style="background:#CC0000">VI</div>
+          <div class="pinfo"><div class="pn">Bascule Lounge Chair</div><div class="pb">Vitra · 유럽 · 2026.09.03 판매 시작</div></div>
+          <span class="bdg bdg-a">LDF 헤드라인</span>
+          <div class="pacts"><span class="ibtn">☆</span><span class="ibtn">✎</span><a class="ibtn" href="https://www.vitra.com/en-gb/office/product/details/bascule-lounge-chair" target="_blank">↗</a></div>
+        </div>
+        <div class="p-all"><a href="#" onclick="document.getElementById('sep-eu-sec').scrollIntoView({behavior:'smooth'});return false;">지역별 전체 신제품 보기 →</a></div>
+      </div>
+
+      <!-- Right column -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card">
+          <div class="ch">
+            <span class="ct">지역별 신제품 현황</span>
+            <button class="cc">9월 ▾</button>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--na)"></span>북미</span><span class="rsc">1개</span></div>
+            <div class="rsb"><div class="rsf" style="width:33%;background:var(--na)"></div></div>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--eu)"></span>유럽</span><span class="rsc">3개 + 티저 다수</span></div>
+            <div class="rsb"><div class="rsf" style="width:100%;background:var(--eu)"></div></div>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--jp)"></span>일본</span><span class="rsc">1개</span></div>
+            <div class="rsb"><div class="rsf" style="width:33%;background:var(--jp)"></div></div>
+          </div>
+          <div class="rs">
+            <div class="rst"><span class="rsn"><span class="rsd" style="background:var(--kr)"></span>국내</span><span class="rsc">2개</span></div>
+            <div class="rsb"><div class="rsf" style="width:67%;background:var(--kr)"></div></div>
+          </div>
+        </div>
+        <div class="mini">
+          <div class="ml">이달의 주목</div>
+          <div class="mv">LDF 2026</div>
+          <div class="ms">9월 12~20일 · Vitra Bascule 헤드라인</div>
+        </div>
+        <div class="mini">
+          <div class="ml">국내 최대 이슈</div>
+          <div class="mv">가전사의 의자 진출</div>
+          <div class="ms">코웨이 트리플체어2 슬림 · 사무+안마 겸용</div>
+        </div>
+        <div class="mini">
+          <div class="ml">D-DAY</div>
+          <div class="mv">Orgatec 2026</div>
+          <div class="ms">10월 27일 개막 · Kokuyo PROJECT：C15 공개 예정</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 국내 9월 ═══════════════════ -->
+    <div id="sep-kr-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--kr)"></div>
+        <span class="reg-hd-name">국내 Korea</span>
+        <span class="reg-hd-count">신제품 2개 · 홈오피스·휴식 겸용 수요 공략</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-sep-cw">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--kr)">코웨이</div>
+            <div class="bc-head">
+              <div class="bc-brand">코웨이</div>
+              <div class="bc-country">한국 · 2026.09.16 출시</div>
+              <div class="bc-badges"><span class="bdg bdg-w">신제품</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">비렉스 트리플체어2 슬림</div>
+            <div class="bc-desc">사무용 의자, 안마의자, 리클라이너 소파를 한 제품으로 합친 '트리플체어'의 슬림 버전입니다. 기존 무빙형보다 부피를 9% 줄여 좁은 방이나 홈오피스에도 놓을 수 있습니다. 안마볼을 등판 안으로 넣는 '히든 안마볼' 구조, 최대 5cm 높이 조절, 개인 자세 4개 저장 기능을 갖췄습니다. 기존 5색에 클라우드 화이트 에디션을 더해 6색으로 나왔고, 렌탈로도 판매합니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">사무+안마·슬림화·렌탈·가전사진출</span>
+            <a class="bc-lnk" href="https://news.mtn.co.kr/news-detail/2026091613594090878" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc" id="bc-sep-sd">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--kr)">시디즈</div>
+            <div class="bc-head">
+              <div class="bc-brand">시디즈</div>
+              <div class="bc-country">한국 · 2026.09.04 판매 · 09.07 발표</div>
+              <div class="bc-badges"><span class="bdg bdg-n">신규 컬러</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">뮤브(MUUVE) 신규 컬러 6종</div>
+            <div class="bc-desc">1월에 나온 라이트워크(홈오피스) 의자 뮤브에 컬러 6종을 추가했습니다. 파우더베이지, 더스티핑크, 더스티블루, 머스타드옐로우, 틸그린, 카본블랙입니다. 허리 곡선을 받쳐 주고 자세에 따라 등판이 함께 움직입니다. 2분기 판매량은 1분기보다 약 70% 늘었고, 8월 판매량은 출시 첫 달의 약 5배입니다. 8월 T50 2세대에 이어 시디즈가 홈오피스 라인까지 넓히고 있습니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">라이트워크·홈오피스·컬러확장·판매급증</span>
+            <a class="bc-lnk" href="https://www.newspim.com/news/view/20260907000083" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 북미 9월 ═══════════════════ -->
+    <div id="sep-na-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--na)"></div>
+        <span class="reg-hd-name">북미 North America</span>
+        <span class="reg-hd-count">신제품 1개 · 대형사는 경영 개편 중</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-sep-vs">
+          <div class="bc-top">
+            <div class="bc-av" style="background:var(--na)">VS</div>
+            <div class="bc-head">
+              <div class="bc-brand">Versteel</div>
+              <div class="bc-country">미국 · 2026.09 출시</div>
+              <div class="bc-badges"><span class="bdg bdg-w">신제품</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Kya Tables</div>
+            <div class="bc-desc">강철 판재를 세워(on its edge) 구조로 쓴 테이블 시리즈입니다. 업무, 교육, 소셜 공간에 두루 쓸 수 있는 다목적 테이블로 소개됐습니다. Business of Furniture 9월 28일자에 실렸고, 아직 다른 매체 보도는 없어 사양과 가격은 추가 확인이 필요합니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">스틸구조·다목적테이블·교육/소셜</span>
+            <a class="bc-lnk" href="https://bellow.press/LatestEditions" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 북미 동향 박스 -->
+      <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:18px 20px;margin:10px 22px 0">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">북미 브랜드 9월 동향</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#00467F;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Steelcase</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">9월 14일 <strong>Irene Tasi를 사장으로 선임</strong>했습니다. HNI에 인수된 뒤의 경영 개편으로 보입니다. 신제품 발표는 없었고, 9월에는 필리핀(Kuysen)과 홍콩에서 Karman·Leap Plus 등 기존 라인업 판매를 넓혔습니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#D35F23;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">MillerKnoll</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Design Days 2026에서 발표한 42개 신규 라인과 확장 제품이 순차 출시되고 있습니다. 산하 브랜드 Muuto의 Coltre Sofa가 9월에 출시됐습니다(유럽 섹션 참고).</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#4B5563;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">기타</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Landscape Forms와 Emeco가 재활용 알루미늄 의자를 아웃도어로 넓히는 파트너십을 맺었습니다(9/5). Shaw Contract는 NeoCon에서 선보인 포세린 타일·벽재 'Cult Classics'를 정식 출시했습니다(9/21).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 유럽 9월 ═══════════════════ -->
+    <div id="sep-eu-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--eu)"></div>
+        <span class="reg-hd-name">유럽 Europe</span>
+        <span class="reg-hd-count">신제품 3개 · LDF 가을 컬렉션 · Orgatec 티저</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-sep-vi">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#CC0000">VI</div>
+            <div class="bc-head">
+              <div class="bc-brand">Vitra</div>
+              <div class="bc-country">스위스 · 2026.09.03 판매 · LDF 9.15~19 전시</div>
+              <div class="bc-badges"><span class="bdg bdg-a">LDF 헤드라인</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Bascule Lounge Chair</div>
+            <div class="bc-desc">8월 리포트에서 예고한 제품으로, 9월 3일 판매를 시작했습니다. London Design Festival 기간에는 Tramshed 쇼룸에서 헤드라인 제품으로 전시했습니다. 베를린 Studio Œ가 디자인했고, 재킷처럼 감싸는 패브릭과 체중에 반응하는 리클라인 메커니즘이 특징입니다. 하이백·로우백 두 가지이고 베이스를 바꿔 달 수 있습니다. 부품을 분리해 재활용하거나 수리할 수 있게 설계했습니다. Verner Panton Cubes 복각판도 함께 공개했습니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">LDF·StudioŒ·수리가능설계·판매개시</span>
+            <a class="bc-lnk" href="https://www.dezeen.com/eventsguide/london-design-festival-2026/" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc" id="bc-sep-hay">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#E2412E">HAY</div>
+            <div class="bc-head">
+              <div class="bc-brand">Hay</div>
+              <div class="bc-country">덴마크 · 2026 가을 컬렉션 · 10.30 판매</div>
+              <div class="bc-badges"><span class="bdg bdg-b">판매 예정</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Pack Chair (Jasper Morrison)</div>
+            <div class="bc-desc">Jasper Morrison이 HAY와 처음 작업한 의자로, 트라토리아 의자를 플랫팩으로 다시 해석했습니다. 좌판과 등판은 소비자 사용 후 재활용 PP 80%에 목섬유를 섞어 성형했고, 다리는 원목 오크입니다. 성형형(Pack Chair 10)과 패브릭 커버형(11) 두 가지이며, 커버는 좌판 가장자리 홈에 끼우는 방식입니다. DESIGNART TOKYO(10/30)에서 처음 선보이고 같은 날 판매를 시작합니다. 영국 판매가는 £189부터입니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">플랫팩·재활용PP80%·JasperMorrison</span>
+            <a class="bc-lnk" href="https://www.hay.com/news/news-2026/pack-chair-by-jasper-morrison" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+        <div class="bc" id="bc-sep-mu">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#1A1A1A">MU</div>
+            <div class="bc-head">
+              <div class="bc-brand">Muuto</div>
+              <div class="bc-country">덴마크 · 2026.09 출시 · MillerKnoll 그룹</div>
+              <div class="bc-badges"><span class="bdg bdg-w">신제품</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">Coltre Modular Sofa (Studiopepe)</div>
+            <div class="bc-desc">이탈리아 Studiopepe가 디자인한 모듈 소파로, 평행 퀼팅 패턴이 특징입니다. 135°·225° 코너와 풋레스트를 포함한 6개 모듈로 구성되며, 다리 주변에 미리 달린 강철 피팅으로 연결하거나 따로 쓸 수 있습니다. FSC 인증 목재 프레임에 지퍼식 탈착 커버를 썼습니다. 같은 시즌에 Thomas Bentzen의 Brink 의자 시리즈(성형 베니어)도 나왔습니다. 라운지와 협업 공간용 소프트 시팅으로 쓸 수 있습니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">모듈소파·퀼팅·FSC·탈착커버</span>
+            <a class="bc-lnk" href="https://www.designville.eu/blog/muuto-s-fresh-fall-new-arrivals-for-2026" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Orgatec 티저 박스 -->
+      <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:10px;padding:18px 20px;margin:10px 22px 0">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">Orgatec 2026 — 10월 27~30일 쾰른 · 출품작 사전 공개</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#1F2937;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Thonet</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Hall 6 C061. <strong>S 760 다기능 의자</strong>(Uwe Sommerlade), <strong>521 회의용 회전의자</strong>(Marco Dessì), S 243 바스툴·암체어 버전(Frank Rettenbacher), 전자식 좌석번호 시스템 Plenum. 부스는 Studio Aisslinger가 디자인했습니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#6B4F3A;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">COR</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Hall 10.2. Werner Aisslinger와 개발한 <strong>새 의자 패밀리 'Floy'</strong>를 처음으로 업계에 공개합니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#374151;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Interstuhl</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Hall 6 C018. 새 브랜드 아이덴티티를 처음 공개하고, 공간 솔루션·Active Office·제품 혁신을 한 콘셉트로 묶었습니다. 제품군에 적용할 새 표면(마감) 콘셉트도 처음 선보입니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#1F3245;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Sedus · Bene</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">Sedus는 Hall 6 C019에서 "Spaces that Care – Wellbuilding for Human Nature"를 주제로 공간을 연출합니다. Bene는 Hall 6 C060에서 "Offices. built for humans. Powered by AI."를 내걸고 Xal·Vescom·Forte와 공동 부스를 엽니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ 일본 9월 ═══════════════════ -->
+    <div id="sep-jp-sec" class="reg-sec">
+      <div class="reg-hd">
+        <div class="reg-hd-bar" style="background:var(--jp)"></div>
+        <span class="reg-hd-name">일본 Japan</span>
+        <span class="reg-hd-count">신제품 1개 · Orgatec·11월 페어 준비</span>
+        <div class="reg-hd-line"></div>
+      </div>
+      <div class="reg-grid">
+
+        <div class="bc" id="bc-sep-ma">
+          <div class="bc-top">
+            <div class="bc-av" style="background:#1A1A1A">MA</div>
+            <div class="bc-head">
+              <div class="bc-brand">Maruni</div>
+              <div class="bc-country">일본 · 2026.09.01 주문 개시 · 직영점 한정</div>
+              <div class="bc-badges"><span class="bdg bdg-n">한정판</span></div>
+            </div>
+          </div>
+          <div class="bc-body">
+            <div class="bc-prod">HIROSHIMA 암체어 홋카이도산 타모(물푸레나무) 에디션</div>
+            <div class="bc-desc">마루니목공의 대표작 HIROSHIMA 암체어를 홋카이도산 타모 원목으로 만든 수량 한정판입니다. 마감은 우레탄 수지 내추럴 카멜(NV-0)입니다. 도쿄·오사카·히로시마·하쓰카이치·후쿠오카 직영점과 공식 온라인숍에서만 팔고, 재고가 떨어지면 판매를 끝냅니다. 가격은 세금 포함 139,700엔입니다.</div>
+          </div>
+          <div class="bc-foot">
+            <span class="bc-tag">한정판·국산원목·직영점한정</span>
+            <a class="bc-lnk" href="https://webshop.maruni.com/topics/2026-09_limited-edition-2026/" target="_blank">자세히 보기 ↗</a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div style="background:#F8F5F1;border:1px solid var(--bd);border-radius:10px;padding:18px 20px;margin:0 22px 12px">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--t1)">일본 브랜드 9월 동향</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#C8102E;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Kokuyo</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">9월 25~27일 PHASE FREE Meet 2026(도쿄 빅사이트)에 로비체어 SOLOS와 콤팩트 테이블 MULTIS를 출품했습니다. Orgatec(Hall 7 C018/D019)에서는 "Three Chairs, Endless Curiosity"를 주제로 ingCloud(Red Dot Best of the Best), 출시 10주년 Duora2, <strong>차세대 플래그십 체어 'PROJECT：C15'(가칭)</strong>를 선보입니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#B91C1C;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Okamura</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">9월에 랩 오피스 'We Labo'(도쿄 지요다구)에 사원식당 'Shallwe'를 열었습니다. 식당을 '워크플레이스 다이닝'으로 보고 직접 실험하는 공간입니다. 8월 24일에는 TBS 드라마 'VIVANT' 시즌 2에 Contessa Ⅱ 등을 협찬했다고 발표했습니다. 9월 28일 발표한 소형 창고용 자동창고 'AutoStore Pio'는 물류 사업이라 신제품 집계에서 뺐습니다. 오피스 신제품은 11월 12일 개막하는 <strong>오카무라 그랜드페어 2026</strong>에서 대거 공개할 예정입니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:var(--jp);color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Itoki</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">9월 16~18일 '총무·인사·경리 Week'(도쿄 빅사이트)에 <strong>ITOKI OFFICE DEVICES</strong> 프로토타입을 참고 출품했습니다. 책상·의자에 단 센서로 회의실·좌석 예약과 실제 사용을 비교해, 쓰지 않는 예약을 감지하면 반납을 권하거나 자동으로 취소합니다(아직 판매 전). RISCON TOKYO 2026(9/30~10/2)에는 다목적 재난 대피용 도어 'BOUNCEBACK'을 출품했고, 9월 30일 ITOKI DESIGN HOUSE TOKYO 12층을 니혼바시 도시 구조를 콘셉트로 한 워크플레이스로 리뉴얼했습니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#78350F;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Karimoku</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">9월부터 기본 라인 'KARIMOKU' 카탈로그를 새로 냈습니다(개별 신제품명은 미공개). 8월 29일~9월 15일에는 Karimoku Commons Tokyo에서 과거 행사용 특주 가구를 전시·판매하는 'Behind the Archives'를 열었습니다.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="background:#4B5563;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:1px">Uchida · Plus</span>
+            <div style="font-size:13px;color:var(--t2);line-height:1.6">두 회사 공식 뉴스에서 8~9월 가구 신제품은 없었습니다. Uchida Yoko는 9월 14일 오피스 제품 가격 인상을 공지했고, Plus는 8월 27일 오사카에 쇼룸 'PLUS DESIGN CROSS 오사카'를 열었습니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9월 BOTTOM GRID -->
+    <div class="gbot">
+      <div class="card">
+        <div class="ch"><span class="ct">이달의 주요 트렌드</span><span class="ca">5개</span></div>
+        <div class="ti">
+          <div class="tnum">01</div>
+          <div><div class="tt">오피스와 리빙의 경계가 사라지는 가을 컬렉션</div><div class="td">Vitra Bascule, HAY Pack Chair, Muuto Coltre 모두 주거용 감성을 앞세워 라운지·카페·협업 공간에 쓰도록 나온 제품입니다. 9월 유럽 신제품 가운데 순수 태스크 체어는 없었고, '소프트 시팅'에 무게가 실렸습니다.</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">02</div>
+          <div><div class="tt">재활용·분해·수리 가능 설계가 기본값으로</div><div class="td">HAY는 재활용 PP 80%를 썼고, Vitra Bascule은 부품을 분리해 재활용·수리할 수 있게 설계했습니다. Muuto는 FSC 목재와 탈착 커버를 썼습니다. 친환경이 차별화 요소를 넘어, 유럽 신제품이면 당연히 갖춰야 하는 조건이 되고 있습니다.</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">03</div>
+          <div><div class="tt">가전·헬스케어 기업의 의자 시장 진입</div><div class="td">코웨이가 사무용 의자, 안마의자, 리클라이너를 합친 트리플체어를 슬림화해 홈오피스 공간을 겨냥했습니다. 렌탈 판매 구조도 함께 가져왔습니다. 사무가구 회사가 아닌 경쟁자가 '앉는 시간' 시장을 넓혀 가고 있습니다.</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">04</div>
+          <div><div class="tt">컬러로 수명을 늘리는 전략</div><div class="td">8월 Aeron 신규 컬러에 이어 9월에는 시디즈 뮤브가 6색을 추가했습니다. 새 구조를 개발하지 않고 컬러만 넓혀 판매를 다시 끌어올리는 방식입니다. 뮤브는 이 방식으로 8월 판매량이 출시 첫 달의 5배가 됐습니다.</div></div>
+        </div>
+        <div class="ti">
+          <div class="tnum">05</div>
+          <div><div class="tt">Orgatec의 키워드는 AI와 웰빙, 일본 플래그십</div><div class="td">Bene는 AI를, Sedus는 웰빌딩을 주제로 내걸었고, Interstuhl은 브랜드를 새로 단장했습니다. Kokuyo는 차세대 플래그십 PROJECT：C15를 공개합니다. 출품작이 의자 단품보다 공간 콘셉트 중심으로 바뀌고 있어, 10월 리포트에서 집중 분석할 예정입니다.</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ch" style="background:#FDF9F5;border-bottom:1px solid #EDE8E3"><span class="ct">퍼시스 시사점</span><span class="ca">5개 전략 과제 · 2026.09</span></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">Orgatec 현장 모니터링 — Kokuyo PROJECT：C15·Thonet·COR 우선 확인</div><div class="td">일본 경쟁사 Kokuyo의 차세대 플래그십이 유럽 무대에서 먼저 공개됩니다. 퍼시스 플래그십 의자와 직접 비교할 대상이므로, 메커니즘·소재·가격대를 현장에서 우선 확인해야 합니다.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF2F2;color:#DC2626;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">긴급</span><div><div class="tt">시디즈 홈오피스 확장과 라인업 역할 정리</div><div class="td">시디즈가 8월 T50 2세대, 9월 뮤브 컬러 확장으로 오피스와 홈오피스를 동시에 넓히고 있습니다. 뮤브 판매가 빠르게 늘고 있으므로, 퍼시스 의자 라인과 가격대·채널이 겹치지 않도록 포지셔닝을 정리하고 컬러 전략 적용 가능성을 검토할 필요가 있습니다.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">비가구 경쟁자(코웨이 등) 모니터링</div><div class="td">코웨이는 렌탈·관리 서비스를 묶어 의자 시장에 들어오고 있습니다. 퍼시스 WaaS 구독 모델과 판매 방식이 겹치므로, 개인·SOHO 시장에서 가전사 렌탈과 어떻게 차별화할지 검토가 필요합니다.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#FEF3C7;color:#D97706;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">주의</span><div><div class="tt">수리·분해 가능 설계 대비</div><div class="td">유럽 신제품이 재활용 소재 비율과 부품 분리 구조를 기본 사양으로 내세우고 있습니다. 해외 입찰과 ESG 평가에 대비해 퍼시스 주요 제품의 재활용 소재 비율, 분해 가능 여부, 수리 부품 공급 체계를 정리해 두어야 합니다.</div></div></div>
+        <div class="ti"><span style="flex-shrink:0;background:#EFF6FF;color:#2563EB;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:2px">검토</span><div><div class="tt">라운지·협업 공간용 소프트 시팅 라인 강화</div><div class="td">Muuto Coltre(모듈 소파), Vitra Bascule(라운지 체어), HAY Pack(카페 체어)처럼 유럽 가을 신제품은 '오피스 속 거실' 수요를 겨냥하고 있습니다. 국내 오피스 리뉴얼에서 라운지 비중이 커지는 흐름에 맞춰 모듈형 소프트 시팅 제안을 늘리는 방안을 검토할 수 있습니다.</div></div></div>
+      </div>
+    </div>
+
+  </div><!-- end view-sep -->
+
   <!-- BRANDS DIRECTORY VIEW -->
   <div class="cnt" id="view-brands" style="display:none">
     <!-- filter bar -->
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
       <div>
         <div style="font-size:17px;font-weight:700;letter-spacing:-.01em">브랜드 디렉토리</div>
-        <div style="font-size:14px;color:var(--t3);margin-top:2px">4개 지역 57개 글로벌 브랜드</div>
+        <div style="font-size:14px;color:var(--t3);margin-top:2px">4개 지역 60개 글로벌 브랜드</div>
       </div>
       <div class="bfilt" id="bfilt">
         <button class="bfbtn on" onclick="bFilter('all',this)">전체</button>
@@ -1695,7 +2133,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
     <!-- 북미 -->
     <div class="reg-sec" id="bsec-na">
-      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--na)"></div><span class="reg-hd-name">북미 North America</span><span class="reg-hd-count">16개 브랜드</span><div class="reg-hd-line"></div></div>
+      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--na)"></div><span class="reg-hd-name">북미 North America</span><span class="reg-hd-count">18개 브랜드</span><div class="reg-hd-line"></div></div>
       <div class="bdc-grid" id="bgrid-na"></div>
     </div>
 
@@ -1713,7 +2151,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
 
     <!-- 국내 -->
     <div class="reg-sec" id="bsec-kr">
-      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--kr)"></div><span class="reg-hd-name">국내 Korea</span><span class="reg-hd-count">10개 브랜드</span><div class="reg-hd-line"></div></div>
+      <div class="reg-hd"><div class="reg-hd-bar" style="background:var(--kr)"></div><span class="reg-hd-name">국내 Korea</span><span class="reg-hd-count">11개 브랜드</span><div class="reg-hd-line"></div></div>
       <div class="bdc-grid" id="bgrid-kr"></div>
     </div>
   </div><!-- end view-brands -->
@@ -1779,9 +2217,10 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
   var MO_SUBTITLES = {
     jun: '2026년 6월 수집 · 4개 지역 57개 브랜드 모니터링',
     jul: '2026년 7월 수집 · 4개 지역 57개 브랜드 모니터링',
-    aug: '2026년 8월 수집 · 4개 지역 57개 브랜드 모니터링'
+    aug: '2026년 8월 수집 · 4개 지역 57개 브랜드 모니터링',
+    sep: '2026년 9월 수집 · 4개 지역 60개 브랜드 모니터링'
   };
-  var MO_PANELS = {jun:'view-dash', jul:'view-jul', aug:'view-aug'};
+  var MO_PANELS = {jun:'view-dash', jul:'view-jul', aug:'view-aug', sep:'view-sep'};
   window.moTab = function(btn, panelId){
     curMo = btn.dataset.mo;
     document.querySelectorAll('.mo-tab').forEach(function(t){t.classList.remove('on');});
@@ -1809,6 +2248,15 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       x3.strokeStyle='#C17F3E';x3.lineWidth=lw;x3.lineCap='round';x3.stroke();
       c3.dataset.drawn='1';
     }
+    if(curMo==='sep' && !document.getElementById('gc4').dataset.drawn){
+      var c4=document.getElementById('gc4');
+      var x4=c4.getContext('2d'),cx=65,cy=66,r=48,lw=8;
+      x4.beginPath();x4.arc(cx,cy,r,Math.PI,0,false);
+      x4.strokeStyle='#F4F2EF';x4.lineWidth=lw;x4.stroke();
+      x4.beginPath();x4.arc(cx,cy,r,Math.PI,Math.PI+Math.PI*.85,false);
+      x4.strokeStyle='#C17F3E';x4.lineWidth=lw;x4.lineCap='round';x4.stroke();
+      c4.dataset.drawn='1';
+    }
   };
 
   // View switching
@@ -1824,17 +2272,19 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     var tbS=document.querySelector('.tb-s');
     var tabbar=document.getElementById('mo-tabbar');
     var aug=document.getElementById('view-aug');
+    var sep=document.getElementById('view-sep');
     if(v==='brands'){
       dash.style.display='none';
       jul.style.display='none';
       aug.style.display='none';
+      sep.style.display='none';
       brands.style.display='';
       tabbar.style.display='none';
       navD.classList.remove('on');
       navR.classList.remove('on');
       navB.classList.add('on');
       tbT.textContent='브랜드 디렉토리';
-      tbS.textContent='4개 지역 57개 글로벌 브랜드 모니터링';
+      tbS.textContent='4개 지역 60개 글로벌 브랜드 모니터링';
       if(!brandsRendered){renderBrands();brandsRendered=true;}
     } else {
       brands.style.display='none';
@@ -1848,6 +2298,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       dash.style.display = (curMo==='jun') ? '' : 'none';
       jul.style.display  = (curMo==='jul') ? '' : 'none';
       aug.style.display  = (curMo==='aug') ? '' : 'none';
+      sep.style.display  = (curMo==='sep') ? '' : 'none';
     }
   };
 
@@ -1923,6 +2374,9 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     '베스툴':                 'logos/bestuhl.png',
     '에넥스':                 'logos/enex.png',
     '아모스아인스':           'logos/amosains.png',
+    'Versteel':               'logos/versteel.png',
+    'AIS':                    'logos/ais.png',
+    '코웨이':                 'logos/coway.png',
   };
 
   // 주목 신제품 대표 이미지 (products/ 폴더에 파일 추가 시 여기에 등록)
@@ -1942,6 +2396,12 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
     'bc-aug-hm': 'products/prod-aug-hm.jpg',
     'bc-aug-hw': 'products/prod-aug-hw.png',
     'bc-aug-hag': 'products/prod-aug-hag.jpg',
+    'bc-aug-vi':  'products/prod-aug-vi.jpg',
+    'bc-sep-cw':  'products/prod-sep-cw.jpg',
+    'bc-sep-mu':  'products/prod-sep-mu.jpg',
+    'bc-sep-sd':  'products/prod-sep-sd.jpg',
+    'bc-sep-hay': 'products/prod-sep-hay.jpg',
+    'bc-sep-vi':  'products/prod-aug-vi.jpg',
   };
   (function(){
     var L={
@@ -1967,6 +2427,8 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       '시디즈':        {bg:'#0D7377',mark:'시디즈',fs:9, fw:'700',ls:'0'},
       '현대리바트':    {bg:'#0A3D8F',mark:'리바트',fs:9, fw:'700',ls:'0'},
       '코아스':        {bg:'#3730A3',mark:'코아스',fs:10,fw:'700',ls:'0'},
+      '코웨이':        {bg:'#1BA6E8',mark:'코웨이',fs:10,fw:'700',ls:'0'},
+      'Versteel':      {bg:'#1F2A44',mark:'VS',   fs:14,fw:'700',ls:'0.5'},
     };
     function mk(lg){
       var c=lg.color||'#fff';
@@ -2052,6 +2514,8 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       {n:'KI',                   c:'미국',    cat:'교육·의료·오피스가구',  url:'https://www.ki.com',                     bg:'#006341',mark:'KI', fs:16,fw:'800'},
       {n:'Nienkämper',           c:'캐나다',  cat:'프리미엄 오피스가구',   url:'https://www.nienkamper.com',             bg:'#1A1A2E',mark:'NK', fs:13,fw:'700'},
       {n:'Narbutas',             c:'리투아니아',cat:'시스템·어쿠스틱가구', url:'https://www.narbutas.com',               bg:'#2D6A4F',mark:'NB', fs:13,fw:'700'},
+      {n:'Versteel',             c:'미국',    cat:'테이블·컨트랙트 시팅',  url:'https://www.versteel.com',               bg:'#1F2A44',mark:'VS', fs:14,fw:'700'},
+      {n:'AIS',                  c:'미국',    cat:'시스템·오피스가구',     url:'https://www.ais-inc.com',                bg:'#002536',mark:'AIS',fs:12,fw:'800'},
     ],
     eu:[
       {n:'Vitra',         c:'스위스',    cat:'디자인·워크체어',      url:'https://www.vitra.com',           bg:'#CC0000',mark:'V',  fs:20,fw:'300',dots:true},
@@ -2099,6 +2563,7 @@ html,body{height:100%;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sy
       {n:'베스툴',     c:'한국',cat:'인체공학 의자',        url:'https://www.bestuhl.co.kr',         bg:'#1E40AF',mark:'B',   fs:20,fw:'700'},
       {n:'에넥스',     c:'한국',cat:'주방·오피스가구',      url:'https://www.enex.co.kr',            bg:'#047857',mark:'E',   fs:20,fw:'700'},
       {n:'아모스아인스',c:'한국',cat:'사무환경 토탈 솔루션', url:'https://www.amosains.com',             bg:'#0F3460',mark:'A',   fs:20,fw:'700'},
+      {n:'코웨이',     c:'한국',cat:'헬스케어 체어·렌탈',   url:'https://www.coway.co.kr',             bg:'#1BA6E8',mark:'코웨이',fs:11,fw:'700'},
     ]
   };
   function mkBLogo(b){
